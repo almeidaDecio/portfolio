@@ -51,7 +51,7 @@ export function AppSidebar() {
                 Décio D'Almeida
               </span>
               <span className="text-xs text-muted-foreground">
-                UX/UI Designer
+                Product Designer
               </span>
             </div>
           )}

@@ -7,11 +7,11 @@ import { Badge } from "@/components/ui/badge";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Décio D'Almeida — UX/UI Designer | Perfil" },
+      { title: "Décio D'Almeida — Product Designer | Perfil" },
       {
         name: "description",
         content:
-          "UX/UI Designer com experiência em produtos digitais, design system, user research, prototipação e design centrado no usuário.",
+          "Product Designer com experiência em produtos digitais, design system, user research, prototipação e design centrado no usuário.",
       },
     ],
   }),
@@ -48,7 +48,7 @@ function PerfilPage() {
         <div className="md:col-span-8">
           <span className="animate-fade-in inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
             <Sparkles className="h-3 w-3" />
-            UX/UI Designer · Product Design
+            Product Designer · Product Design
           </span>
 
           <h1 className="animate-fade-up mt-6 text-balance text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl">
@@ -117,7 +117,7 @@ function PerfilPage() {
             <p>
               Atuo há mais de 6 anos como{" "}
               <strong className="font-semibold text-foreground">
-                UX/UI Designer
+                Product Designer
               </strong>
               , liderando projetos de produtos digitais em times ágeis. Tenho
               experiência sólida em{" "}

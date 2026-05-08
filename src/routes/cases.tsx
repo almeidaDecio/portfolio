@@ -6,11 +6,11 @@ import { SectionHeader } from "@/components/SectionHeader";
 export const Route = createFileRoute("/cases")({
   head: () => ({
     meta: [
-      { title: "Cases — Décio D'Almeida | UX/UI Designer" },
+      { title: "Cases — Décio D'Almeida | Product Designer" },
       {
         name: "description",
         content:
-          "Estudos de caso selecionados de UX/UI Design: contexto, problema, processo, solução e resultado.",
+          "Estudos de caso selecionados de Product Design: contexto, problema, processo, solução e resultado.",
       },
     ],
   }),

@@ -5,11 +5,11 @@ import { SectionHeader } from "@/components/SectionHeader";
 export const Route = createFileRoute("/skills")({
   head: () => ({
     meta: [
-      { title: "Skills — Décio D'Almeida | UX/UI Designer" },
+      { title: "Skills — Décio D'Almeida | Product Designer" },
       {
         name: "description",
         content:
-          "Hard skills, ferramentas e soft skills de Décio D'Almeida, UX/UI Designer.",
+          "Hard skills, ferramentas e soft skills de Décio D'Almeida, Product Designer.",
       },
     ],
   }),
