@@ -21,8 +21,8 @@ const channels = [
   {
     icon: Mail,
     label: "E-mail",
-    value: "decio.dalmeida@email.com",
-    href: "mailto:decio.dalmeida@email.com",
+    value: "decio.almeida.1969@gmail.com",
+    href: "mailto:decio.almeida.1969@gmail.com",
   },
   {
     icon: Linkedin,
@@ -58,7 +58,7 @@ function ContatoPage() {
 
           <div className="mt-10 flex flex-wrap gap-3">
             <a
-              href="mailto:decio.dalmeida@email.com"
+              href="mailto:decio.almeida.1969@gmail.com"
               className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
             >
               <Mail className="h-4 w-4" />
