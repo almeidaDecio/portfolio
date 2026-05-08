@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SkillsRouteImport } from './routes/skills'
 import { Route as FormacaoRouteImport } from './routes/formacao'
 import { Route as ExperienciasRouteImport } from './routes/experiencias'
 import { Route as CasesRouteImport } from './routes/cases'
@@ -16,6 +17,11 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as CasesSoftfocusRouteImport } from './routes/cases.softfocus'
 import { Route as CasesGamegatherRouteImport } from './routes/cases.gamegather'
 
+const SkillsRoute = SkillsRouteImport.update({
+  id: '/skills',
+  path: '/skills',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FormacaoRoute = FormacaoRouteImport.update({
   id: '/formacao',
   path: '/formacao',
@@ -52,6 +58,7 @@ export interface FileRoutesByFullPath {
   '/cases': typeof CasesRouteWithChildren
   '/experiencias': typeof ExperienciasRoute
   '/formacao': typeof FormacaoRoute
+  '/skills': typeof SkillsRoute
   '/cases/gamegather': typeof CasesGamegatherRoute
   '/cases/softfocus': typeof CasesSoftfocusRoute
 }
@@ -60,6 +67,7 @@ export interface FileRoutesByTo {
   '/cases': typeof CasesRouteWithChildren
   '/experiencias': typeof ExperienciasRoute
   '/formacao': typeof FormacaoRoute
+  '/skills': typeof SkillsRoute
   '/cases/gamegather': typeof CasesGamegatherRoute
   '/cases/softfocus': typeof CasesSoftfocusRoute
 }
@@ -69,6 +77,7 @@ export interface FileRoutesById {
   '/cases': typeof CasesRouteWithChildren
   '/experiencias': typeof ExperienciasRoute
   '/formacao': typeof FormacaoRoute
+  '/skills': typeof SkillsRoute
   '/cases/gamegather': typeof CasesGamegatherRoute
   '/cases/softfocus': typeof CasesSoftfocusRoute
 }
@@ -79,6 +88,7 @@ export interface FileRouteTypes {
     | '/cases'
     | '/experiencias'
     | '/formacao'
+    | '/skills'
     | '/cases/gamegather'
     | '/cases/softfocus'
   fileRoutesByTo: FileRoutesByTo
@@ -87,6 +97,7 @@ export interface FileRouteTypes {
     | '/cases'
     | '/experiencias'
     | '/formacao'
+    | '/skills'
     | '/cases/gamegather'
     | '/cases/softfocus'
   id:
@@ -95,6 +106,7 @@ export interface FileRouteTypes {
     | '/cases'
     | '/experiencias'
     | '/formacao'
+    | '/skills'
     | '/cases/gamegather'
     | '/cases/softfocus'
   fileRoutesById: FileRoutesById
@@ -104,10 +116,18 @@ export interface RootRouteChildren {
   CasesRoute: typeof CasesRouteWithChildren
   ExperienciasRoute: typeof ExperienciasRoute
   FormacaoRoute: typeof FormacaoRoute
+  SkillsRoute: typeof SkillsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/skills': {
+      id: '/skills'
+      path: '/skills'
+      fullPath: '/skills'
+      preLoaderRoute: typeof SkillsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/formacao': {
       id: '/formacao'
       path: '/formacao'
@@ -170,6 +190,7 @@ const rootRouteChildren: RootRouteChildren = {
   CasesRoute: CasesRouteWithChildren,
   ExperienciasRoute: ExperienciasRoute,
   FormacaoRoute: FormacaoRoute,
+  SkillsRoute: SkillsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
