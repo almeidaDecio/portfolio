@@ -43,7 +43,7 @@ export function AppSidebar() {
       <SidebarHeader className="px-4 py-6">
         <Link to="/" className="flex items-center gap-3">
           <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground font-semibold">
-            A
+            D
           </div>
           {!collapsed && (
             <div className="flex flex-col leading-tight">
