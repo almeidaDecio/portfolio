@@ -13,6 +13,7 @@ import { Route as ExperienciasRouteImport } from './routes/experiencias'
 import { Route as CasesRouteImport } from './routes/cases'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CasesSoftfocusRouteImport } from './routes/cases.softfocus'
+import { Route as CasesGamegatherRouteImport } from './routes/cases.gamegather'
 
 const ExperienciasRoute = ExperienciasRouteImport.update({
   id: '/experiencias',
@@ -34,17 +35,24 @@ const CasesSoftfocusRoute = CasesSoftfocusRouteImport.update({
   path: '/softfocus',
   getParentRoute: () => CasesRoute,
 } as any)
+const CasesGamegatherRoute = CasesGamegatherRouteImport.update({
+  id: '/gamegather',
+  path: '/gamegather',
+  getParentRoute: () => CasesRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/cases': typeof CasesRouteWithChildren
   '/experiencias': typeof ExperienciasRoute
+  '/cases/gamegather': typeof CasesGamegatherRoute
   '/cases/softfocus': typeof CasesSoftfocusRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/cases': typeof CasesRouteWithChildren
   '/experiencias': typeof ExperienciasRoute
+  '/cases/gamegather': typeof CasesGamegatherRoute
   '/cases/softfocus': typeof CasesSoftfocusRoute
 }
 export interface FileRoutesById {
@@ -52,14 +60,31 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/cases': typeof CasesRouteWithChildren
   '/experiencias': typeof ExperienciasRoute
+  '/cases/gamegather': typeof CasesGamegatherRoute
   '/cases/softfocus': typeof CasesSoftfocusRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/cases' | '/experiencias' | '/cases/softfocus'
+  fullPaths:
+    | '/'
+    | '/cases'
+    | '/experiencias'
+    | '/cases/gamegather'
+    | '/cases/softfocus'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/cases' | '/experiencias' | '/cases/softfocus'
-  id: '__root__' | '/' | '/cases' | '/experiencias' | '/cases/softfocus'
+  to:
+    | '/'
+    | '/cases'
+    | '/experiencias'
+    | '/cases/gamegather'
+    | '/cases/softfocus'
+  id:
+    | '__root__'
+    | '/'
+    | '/cases'
+    | '/experiencias'
+    | '/cases/gamegather'
+    | '/cases/softfocus'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -98,14 +123,23 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CasesSoftfocusRouteImport
       parentRoute: typeof CasesRoute
     }
+    '/cases/gamegather': {
+      id: '/cases/gamegather'
+      path: '/gamegather'
+      fullPath: '/cases/gamegather'
+      preLoaderRoute: typeof CasesGamegatherRouteImport
+      parentRoute: typeof CasesRoute
+    }
   }
 }
 
 interface CasesRouteChildren {
+  CasesGamegatherRoute: typeof CasesGamegatherRoute
   CasesSoftfocusRoute: typeof CasesSoftfocusRoute
 }
 
 const CasesRouteChildren: CasesRouteChildren = {
+  CasesGamegatherRoute: CasesGamegatherRoute,
   CasesSoftfocusRoute: CasesSoftfocusRoute,
 }
 
