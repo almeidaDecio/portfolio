@@ -33,13 +33,6 @@ const keywords = [
   "Scrum / Agile",
 ];
 
-const stats = [
-  { value: "6+", label: "Anos de experiência" },
-  { value: "20+", label: "Produtos digitais" },
-  { value: "12", label: "Design systems" },
-  { value: "98%", label: "Satisfação stakeholders" },
-];
-
 function PerfilPage() {
   return (
     <PageContainer>
