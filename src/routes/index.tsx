@@ -48,7 +48,7 @@ function PerfilPage() {
         <div className="md:col-span-8">
           <span className="animate-fade-in inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
             <Sparkles className="h-3 w-3" />
-            Product Designer · Product Design
+            Product Design
           </span>
 
           <h1 className="animate-fade-up mt-6 text-balance text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl">
