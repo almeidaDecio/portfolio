@@ -48,7 +48,7 @@ export function AppSidebar() {
           {!collapsed && (
             <div className="flex flex-col leading-tight">
               <span className="text-sm font-semibold tracking-tight">
-                Alex Ribeiro
+                Décio D'Almeida
               </span>
               <span className="text-xs text-muted-foreground">
                 UX/UI Designer

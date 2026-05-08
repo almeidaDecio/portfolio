@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 export const Route = createFileRoute("/experiencias")({
   head: () => ({
     meta: [
-      { title: "Experiências — Alex Ribeiro | UX/UI Designer" },
+      { title: "Experiências — Décio D'Almeida | UX/UI Designer" },
       {
         name: "description",
         content:

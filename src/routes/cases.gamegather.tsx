@@ -4,7 +4,7 @@ import { CaseShell } from "@/components/CaseShell";
 export const Route = createFileRoute("/cases/gamegather")({
   head: () => ({
     meta: [
-      { title: "Case Gamegather — Alex Ribeiro | UX/UI Designer" },
+      { title: "Case Gamegather — Décio D'Almeida | UX/UI Designer" },
       {
         name: "description",
         content:
