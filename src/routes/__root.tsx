@@ -70,14 +70,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Alex Ribeiro — UX/UI Designer | Portfolio" },
+      { title: "Décio D'Almeida — UX/UI Designer | Portfolio" },
       {
         name: "description",
         content:
-          "Portfolio de Alex Ribeiro, UX/UI Designer especializado em produtos digitais, design system, user research e interface design.",
+          "Portfolio de Décio D'Almeida, UX/UI Designer especializado em produtos digitais, design system, user research e interface design.",
       },
-      { name: "author", content: "Alex Ribeiro" },
-      { property: "og:title", content: "Alex Ribeiro — UX/UI Designer" },
+      { name: "author", content: "Décio D'Almeida" },
+      { property: "og:title", content: "Décio D'Almeida — UX/UI Designer" },
       {
         property: "og:description",
         content:
@@ -148,7 +148,7 @@ function RootComponent() {
             </main>
             <footer className="border-t border-border px-6 py-8 text-xs text-muted-foreground">
               <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-3 md:flex-row md:items-center">
-                <span>© 2026 Alex Ribeiro · UX/UI Designer</span>
+                <span>© 2026 Décio D'Almeida · UX/UI Designer</span>
                 <span>Feito com cuidado em Figma + React</span>
               </div>
             </footer>

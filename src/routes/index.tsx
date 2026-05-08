@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Alex Ribeiro — UX/UI Designer | Perfil" },
+      { title: "Décio D'Almeida — UX/UI Designer | Perfil" },
       {
         name: "description",
         content:
@@ -59,7 +59,7 @@ function PerfilPage() {
           </h1>
 
           <p className="animate-fade-up delay-200 mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl">
-            Sou Alex Ribeiro, designer focado em produto. Trabalho na
+            Sou Décio D'Almeida, designer focado em produto. Trabalho na
             interseção entre pesquisa, estratégia e interface para criar
             soluções digitais com clareza, impacto de negócio e qualidade
             visual de produto.

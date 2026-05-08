@@ -6,11 +6,11 @@ import { SectionHeader } from "@/components/SectionHeader";
 export const Route = createFileRoute("/contato")({
   head: () => ({
     meta: [
-      { title: "Contato — Alex Ribeiro | UX/UI Designer" },
+      { title: "Contato — Décio D'Almeida | UX/UI Designer" },
       {
         name: "description",
         content:
-          "Entre em contato com Alex Ribeiro: e-mail, LinkedIn e Behance.",
+          "Entre em contato com Décio D'Almeida: e-mail, LinkedIn e Behance.",
       },
     ],
   }),
@@ -21,19 +21,19 @@ const channels = [
   {
     icon: Mail,
     label: "E-mail",
-    value: "alex.ribeiro@email.com",
-    href: "mailto:alex.ribeiro@email.com",
+    value: "decio.dalmeida@email.com",
+    href: "mailto:decio.dalmeida@email.com",
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
-    value: "linkedin.com/in/alexribeiro",
-    href: "https://linkedin.com",
+    value: "linkedin.com/in/décio-d-almeida",
+    href: "https://www.linkedin.com/in/d%C3%A9cio-d-almeida-74186621/",
   },
   {
     icon: Dribbble,
     label: "Behance",
-    value: "behance.net/alexribeiro",
+    value: "behance.net/deciodalmeida",
     href: "https://behance.net",
   },
 ];
@@ -58,14 +58,14 @@ function ContatoPage() {
 
           <div className="mt-10 flex flex-wrap gap-3">
             <a
-              href="mailto:alex.ribeiro@email.com"
+              href="mailto:decio.dalmeida@email.com"
               className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
             >
               <Mail className="h-4 w-4" />
               Enviar e-mail
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/d%C3%A9cio-d-almeida-74186621/"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-medium hover:bg-accent"

@@ -6,7 +6,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 export const Route = createFileRoute("/cases")({
   head: () => ({
     meta: [
-      { title: "Cases — Alex Ribeiro | UX/UI Designer" },
+      { title: "Cases — Décio D'Almeida | UX/UI Designer" },
       {
         name: "description",
         content:
