@@ -132,16 +132,12 @@ function RootComponent() {
         <div className="flex min-h-screen w-full bg-background">
           <AppSidebar />
           <div className="flex flex-1 flex-col">
-            <header className="sticky top-0 z-30 flex h-14 items-center gap-3 border-b border-border bg-background/80 px-4 backdrop-blur-md md:px-6">
+            <header className="sticky top-0 z-30 flex h-12 items-center gap-3 border-b border-border bg-background/80 px-4 backdrop-blur-md md:px-6">
               <SidebarTrigger className="-ml-1" />
               <div className="h-5 w-px bg-border" />
               <span className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
                 Portfolio · 2026
               </span>
-              <div className="ml-auto hidden items-center gap-2 text-xs text-muted-foreground md:flex">
-                <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                Aberto a novas oportunidades
-              </div>
             </header>
             <main className="flex-1">
               <Outlet />
