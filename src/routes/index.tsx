@@ -44,62 +44,39 @@ function PerfilPage() {
   return (
     <PageContainer>
       {/* HERO */}
-      <section className="grid gap-8 pt-0 md:grid-cols-12 md:gap-12 md:pt-2">
-        <div className="md:col-span-8">
-          <span className="animate-fade-in inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
-            <Sparkles className="h-3 w-3" />
-            Product Design
+      <section className="pt-0 md:pt-2">
+        <h1 className="animate-fade-up text-pretty text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl">
+          Transformando<br />
+          problemas complexos em<br />
+          <span className="italic text-muted-foreground">
+            experiências digitais<br />
+            intuitivas
           </span>
+        </h1>
 
-          <h1 className="animate-fade-up mt-6 text-balance text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl">
-            Transformando problemas complexos em{" "}
-            <span className="italic text-muted-foreground">
-              experiências digitais intuitivas.
-            </span>
-          </h1>
+        <p className="animate-fade-up delay-200 mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl">
+          Sou Décio D'Almeida, designer focado em produto. Comecei no
+          gráfico, onde erro não tem Ctrl+Z depois da impressão. Esse jeito
+          de trabalhar — com cuidado, atenção e senso de responsabilidade —
+          foi o que me trouxe para o UX e ainda guia tudo que eu faço.
+        </p>
 
-          <p className="animate-fade-up delay-200 mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl">
-            Sou Décio D'Almeida, designer focado em produto. Trabalho na
-            interseção entre pesquisa, estratégia e interface para criar
-            soluções digitais com clareza, impacto de negócio e qualidade
-            visual de produto.
-          </p>
-
-          <div className="animate-fade-up delay-300 mt-10 flex flex-wrap items-center gap-3">
-            <Link
-              to="/cases"
-              className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:gap-3 hover:bg-primary/90"
-            >
-              Ver cases selecionados
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-            </Link>
-            <Link
-              to="/contato"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-accent"
-            >
-              Vamos conversar
-              <ArrowUpRight className="h-4 w-4" />
-            </Link>
-          </div>
+        <div className="animate-fade-up delay-300 mt-10 flex flex-wrap items-center gap-3">
+          <Link
+            to="/cases"
+            className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:gap-3 hover:bg-primary/90"
+          >
+            Ver cases
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+          </Link>
+          <Link
+            to="/contato"
+            className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+          >
+            Vamos conversar
+            <ArrowUpRight className="h-4 w-4" />
+          </Link>
         </div>
-
-        <aside className="md:col-span-4">
-          <div className="animate-rise delay-200 grid grid-cols-2 gap-3">
-            {stats.map((s) => (
-              <div
-                key={s.label}
-                className="rounded-2xl border border-border bg-card p-5 hover-lift"
-              >
-                <div className="text-3xl font-semibold tracking-tight">
-                  {s.value}
-                </div>
-                <div className="mt-1 text-xs leading-relaxed text-muted-foreground">
-                  {s.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </aside>
       </section>
 
       <div className="mt-10 h-px w-full bg-border md:mt-14" />
