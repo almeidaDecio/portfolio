@@ -9,38 +9,166 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SkillsRouteImport } from './routes/skills'
+import { Route as FormacaoRouteImport } from './routes/formacao'
+import { Route as ExperienciasRouteImport } from './routes/experiencias'
+import { Route as ContatoRouteImport } from './routes/contato'
+import { Route as CasesRouteImport } from './routes/cases'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CasesSoftfocusRouteImport } from './routes/cases.softfocus'
+import { Route as CasesGamegatherRouteImport } from './routes/cases.gamegather'
 
+const SkillsRoute = SkillsRouteImport.update({
+  id: '/skills',
+  path: '/skills',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FormacaoRoute = FormacaoRouteImport.update({
+  id: '/formacao',
+  path: '/formacao',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExperienciasRoute = ExperienciasRouteImport.update({
+  id: '/experiencias',
+  path: '/experiencias',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContatoRoute = ContatoRouteImport.update({
+  id: '/contato',
+  path: '/contato',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CasesRoute = CasesRouteImport.update({
+  id: '/cases',
+  path: '/cases',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CasesSoftfocusRoute = CasesSoftfocusRouteImport.update({
+  id: '/softfocus',
+  path: '/softfocus',
+  getParentRoute: () => CasesRoute,
+} as any)
+const CasesGamegatherRoute = CasesGamegatherRouteImport.update({
+  id: '/gamegather',
+  path: '/gamegather',
+  getParentRoute: () => CasesRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/cases': typeof CasesRouteWithChildren
+  '/contato': typeof ContatoRoute
+  '/experiencias': typeof ExperienciasRoute
+  '/formacao': typeof FormacaoRoute
+  '/skills': typeof SkillsRoute
+  '/cases/gamegather': typeof CasesGamegatherRoute
+  '/cases/softfocus': typeof CasesSoftfocusRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/cases': typeof CasesRouteWithChildren
+  '/contato': typeof ContatoRoute
+  '/experiencias': typeof ExperienciasRoute
+  '/formacao': typeof FormacaoRoute
+  '/skills': typeof SkillsRoute
+  '/cases/gamegather': typeof CasesGamegatherRoute
+  '/cases/softfocus': typeof CasesSoftfocusRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/cases': typeof CasesRouteWithChildren
+  '/contato': typeof ContatoRoute
+  '/experiencias': typeof ExperienciasRoute
+  '/formacao': typeof FormacaoRoute
+  '/skills': typeof SkillsRoute
+  '/cases/gamegather': typeof CasesGamegatherRoute
+  '/cases/softfocus': typeof CasesSoftfocusRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/cases'
+    | '/contato'
+    | '/experiencias'
+    | '/formacao'
+    | '/skills'
+    | '/cases/gamegather'
+    | '/cases/softfocus'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/cases'
+    | '/contato'
+    | '/experiencias'
+    | '/formacao'
+    | '/skills'
+    | '/cases/gamegather'
+    | '/cases/softfocus'
+  id:
+    | '__root__'
+    | '/'
+    | '/cases'
+    | '/contato'
+    | '/experiencias'
+    | '/formacao'
+    | '/skills'
+    | '/cases/gamegather'
+    | '/cases/softfocus'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CasesRoute: typeof CasesRouteWithChildren
+  ContatoRoute: typeof ContatoRoute
+  ExperienciasRoute: typeof ExperienciasRoute
+  FormacaoRoute: typeof FormacaoRoute
+  SkillsRoute: typeof SkillsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/skills': {
+      id: '/skills'
+      path: '/skills'
+      fullPath: '/skills'
+      preLoaderRoute: typeof SkillsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/formacao': {
+      id: '/formacao'
+      path: '/formacao'
+      fullPath: '/formacao'
+      preLoaderRoute: typeof FormacaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/experiencias': {
+      id: '/experiencias'
+      path: '/experiencias'
+      fullPath: '/experiencias'
+      preLoaderRoute: typeof ExperienciasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contato': {
+      id: '/contato'
+      path: '/contato'
+      fullPath: '/contato'
+      preLoaderRoute: typeof ContatoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cases': {
+      id: '/cases'
+      path: '/cases'
+      fullPath: '/cases'
+      preLoaderRoute: typeof CasesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,22 +176,43 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cases/softfocus': {
+      id: '/cases/softfocus'
+      path: '/softfocus'
+      fullPath: '/cases/softfocus'
+      preLoaderRoute: typeof CasesSoftfocusRouteImport
+      parentRoute: typeof CasesRoute
+    }
+    '/cases/gamegather': {
+      id: '/cases/gamegather'
+      path: '/gamegather'
+      fullPath: '/cases/gamegather'
+      preLoaderRoute: typeof CasesGamegatherRouteImport
+      parentRoute: typeof CasesRoute
+    }
   }
 }
 
+interface CasesRouteChildren {
+  CasesGamegatherRoute: typeof CasesGamegatherRoute
+  CasesSoftfocusRoute: typeof CasesSoftfocusRoute
+}
+
+const CasesRouteChildren: CasesRouteChildren = {
+  CasesGamegatherRoute: CasesGamegatherRoute,
+  CasesSoftfocusRoute: CasesSoftfocusRoute,
+}
+
+const CasesRouteWithChildren = CasesRoute._addFileChildren(CasesRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CasesRoute: CasesRouteWithChildren,
+  ContatoRoute: ContatoRoute,
+  ExperienciasRoute: ExperienciasRoute,
+  FormacaoRoute: FormacaoRoute,
+  SkillsRoute: SkillsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
