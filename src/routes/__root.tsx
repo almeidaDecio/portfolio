@@ -70,14 +70,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Décio D'Almeida — UX/UI Designer | Portfolio" },
+      { title: "Décio D'Almeida — Product Designer | Portfolio" },
       {
         name: "description",
         content:
-          "Portfolio de Décio D'Almeida, UX/UI Designer especializado em produtos digitais, design system, user research e interface design.",
+          "Portfolio de Décio D'Almeida, Product Designer especializado em produtos digitais, design system, user research e interface design.",
       },
       { name: "author", content: "Décio D'Almeida" },
-      { property: "og:title", content: "Décio D'Almeida — UX/UI Designer" },
+      { property: "og:title", content: "Décio D'Almeida — Product Designer" },
       {
         property: "og:description",
         content:
@@ -132,23 +132,19 @@ function RootComponent() {
         <div className="flex min-h-screen w-full bg-background">
           <AppSidebar />
           <div className="flex flex-1 flex-col">
-            <header className="sticky top-0 z-30 flex h-14 items-center gap-3 border-b border-border bg-background/80 px-4 backdrop-blur-md md:px-6">
+            <header className="sticky top-0 z-30 flex h-12 items-center gap-3 border-b border-border bg-background/80 px-4 backdrop-blur-md md:px-6">
               <SidebarTrigger className="-ml-1" />
               <div className="h-5 w-px bg-border" />
               <span className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
                 Portfolio · 2026
               </span>
-              <div className="ml-auto hidden items-center gap-2 text-xs text-muted-foreground md:flex">
-                <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                Aberto a novas oportunidades
-              </div>
             </header>
             <main className="flex-1">
               <Outlet />
             </main>
             <footer className="border-t border-border px-6 py-8 text-xs text-muted-foreground">
               <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-3 md:flex-row md:items-center">
-                <span>© 2026 Décio D'Almeida · UX/UI Designer</span>
+                <span>© 2026 Décio D'Almeida · Product Designer</span>
                 <span>Feito com cuidado em Figma + React</span>
               </div>
             </footer>

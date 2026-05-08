@@ -7,11 +7,11 @@ import { Badge } from "@/components/ui/badge";
 export const Route = createFileRoute("/experiencias")({
   head: () => ({
     meta: [
-      { title: "Experiências — Décio D'Almeida | UX/UI Designer" },
+      { title: "Experiências — Décio D'Almeida | Product Designer" },
       {
         name: "description",
         content:
-          "Experiência profissional como UX/UI Designer em produtos digitais: Softfocus, Gamegather e mais.",
+          "Experiência profissional como Product Designer em produtos digitais: Softfocus, Gamegather e mais.",
       },
     ],
   }),
@@ -32,7 +32,7 @@ type Experience = {
 const experiences: Experience[] = [
   {
     company: "Softfocus",
-    role: "UX/UI Designer Pleno",
+    role: "Product Designer Pleno",
     period: "2023 — Atual",
     location: "Remoto",
     summary:
@@ -50,7 +50,7 @@ const experiences: Experience[] = [
   },
   {
     company: "Gamegather",
-    role: "UX/UI Designer",
+    role: "Product Designer",
     period: "2021 — 2023",
     location: "Híbrido — São Paulo",
     summary:

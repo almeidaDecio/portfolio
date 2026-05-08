@@ -6,11 +6,11 @@ import { SectionHeader } from "@/components/SectionHeader";
 export const Route = createFileRoute("/formacao")({
   head: () => ({
     meta: [
-      { title: "Formação — Décio D'Almeida | UX/UI Designer" },
+      { title: "Formação — Décio D'Almeida | Product Designer" },
       {
         name: "description",
         content:
-          "Formação acadêmica, cursos e certificações em UX/UI Design, Product Design e pesquisa.",
+          "Formação acadêmica, cursos e certificações em Product Design, Product Design e pesquisa.",
       },
     ],
   }),
@@ -62,7 +62,7 @@ function FormacaoPage() {
       <SectionHeader
         eyebrow="Formação"
         title="Formação acadêmica e contínua"
-        description="Graduação, cursos e certificações que sustentam minha prática de UX/UI Design e Product Design."
+        description="Graduação, cursos e certificações que sustentam minha prática de Product Design e Product Design."
       />
 
       <div className="relative mt-14 md:mt-20">
