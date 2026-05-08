@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SkillsRouteImport } from './routes/skills'
 import { Route as FormacaoRouteImport } from './routes/formacao'
 import { Route as ExperienciasRouteImport } from './routes/experiencias'
+import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as CasesRouteImport } from './routes/cases'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CasesSoftfocusRouteImport } from './routes/cases.softfocus'
@@ -30,6 +31,11 @@ const FormacaoRoute = FormacaoRouteImport.update({
 const ExperienciasRoute = ExperienciasRouteImport.update({
   id: '/experiencias',
   path: '/experiencias',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContatoRoute = ContatoRouteImport.update({
+  id: '/contato',
+  path: '/contato',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CasesRoute = CasesRouteImport.update({
@@ -56,6 +62,7 @@ const CasesGamegatherRoute = CasesGamegatherRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/cases': typeof CasesRouteWithChildren
+  '/contato': typeof ContatoRoute
   '/experiencias': typeof ExperienciasRoute
   '/formacao': typeof FormacaoRoute
   '/skills': typeof SkillsRoute
@@ -65,6 +72,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/cases': typeof CasesRouteWithChildren
+  '/contato': typeof ContatoRoute
   '/experiencias': typeof ExperienciasRoute
   '/formacao': typeof FormacaoRoute
   '/skills': typeof SkillsRoute
@@ -75,6 +83,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/cases': typeof CasesRouteWithChildren
+  '/contato': typeof ContatoRoute
   '/experiencias': typeof ExperienciasRoute
   '/formacao': typeof FormacaoRoute
   '/skills': typeof SkillsRoute
@@ -86,6 +95,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/cases'
+    | '/contato'
     | '/experiencias'
     | '/formacao'
     | '/skills'
@@ -95,6 +105,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/cases'
+    | '/contato'
     | '/experiencias'
     | '/formacao'
     | '/skills'
@@ -104,6 +115,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/cases'
+    | '/contato'
     | '/experiencias'
     | '/formacao'
     | '/skills'
@@ -114,6 +126,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CasesRoute: typeof CasesRouteWithChildren
+  ContatoRoute: typeof ContatoRoute
   ExperienciasRoute: typeof ExperienciasRoute
   FormacaoRoute: typeof FormacaoRoute
   SkillsRoute: typeof SkillsRoute
@@ -140,6 +153,13 @@ declare module '@tanstack/react-router' {
       path: '/experiencias'
       fullPath: '/experiencias'
       preLoaderRoute: typeof ExperienciasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contato': {
+      id: '/contato'
+      path: '/contato'
+      fullPath: '/contato'
+      preLoaderRoute: typeof ContatoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/cases': {
@@ -188,6 +208,7 @@ const CasesRouteWithChildren = CasesRoute._addFileChildren(CasesRouteChildren)
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CasesRoute: CasesRouteWithChildren,
+  ContatoRoute: ContatoRoute,
   ExperienciasRoute: ExperienciasRoute,
   FormacaoRoute: FormacaoRoute,
   SkillsRoute: SkillsRoute,
