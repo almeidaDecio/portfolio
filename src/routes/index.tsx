@@ -44,7 +44,7 @@ function PerfilPage() {
   return (
     <PageContainer>
       {/* HERO */}
-      <section className="grid gap-12 pt-4 md:grid-cols-12 md:gap-16 md:pt-8">
+      <section className="grid gap-8 pt-0 md:grid-cols-12 md:gap-12 md:pt-2">
         <div className="md:col-span-8">
           <span className="animate-fade-in inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
             <Sparkles className="h-3 w-3" />
@@ -102,10 +102,10 @@ function PerfilPage() {
         </aside>
       </section>
 
-      <div className="mt-20 h-px w-full bg-border md:mt-28" />
+      <div className="mt-10 h-px w-full bg-border md:mt-14" />
 
       {/* RESUMO PROFISSIONAL */}
-      <section className="mt-20 grid gap-12 md:mt-28 md:grid-cols-12">
+      <section className="mt-10 grid gap-12 md:mt-14 md:grid-cols-12">
         <div className="md:col-span-5">
           <SectionHeader
             eyebrow="Resumo profissional"
@@ -159,10 +159,10 @@ function PerfilPage() {
         </div>
       </section>
 
-      <div className="mt-20 h-px w-full bg-border md:mt-28" />
+      <div className="mt-10 h-px w-full bg-border md:mt-14" />
 
       {/* CTA SECTION */}
-      <section className="mt-20 md:mt-28">
+      <section className="mt-10 md:mt-14">
         <div className="rounded-3xl border border-border bg-card p-10 md:p-16">
           <div className="grid gap-10 md:grid-cols-2 md:items-end">
             <div>
