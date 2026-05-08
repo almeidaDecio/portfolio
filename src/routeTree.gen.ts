@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as ExperienciasRouteImport } from './routes/experiencias'
 import { Route as CasesRouteImport } from './routes/cases'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CasesSoftfocusRouteImport } from './routes/cases.softfocus'
 
 const ExperienciasRoute = ExperienciasRouteImport.update({
   id: '/experiencias',
@@ -28,34 +29,42 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CasesSoftfocusRoute = CasesSoftfocusRouteImport.update({
+  id: '/softfocus',
+  path: '/softfocus',
+  getParentRoute: () => CasesRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/cases': typeof CasesRoute
+  '/cases': typeof CasesRouteWithChildren
   '/experiencias': typeof ExperienciasRoute
+  '/cases/softfocus': typeof CasesSoftfocusRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/cases': typeof CasesRoute
+  '/cases': typeof CasesRouteWithChildren
   '/experiencias': typeof ExperienciasRoute
+  '/cases/softfocus': typeof CasesSoftfocusRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/cases': typeof CasesRoute
+  '/cases': typeof CasesRouteWithChildren
   '/experiencias': typeof ExperienciasRoute
+  '/cases/softfocus': typeof CasesSoftfocusRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/cases' | '/experiencias'
+  fullPaths: '/' | '/cases' | '/experiencias' | '/cases/softfocus'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/cases' | '/experiencias'
-  id: '__root__' | '/' | '/cases' | '/experiencias'
+  to: '/' | '/cases' | '/experiencias' | '/cases/softfocus'
+  id: '__root__' | '/' | '/cases' | '/experiencias' | '/cases/softfocus'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  CasesRoute: typeof CasesRoute
+  CasesRoute: typeof CasesRouteWithChildren
   ExperienciasRoute: typeof ExperienciasRoute
 }
 
@@ -82,14 +91,41 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cases/softfocus': {
+      id: '/cases/softfocus'
+      path: '/softfocus'
+      fullPath: '/cases/softfocus'
+      preLoaderRoute: typeof CasesSoftfocusRouteImport
+      parentRoute: typeof CasesRoute
+    }
   }
 }
 
+interface CasesRouteChildren {
+  CasesSoftfocusRoute: typeof CasesSoftfocusRoute
+}
+
+const CasesRouteChildren: CasesRouteChildren = {
+  CasesSoftfocusRoute: CasesSoftfocusRoute,
+}
+
+const CasesRouteWithChildren = CasesRoute._addFileChildren(CasesRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  CasesRoute: CasesRoute,
+  CasesRoute: CasesRouteWithChildren,
   ExperienciasRoute: ExperienciasRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
