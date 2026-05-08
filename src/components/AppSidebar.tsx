@@ -94,19 +94,6 @@ export function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
 
-      <SidebarFooter className="border-t border-sidebar-border p-4">
-        {!collapsed ? (
-          <div className="flex flex-col gap-1 text-xs text-muted-foreground">
-            <span className="inline-flex items-center gap-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-              Disponível para projetos
-            </span>
-            <span>São Paulo, BR</span>
-          </div>
-        ) : (
-          <span className="mx-auto h-1.5 w-1.5 rounded-full bg-emerald-500" />
-        )}
-      </SidebarFooter>
     </Sidebar>
   );
 }
