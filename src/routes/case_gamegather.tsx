@@ -86,7 +86,7 @@ function CaseSoftfocusNovoPage() {
 
       {/* PROCESSO */}
       <section className="mt-14">
-        <h2 className="text-2xl font-semibold tracking-tight">Processos e fluxo de trabalho</h2>
+        <h2 className="text-2xl font-semibold tracking-tight">Processos e fluxos de trabalho</h2>
 
 
 
