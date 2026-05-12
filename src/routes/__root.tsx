@@ -132,7 +132,7 @@ function RootComponent() {
         <div className="flex min-h-screen w-full bg-background">
           <AppSidebar />
           <div className="flex flex-1 flex-col">
-            <header className="sticky top-0 z-30 flex h-12 items-center gap-3 border-b border-border bg-background/80 px-4 backdrop-blur-md md:px-6">
+            <header className="sticky top-0 z-30 flex h-14 items-center gap-3 border-b border-border bg-background/80 px-4 backdrop-blur-md md:px-6">
               <SidebarTrigger className="-ml-1" />
               <div className="h-5 w-px bg-border" />
               <span className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
@@ -143,9 +143,8 @@ function RootComponent() {
               <Outlet />
             </main>
             <footer className="border-t border-border px-6 py-8 text-xs text-muted-foreground">
-              <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-3 md:flex-row md:items-center">
+              <div className="flex max-w-6xl px-6 md:px-20 lg:px-10 flex-col items-start justify-between gap-3 md:flex-row md:items-center">
                 <span>© 2026 Décio D'Almeida · Product Designer</span>
-                <span>Feito com cuidado em Figma + React</span>
               </div>
             </footer>
           </div>

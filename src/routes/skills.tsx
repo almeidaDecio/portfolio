@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageContainer } from "@/components/PageContainer";
 import { SectionHeader } from "@/components/SectionHeader";
+import { Badge } from "@/components/ui/badge";
 
 export const Route = createFileRoute("/skills")({
   head: () => ({
@@ -22,9 +23,9 @@ const groups = [
     eyebrow: "Competências técnicas",
     items: [
       "UX Research",
-      "UI Design",
+      "UI /UX Design",
       "Wireframing",
-      "Prototyping",
+      "Prototipagem",
       "Design System",
       "Usabilidade",
       "Arquitetura da Informação",
@@ -33,6 +34,8 @@ const groups = [
       "Design Thinking",
       "Discovery",
       "Análise de Usabilidade",
+      "Handoff",
+      "Controle de Qualidade",
     ],
   },
   {
@@ -40,15 +43,24 @@ const groups = [
     eyebrow: "Stack do dia a dia",
     items: [
       "Figma",
+      "Adobe XD",
       "FigJam",
       "Miro",
-      "Notion",
       "Jira",
-      "Google Analytics",
-      "Maze",
       "Hotjar",
-      "Zeplin",
       "Slack",
+      "YouTrack",
+      "Pacote Adobe",
+      "Photoshop",
+      "Illustrator",
+      "Adobe Acrobat",
+      "InDesign",
+      "Pacote Office",
+      "ChatGPT",
+      "Lovable",
+      "Stitch",
+      "Claude Design",
+      "Gemini",
     ],
   },
   {
@@ -64,6 +76,9 @@ const groups = [
       "Organização",
       "Pensamento Crítico",
       "Adaptabilidade",
+      "Atenção a Detalhes",
+      "Liderança",
+      "Proatividade",
     ],
   },
 ];
@@ -71,38 +86,39 @@ const groups = [
 function SkillsPage() {
   return (
     <PageContainer>
-      <SectionHeader
-        eyebrow="Skills"
-        title="Stack de design e habilidades"
-        description="Habilidades técnicas, ferramentas e competências comportamentais aplicadas em produtos digitais."
-      />
+      <section className="-mt-6">
+        <SectionHeader title="Stack de design e habilidades" />
 
-      <div className="mt-14 grid gap-6 md:mt-20 md:grid-cols-3">
-        {groups.map((g, i) => (
-          <section
-            key={g.title}
-            className="animate-fade-up rounded-3xl border border-border bg-card p-7 md:p-8"
-            style={{ animationDelay: `${i * 0.08}s` }}
-          >
-            <span className="text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
-              {g.eyebrow}
-            </span>
-            <h3 className="mt-2 text-2xl font-semibold tracking-tight">
-              {g.title}
-            </h3>
-            <ul className="mt-6 flex flex-wrap gap-2">
-              {g.items.map((item) => (
-                <li
-                  key={item}
-                  className="rounded-full border border-border bg-background px-3 py-1.5 text-[13px] font-medium text-foreground/90 transition-colors hover:border-foreground/30"
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </section>
-        ))}
-      </div>
+        <div className="mt-4 grid gap-6 md:mt-8 md:grid-cols-3">
+          {groups.map((g, i) => (
+            <section
+              key={g.title}
+              className="animate-fade-up group rounded-3xl border border-border bg-card p-5 transition-all hover:border-foreground/20 md:p-6"
+              style={{ animationDelay: `${i * 0.08}s` }}
+            >
+              <span className="text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
+                {g.eyebrow}
+              </span>
+
+              <h3 className="mt-2 text-2xl font-semibold tracking-tight">
+                {g.title}
+              </h3>
+
+              <div className="mt-6 flex flex-wrap gap-2">
+                {g.items.map((item) => (
+                  <Badge
+                    key={item}
+                    variant="secondary"
+                    className="rounded-full border border-border bg-secondary px-3 py-1 text-[12px] font-medium"
+                  >
+                    {item}
+                  </Badge>
+                ))}
+              </div>
+            </section>
+          ))}
+        </div>
+      </section>
     </PageContainer>
   );
 }

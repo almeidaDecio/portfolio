@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight } from "lucide-react";
 import { PageContainer } from "@/components/PageContainer";
 import { SectionHeader } from "@/components/SectionHeader";
 
@@ -19,77 +18,73 @@ export const Route = createFileRoute("/cases")({
 
 const cases = [
   {
-    slug: "/cases/softfocus" as const,
+    slug: "/case_softfocus_novo" as const,
     company: "Softfocus",
-    title: "Reformulando o fluxo de onboarding em uma plataforma B2B",
+    subtitle: "Softfocus — Zoom Rural",
+    title: "Melhorando a experiência na análise e fiscalização do crédito rural",
     summary:
-      "Discovery, redesign de fluxo e design system aplicados para reduzir fricção e acelerar a ativação de novos usuários.",
-    tags: ["B2B SaaS", "Discovery", "Design System"],
-    cover:
-      "linear-gradient(135deg, oklch(0.92 0.02 75) 0%, oklch(0.86 0.03 60) 100%)",
+      "Solução que transforma o monitoramento de crédito rural em um processo mais simples, integrado e orientado a compliance para instituições financeiras.",
+    cover: null,
+    image: "/dashboard.png",
   },
   {
-    slug: "/cases/gamegather" as const,
+    slug: "/case_gamegather" as const,
     company: "Gamegather",
-    title: "Engajando uma comunidade através de uma experiência mobile fluida",
+    subtitle: "Portal Gamegather",
+    title: "Conectando jogadores pelo que realmente importa: comunidade e respeito",
     summary:
-      "Pesquisa, arquitetura de informação e UI design para uma plataforma social com forte componente de identidade.",
-    tags: ["Consumer", "Mobile", "Comunidade"],
-    cover:
-      "linear-gradient(135deg, oklch(0.86 0.04 250) 0%, oklch(0.78 0.05 280) 100%)",
+      "Plataforma social que une gamers com base em interesses e reputação comunitária — criando conexões mais saudáveis e experiências de jogo sem toxicidade.",
+    cover: null,
+    image: "/gamegather.png",
   },
 ];
 
 function CasesPage() {
   return (
     <PageContainer>
-      <SectionHeader
-        eyebrow="Cases selecionados"
-        title="Estudos de caso de produto"
-        description="Cada case está estruturado em contexto, problema, processo, solução e resultado — para leitura rápida ou aprofundada."
-      />
+      <section className="-mt-6">
+        <SectionHeader title="Estudos de caso de produto" />
 
-      <div className="mt-14 grid gap-6 md:mt-20 md:grid-cols-2">
-        {cases.map((c, i) => (
-          <Link
-            key={c.slug}
-            to={c.slug}
-            className="animate-fade-up group block overflow-hidden rounded-3xl border border-border bg-card hover-lift"
-            style={{ animationDelay: `${i * 0.08}s` }}
-          >
-            <div
-              className="relative aspect-[4/3] w-full overflow-hidden"
-              style={{ background: c.cover }}
+        <div className="mt-8 grid gap-6 md:mt-10 md:grid-cols-2">
+          {cases.map((c, i) => (
+            <Link
+              key={c.slug}
+              to={c.slug}
+              className="animate-fade-up group block overflow-hidden rounded-3xl border border-border bg-card hover-lift"
+              style={{ animationDelay: `${i * 0.08}s` }}
             >
-              <div className="absolute inset-0 grain opacity-60" />
-              <div className="absolute left-6 top-6 text-[11px] font-medium uppercase tracking-[0.18em] text-foreground/70">
-                {c.company}
+              <div
+                className="relative aspect-[4/2] w-full overflow-hidden"
+                style={c.cover ? { background: c.cover } : undefined}
+              >
+                {c.image ? (
+                  <img
+                    src={c.image}
+                    alt={c.company}
+                    className="h-full w-full object-cover object-top"
+                  />
+                ) : (
+                  <div className="absolute inset-0 grain opacity-60" />
+                )}
               </div>
-              <div className="absolute bottom-6 right-6 flex h-12 w-12 items-center justify-center rounded-full bg-background/90 backdrop-blur transition-transform group-hover:rotate-45">
-                <ArrowUpRight className="h-5 w-5" />
+
+              <div className="p-7">
+                {c.subtitle && (
+                  <p className="text-sm font-medium text-muted-foreground">
+                    {c.subtitle}
+                  </p>
+                )}
+                <h3 className="mt-3 text-pretty text-lg font-semibold tracking-tight md:text-xl">
+                  {c.title}
+                </h3>
+                <p className="mt-3 text-pretty text-sm leading-relaxed text-muted-foreground md:text-base">
+                  {c.summary}
+                </p>
               </div>
-            </div>
-            <div className="p-7">
-              <h3 className="text-pretty text-xl font-semibold tracking-tight md:text-2xl">
-                {c.title}
-              </h3>
-              <p className="mt-3 text-pretty text-sm leading-relaxed text-muted-foreground md:text-base">
-                {c.summary}
-              </p>
-              <div className="mt-5 flex flex-wrap gap-1.5">
-                {c.tags.map((t) => (
-                  <span
-                    key={t}
-                    className="rounded-full border border-border px-2.5 py-0.5 text-[11px] font-medium text-muted-foreground"
-                  >
-                    {t}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </Link>
-        ))}
-      </div>
+            </Link>
+          ))}
+        </div>
+      </section>
     </PageContainer>
   );
 }

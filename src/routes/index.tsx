@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { Download } from "lucide-react";
 import { PageContainer } from "@/components/PageContainer";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Badge } from "@/components/ui/badge";
@@ -37,132 +37,56 @@ function PerfilPage() {
   return (
     <PageContainer>
       {/* HERO */}
-      <section className="pt-0 md:pt-2">
-        <h1 className="animate-fade-up text-pretty text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl">
-          Transformando<br />
-          problemas complexos em<br />
-          <span className="italic text-muted-foreground">
-            experiências digitais<br />
-            intuitivas
+      <section className="-mt-6">
+        <h1 className="animate-fade-up text-pretty text-5xl font-semibold leading-[1.05] tracking-tight md:text-6xl">
+          Transformando problemas
+          <br />
+          complexos em <span className="italic text-muted-foreground">
+            experiências
+            <br />
+            digitais intuitivas
+            <br />
           </span>
         </h1>
 
-        <p className="animate-fade-up delay-200 mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl">
-          Sou Décio D'Almeida, designer focado em produto. Comecei no
-          gráfico, onde erro não tem Ctrl+Z depois da impressão. Esse jeito
-          de trabalhar — com cuidado, atenção e senso de responsabilidade —
-          foi o que me trouxe para o UX e ainda guia tudo que eu faço.
+        <p className="animate-fade-up delay-200 mt-8 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl">
+          Sou Décio D'Almeida, designer focado em produto. Comecei no gráfico há
+          30 anos, onde erro não tem Ctrl+Z depois da impressão. Esse jeito de
+          trabalhar — com cuidado, atenção e senso de responsabilidade — foi o
+          que me trouxe para o UX e ainda guia tudo que eu faço.
+        </p>
+
+        <p className="animate-fade-up delay-200 mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl">
+          Atuo há 5 anos como Product Designer, conduzindo pesquisas,
+          validando soluções e colaborando com times de desenvolvimento, QA e
+          stakeholders. Tenho experiência em discovery, design system,
+          prototipação e entrega de interfaces com alto padrão visual e técnico
+          — do problema ao pixel.
         </p>
 
         <div className="animate-fade-up delay-300 mt-10 flex flex-wrap items-center gap-3">
           <Link
             to="/cases"
-            className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:gap-3 hover:bg-primary/90"
+            className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm min-w-[200px] justify-center font-medium text-primary-foreground transition-all hover:gap-3 hover:bg-primary/90"
           >
-            Ver cases
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            Cases
           </Link>
+
           <Link
             to="/contato"
-            className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+            className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm min-w-[200px] justify-center font-medium text-foreground transition-colors hover:bg-accent"
           >
-            Vamos conversar
-            <ArrowUpRight className="h-4 w-4" />
+            Contato
           </Link>
-        </div>
-      </section>
 
-      <div className="mt-10 h-px w-full bg-border md:mt-14" />
-
-      {/* RESUMO PROFISSIONAL */}
-      <section className="mt-10 grid gap-12 md:mt-14 md:grid-cols-12">
-        <div className="md:col-span-5">
-          <SectionHeader
-            eyebrow="Resumo profissional"
-            title="Design centrado no usuário, com foco em produto e impacto."
-          />
-        </div>
-        <div className="md:col-span-7">
-          <div className="space-y-6 text-pretty text-base leading-relaxed text-foreground/90 md:text-lg">
-            <p>
-              Atuo há mais de 6 anos como{" "}
-              <strong className="font-semibold text-foreground">
-                Product Designer
-              </strong>
-              , liderando projetos de produtos digitais em times ágeis. Tenho
-              experiência sólida em{" "}
-              <strong className="font-semibold text-foreground">
-                pesquisa com usuários, discovery, design system, prototipação
-              </strong>{" "}
-              e entrega de interfaces com alto padrão visual e técnico.
-            </p>
-            <p>
-              Trabalho de forma colaborativa com{" "}
-              <strong className="font-semibold text-foreground">
-                Product Managers, engenheiros e stakeholders
-              </strong>
-              , conduzindo jornadas do usuário, fluxos de navegação e análise
-              de usabilidade. Aplico Design Thinking e práticas Agile/Scrum
-              para entregar soluções que combinam{" "}
-              <strong className="font-semibold text-foreground">
-                experiência do usuário
-              </strong>{" "}
-              com objetivos de negócio.
-            </p>
-            <p>
-              Apaixonado por construir produtos com clareza visual,
-              consistência e maturidade — do problema ao pixel.
-            </p>
-          </div>
-
-          <div className="mt-10 flex flex-wrap gap-2">
-            {keywords.map((k) => (
-              <Badge
-                key={k}
-                variant="secondary"
-                className="rounded-full border border-border bg-secondary px-3 py-1 text-[12px] font-medium text-secondary-foreground hover:bg-accent"
-              >
-                {k}
-              </Badge>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <div className="mt-10 h-px w-full bg-border md:mt-14" />
-
-      {/* CTA SECTION */}
-      <section className="mt-10 md:mt-14">
-        <div className="rounded-3xl border border-border bg-card p-10 md:p-16">
-          <div className="grid gap-10 md:grid-cols-2 md:items-end">
-            <div>
-              <h3 className="text-balance text-3xl font-semibold tracking-tight md:text-5xl">
-                Quer entender como penso processo, decisão e produto?
-              </h3>
-            </div>
-            <div className="flex flex-col gap-6">
-              <p className="text-pretty text-muted-foreground md:text-lg">
-                Cada case mostra contexto, problema, processo, solução e
-                resultado — com a clareza que recrutadores e gestores de
-                produto esperam.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <Link
-                  to="/experiencias"
-                  className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-                >
-                  Ver experiências
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-                <Link
-                  to="/skills"
-                  className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium hover:bg-accent"
-                >
-                  Skills & Ferramentas
-                </Link>
-              </div>
-            </div>
-          </div>
+          <a
+            href="/cv-decio-dalmeida.pdf"
+            download
+            className="inline-flex items-center gap-2 px-2 py-3 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+          >
+            <Download className="h-4 w-4" />
+            Baixar Curriculum
+          </a>
         </div>
       </section>
     </PageContainer>

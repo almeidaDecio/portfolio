@@ -30,7 +30,7 @@ export function SectionHeader({
       {description && (
         <p
           className={
-            "max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg " +
+            "max-w-4xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg " +
             (align === "center" ? "mx-auto" : "")
           }
         >

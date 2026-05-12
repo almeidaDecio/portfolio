@@ -60,7 +60,7 @@
 
   /* Surfaces — warm off-white, soft neutrals */
   --background: oklch(0.99 0.002 95);
-  --foreground: oklch(0.20 0.005 270);
+  --foreground: oklch(0.30 0.005 270);
 
   --surface: oklch(0.97 0.003 95);
   --surface-foreground: oklch(0.25 0.005 270);
@@ -72,7 +72,7 @@
   --popover-foreground: oklch(0.20 0.005 270);
 
   /* Primary — soft black */
-  --primary: oklch(0.22 0.008 270);
+  --primary: oklch(0.30 0.008 270);
   --primary-foreground: oklch(0.98 0.002 95);
 
   --secondary: oklch(0.96 0.004 270);

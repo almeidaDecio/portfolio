@@ -13,7 +13,6 @@ import {
   SidebarContent,
   SidebarGroup,
   SidebarGroupContent,
-  SidebarGroupLabel,
   SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
@@ -34,21 +33,24 @@ export function AppSidebar() {
   const { state } = useSidebar();
   const collapsed = state === "collapsed";
   const currentPath = useRouterState({ select: (s) => s.location.pathname });
+
   const isActive = (path: string) =>
     path === "/" ? currentPath === "/" : currentPath.startsWith(path);
 
   return (
     <Sidebar collapsible="icon" className="border-r border-sidebar-border">
-      <SidebarHeader className="px-4 py-6">
+      <SidebarHeader className="px-4 py-3">
         <Link to="/" className="flex items-center gap-3">
           <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground font-semibold">
             D
           </div>
+
           {!collapsed && (
             <div className="flex flex-col leading-tight">
               <span className="text-sm font-semibold tracking-tight">
                 Décio D'Almeida
               </span>
+
               <span className="text-xs text-muted-foreground">
                 Product Designer
               </span>
@@ -57,17 +59,13 @@ export function AppSidebar() {
         </Link>
       </SidebarHeader>
 
-      <SidebarContent className="px-2">
+      <SidebarContent className="px-2 pt-10">
         <SidebarGroup>
-          {!collapsed && (
-            <SidebarGroupLabel className="px-2 text-[10px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
-              Portfolio
-            </SidebarGroupLabel>
-          )}
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => {
                 const active = isActive(item.url);
+
                 return (
                   <SidebarMenuItem key={item.title}>
                     <SidebarMenuButton
@@ -78,6 +76,7 @@ export function AppSidebar() {
                     >
                       <Link to={item.url} className="flex items-center gap-3">
                         <item.icon className="h-[18px] w-[18px] shrink-0" />
+
                         {!collapsed && (
                           <span className="text-sm font-medium">
                             {item.title}
@@ -92,7 +91,6 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-
     </Sidebar>
   );
 }

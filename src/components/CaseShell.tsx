@@ -49,7 +49,7 @@ export function CaseShell({
           <h1 className="mt-4 text-balance text-4xl font-semibold leading-[1.1] tracking-tight md:text-6xl">
             {project}
           </h1>
-          <p className="mt-6 max-w-2xl text-pretty text-lg text-muted-foreground md:text-xl">
+          <p className="mt-6 max-w-4xl text-pretty text-lg text-muted-foreground md:text-xl">
             {headline}
           </p>
         </div>
