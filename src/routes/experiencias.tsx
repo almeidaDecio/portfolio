@@ -36,7 +36,7 @@ const experiences: Experience[] = [
     period: "Jul / 2021 — Fev / 2026",
     location: "Remoto",
     summary:
-      "Atuação em projetos de produtos digitais B2B, conduzindo discovery, pesquisa com usuários, prototipação e entrega de interfaces. Colaboração próxima com Product Managers, engenheiros e stakeholders para evolução contínua de produto.",
+      "Atuação em projetos de produtos digitais B2B SaaS, conduzindo discovery, pesquisa com usuários, prototipação e entrega de interfaces. Colaboração próxima com Product Managers, desenvolvedores e QA para evolução contínua de produto.",
     skills: [
       "UX Research",
       "Discovery",
@@ -75,7 +75,7 @@ const experiences: Experience[] = [
     period: "Mar / 2002 — Fev / 2009",
     location: "Presencial",
     summary:
-      "Planejamento e controle de produção, coordenando cronogramas e equipes para cumprimento de prazos. Preparação de arquivos para impressão offset e digital. Liderança colaborativa de equipes em ambientes de alta demanda.",
+      "Planejamento e controle de produção, coordenação de cronogramas e equipes para cumprimento de prazos. Preparação de arquivos para impressão offset e digital. Liderança colaborativa de equipes em ambientes de alta demanda.",
     skills: [
       "Gestão de Produção",
       "Impressão Offset",
@@ -195,9 +195,9 @@ function ExperienciasPage() {
                     <div className="mt-8">
                       <Link
                         to={exp.caseUrl}
-                        className="group/btn inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-2.5 text-sm font-medium transition-colors hover:bg-primary hover:text-primary-foreground"
+                        className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-muted"
                       >
-                        Ver Case Completo
+                        Ver Case
                       </Link>
                     </div>
                   )}

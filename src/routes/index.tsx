@@ -50,16 +50,16 @@ function PerfilPage() {
         </h1>
 
         <p className="animate-fade-up delay-200 mt-8 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl">
-          Sou Décio D'Almeida, designer focado em produto. Comecei no gráfico há
+          Sou Décio D'Almeida, designer focado em produto. comecei no ramo gráfico há
           30 anos, onde erro não tem Ctrl+Z depois da impressão. Esse jeito de
           trabalhar — com cuidado, atenção e senso de responsabilidade — foi o
-          que me trouxe para o UX e ainda guia tudo que eu faço.
+          que me trouxe para o UX e ainda guia tudo que faço.
         </p>
 
         <p className="animate-fade-up delay-200 mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl">
           Atuo há 5 anos como Product Designer, conduzindo pesquisas,
-          validando soluções e colaborando com times de desenvolvimento, QA e
-          stakeholders. Tenho experiência em discovery, design system,
+          validando soluções e colaborando com stakeholders, times de desenvolvimento e QAs.
+          Tenho experiência em discovery, design system,
           prototipação e entrega de interfaces com alto padrão visual e técnico
           — do problema ao pixel.
         </p>
@@ -74,13 +74,13 @@ function PerfilPage() {
 
           <Link
             to="/contato"
-            className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm min-w-[200px] justify-center font-medium text-foreground transition-colors hover:bg-accent"
+            className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm min-w-[200px] justify-center font-medium text-foreground transition-colors hover:bg-muted"
           >
             Contato
           </Link>
 
           <a
-            href="/cv-decio-dalmeida.pdf"
+            href="/CV_Decio_UX.pdf"
             download
             className="inline-flex items-center gap-2 px-2 py-3 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >

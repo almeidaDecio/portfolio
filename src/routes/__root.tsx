@@ -4,6 +4,7 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  useRouterState,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
@@ -125,6 +126,23 @@ function RootShell({ children }: { children: React.ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+
+  const breadcrumb: Record<string, string> = {
+    "/": "Perfil",
+    "/experiencias": "Experiências",
+    "/cases": "Cases",
+    "/formacao": "Formação",
+    "/skills": "Skills",
+    "/contato": "Contato",
+  };
+
+  const caseName: Record<string, string> = {
+    "/case_softfocus_novo": "Softfocus",
+    "/case_gamegather": "Gamegather",
+  };
+
+  const isCase = pathname in caseName;
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -135,9 +153,29 @@ function RootComponent() {
             <header className="sticky top-0 z-30 flex h-14 items-center gap-3 border-b border-border bg-background/80 px-4 backdrop-blur-md md:px-6">
               <SidebarTrigger className="-ml-1" />
               <div className="h-5 w-px bg-border" />
-              <span className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
+              <Link to="/" className="text-xs font-medium tracking-[0.18em] text-muted-foreground hover:text-foreground transition-colors">
                 Portfolio · 2026
-              </span>
+              </Link>
+              {pathname !== "/" && (
+                <>
+                  <span className="text-xs text-muted-foreground/50">/</span>
+                  {isCase ? (
+                    <>
+                      <Link to="/cases" className="text-xs font-medium tracking-[0.18em] text-muted-foreground hover:text-foreground transition-colors">
+                        Cases
+                      </Link>
+                      <span className="text-xs text-muted-foreground/50">/</span>
+                      <span className="text-xs font-medium tracking-[0.18em] text-foreground">
+                        {caseName[pathname]}
+                      </span>
+                    </>
+                  ) : (
+                    <span className="text-xs font-medium tracking-[0.18em] text-foreground">
+                      {breadcrumb[pathname]}
+                    </span>
+                  )}
+                </>
+              )}
             </header>
             <main className="flex-1">
               <Outlet />

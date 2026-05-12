@@ -30,7 +30,7 @@ const cases = [
   {
     slug: "/case_gamegather" as const,
     company: "Gamegather",
-    subtitle: "Portal Gamegather",
+    subtitle: "Freelancer — Portal Gamegather",
     title: "Conectando jogadores pelo que realmente importa: comunidade e respeito",
     summary:
       "Plataforma social que une gamers com base em interesses e reputação comunitária — criando conexões mais saudáveis e experiências de jogo sem toxicidade.",
