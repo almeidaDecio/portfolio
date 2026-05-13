@@ -87,16 +87,16 @@ function CaseSoftfocusNovoPage() {
         </p>
         <ul className="mt-4 space-y-2 text-lg text-muted-foreground">
           {[
-            "Estruturação e evolução do Design System para garantir consistência, escalabilidade e eficiência na experiência do produto",
-            "Condução de entrevistas com clientes para identificar oportunidades, validar hipóteses e direcionar melhorias estratégicas",
-            "Alinhamento com Product Managers para definição de regras de negócio e priorização de soluções",
-            "Mapeamento, desenho e refinamento de fluxos de navegação focados em usabilidade e eficiência operacional",
-            "Prototipação de novas funcionalidades e evolução contínua da experiência dos produtos existentes",
-            "Tradução de requisitos em especificações técnicas claras para desenvolvimento em plataformas como Jira e YouTrack",
-            "Handoff estruturado para desenvolvimento, assegurando consistência entre conceito, interface e implementação",
-            "Validação pós-desenvolvimento para garantir aderência ao layout, componentes e regras de negócio definidas",
-            "Acompanhamento contínuo da evolução do produto com foco em melhoria incremental e otimização da experiência",
-            "Atualização e manutenção de documentações e manuais para apoiar clientes internos e externos com clareza e autonomia",
+            "Estruturação e evolução de Design Systems para garantir consistência visual, escalabilidade e eficiência na construção dos produtos",
+            "Condução de entrevistas e validações com clientes para identificar oportunidades, mapear dores e orientar decisões de produto",
+            "Colaboração com Product Managers na definição de regras de negócio, priorização e alinhamento estratégico das soluções",
+            "Criação e refinamento de fluxos de navegação com foco em usabilidade, clareza e eficiência operacional",
+            "Prototipação de novas funcionalidades e evolução contínua da experiência dos produtos digitais",
+            "Elaboração de especificações funcionais e documentação técnica para desenvolvimento em ferramentas como Jira e YouTrack",
+            "Handoff estruturado para desenvolvimento, garantindo alinhamento entre design, viabilidade técnica e implementação",
+            "Validação e acompanhamento das entregas desenvolvidas para assegurar consistência visual, aderência ao Design System e conformidade com regras de negócio",
+            "Atuação contínua na melhoria da experiência do produto com foco em evolução incremental e qualidade da entrega",
+            "Produção e atualização de documentações e manuais para apoiar clientes internos e externos",
           ].map((item) => (
             <li key={item} className="flex items-start gap-2">
               <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/40" />
