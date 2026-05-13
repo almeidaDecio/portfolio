@@ -75,7 +75,7 @@ const experiences: Experience[] = [
     period: "Abr / 2011 — Set / 2020",
     location: "Presencial",
     summary:
-      "Criação e finalização de documentos de segurança de alta complexidade (cheques e boletos), com atenção extrema a padrões visuais e normas técnicas. Preparação e otimização de arquivos para impressão em máquinas rotativas e digitais, garantindo fidelidade entre arte-final e produto impresso. Integração ativa com equipes de TI, PCP e produção, desenvolvendo habilidade de comunicação clara em ambientes multidisciplinares. Otimização de processos de produção gráfica, reduzindo erros e aumentando a eficiência operacional.",
+      "Criação e finalização de documentos de segurança de alta complexidade, como cheques e boletos, com rigor técnico, precisão visual e conformidade com padrões gráficos e operacionais. Preparação e otimização de arquivos para impressão rotativa e digital, garantindo consistência entre arte-final e produção em larga escala. Atuação integrada com equipes de TI, PCP e produção em ambientes multidisciplinares, fortalecendo processos colaborativos e comunicação entre áreas. Participação contínua na otimização dos fluxos de produção gráfica, contribuindo para redução de falhas, ganho de eficiência operacional e melhoria da qualidade das entregas.",
     skills: [
       "Documentos de Segurança",
       "Pré-impressão",
