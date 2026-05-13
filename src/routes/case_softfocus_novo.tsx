@@ -87,16 +87,16 @@ function CaseSoftfocusNovoPage() {
         </p>
         <ul className="mt-4 space-y-2 text-lg text-muted-foreground">
           {[
-            "Padronização visual e de componentes (Design System)",
-            "Entrevistas com os clientes para mapear melhorias ou testar novas funcionalidades",
-            "Alinhamento e definição das regras de negócio junto ao PM",
-            "Desenho e refinamento de fluxos de navegação",
-            "Prototipação de novas funcionalidades e evolução das funcionalidades existentes",
-            "Descrição técnica das tarefas para os desenvolvedores em aplicativos como Jira e Youtrack",
-            "Handoff para desenvolvimento",
-            "Validação das telas após o desenvolvimento (layout, padrão de componentes e regras de negócio)",
-            "Acompanhamento de melhorias contínuas do produto",
-            "Atualização constante de manuais para os clientes internos e externos",
+            "PEstruturação e evolução do Design System para garantir consistência, escalabilidade e eficiência na experiência do produto",
+            "Condução de entrevistas com clientes para identificar oportunidades, validar hipóteses e direcionar melhorias estratégicas",
+            "Alinhamento com Product Managers para definição de regras de negócio e priorização de soluções",
+            "Mapeamento, desenho e refinamento de fluxos de navegação focados em usabilidade e eficiência operacional",
+            "Prototipação de novas funcionalidades e evolução contínua da experiência dos produtos existentes",
+            "Tradução de requisitos em especificações técnicas claras para desenvolvimento em plataformas como Jira e YouTrack",
+            "Handoff estruturado para desenvolvimento, assegurando consistência entre conceito, interface e implementação",
+            "Validação pós-desenvolvimento para garantir aderência ao layout, componentes e regras de negócio definidas",
+            "Acompanhamento contínuo da evolução do produto com foco em melhoria incremental e otimização da experiência",
+            "Atualização e manutenção de documentações e manuais para apoiar clientes internos e externos com clareza e autonomia",
           ].map((item) => (
             <li key={item} className="flex items-start gap-2">
               <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/40" />
