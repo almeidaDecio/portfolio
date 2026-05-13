@@ -1,11 +1,11 @@
-import { W as jsxRuntimeExports } from "./server-Do46AUw2.js";
-import { P as PageContainer } from "./PageContainer-BKScM67x.js";
-import { S as SectionHeader } from "./SectionHeader-DYoumIUr.js";
-import { B as Badge } from "./badge-BLqIZ6zG.js";
+import { U as jsxRuntimeExports } from "./server-CYDZ-g7l.js";
+import { P as PageContainer } from "./PageContainer-CpDVB6jB.js";
+import { S as SectionHeader } from "./SectionHeader-DP2-1M2d.js";
+import { B as Badge } from "./badge-CnirNAIX.js";
 import "node:async_hooks";
 import "node:stream/web";
 import "node:stream";
-import "./router-DvG2vRnI.js";
+import "./router-D-dRQkAs.js";
 const groups = [{
   title: "Hard Skills",
   eyebrow: "Competências técnicas",

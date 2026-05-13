@@ -1,4 +1,4 @@
-import { r as reactExports, f as functionalUpdate$1, a as arraysEqual, c as createLRUCache, i as isPromise, b as isRedirect, d as isNotFound, e as invariant, g as createControlledPromise, h as rootRouteId, j as isServer$1, k as compileDecodeCharMap, t as trimPath, l as rewriteBasepath, m as composeRewrites, p as processRouteTree, n as processRouteMasks, o as resolvePath, q as cleanPath, s as trimPathRight, u as parseHref, v as executeRewriteInput, w as isDangerousProtocol, x as redirect, y as findSingleMatch, z as deepEqual$1, D as DEFAULT_PROTOCOL_ALLOWLIST, A as buildRouteBranch, B as interpolatePath, C as nullReplaceEqualDeep, E as replaceEqualDeep$1, F as last, G as decodePath, H as findFlatMatch, I as findRouteMatch, J as hasKeys, K as executeRewriteOutput, L as encodePathLikeUrl, M as trimPathLeft, N as joinPaths, O as useRouter, P as dummyMatchContext, Q as matchContext, R as getDefaultExportFromCjs, S as requireReactDom, T as exactPathTest, U as removeTrailingSlash, V as React, W as jsxRuntimeExports, X as isModuleNotFoundError, Y as useHydrated, Z as escapeHtml, _ as isInlinableStylesheet, $ as getAssetCrossOrigin, a0 as resolveManifestAssetLink, a1 as React$1, a2 as Outlet } from "./server-Do46AUw2.js";
+import { r as reactExports, f as functionalUpdate$1, a as arraysEqual, c as createLRUCache, i as isPromise, b as isRedirect, d as isNotFound, e as invariant, g as createControlledPromise, h as rootRouteId, j as isServer$1, k as compileDecodeCharMap, t as trimPath, l as rewriteBasepath, m as composeRewrites, p as processRouteTree, n as processRouteMasks, o as resolvePath, q as cleanPath, s as trimPathRight, u as parseHref, v as executeRewriteInput, w as isDangerousProtocol, x as redirect, y as findSingleMatch, z as deepEqual$1, D as DEFAULT_PROTOCOL_ALLOWLIST, A as interpolatePath, B as nullReplaceEqualDeep, C as replaceEqualDeep$1, E as last, F as decodePath, G as findFlatMatch, H as findRouteMatch, I as executeRewriteOutput, J as encodePathLikeUrl, K as trimPathLeft, L as joinPaths, M as useRouter, N as dummyMatchContext, O as matchContext, P as getDefaultExportFromCjs, Q as requireReactDom, R as exactPathTest, S as removeTrailingSlash, T as React, U as jsxRuntimeExports, V as isModuleNotFoundError, W as useHydrated, X as escapeHtml, Y as isInlinableStylesheet, Z as getAssetCrossOrigin, _ as resolveManifestAssetLink, $ as React$1, a0 as Outlet } from "./server-CYDZ-g7l.js";
 var reactUse = reactExports.use;
 function useForwardedRef(ref) {
   const innerRef = reactExports.useRef(null);
@@ -30,8 +30,8 @@ function decode(str) {
   }
   return result;
 }
-const defaultParseSearch = parseSearchWith(JSON.parse);
-const defaultStringifySearch = stringifySearchWith(JSON.stringify, JSON.parse);
+var defaultParseSearch = parseSearchWith(JSON.parse);
+var defaultStringifySearch = stringifySearchWith(JSON.stringify, JSON.parse);
 function parseSearchWith(parser) {
   return (searchStr) => {
     if (searchStr[0] === "?") searchStr = searchStr.substring(1);
@@ -202,16 +202,16 @@ function reconcileMatchPool(nextMatches, pool, idStore, createMutableStore, batc
     if (!arraysEqual(idStore.get(), nextIds)) idStore.set(nextIds);
   });
 }
-const triggerOnReady = (inner) => {
+var triggerOnReady = (inner) => {
   if (!inner.rendered) {
     inner.rendered = true;
     return inner.onReady?.();
   }
 };
-const resolvePreload = (inner, matchId) => {
+var resolvePreload = (inner, matchId) => {
   return !!(inner.preload && !inner.router.stores.matchStores.has(matchId));
 };
-const buildMatchContext = (inner, index2, includeCurrentMatch = true) => {
+var buildMatchContext = (inner, index2, includeCurrentMatch = true) => {
   const context = { ...inner.router.options.context ?? {} };
   const end = includeCurrentMatch ? index2 : index2 - 1;
   for (let i = 0; i <= end; i++) {
@@ -223,7 +223,7 @@ const buildMatchContext = (inner, index2, includeCurrentMatch = true) => {
   }
   return context;
 };
-const getNotFoundBoundaryIndex = (inner, err) => {
+var getNotFoundBoundaryIndex = (inner, err) => {
   if (!inner.matches.length) return;
   const requestedRouteId = err.routeId;
   const matchedRootIndex = inner.matches.findIndex((m) => m.routeId === inner.router.routeTree.id);
@@ -236,7 +236,7 @@ const getNotFoundBoundaryIndex = (inner, err) => {
   }
   return requestedRouteId ? startIndex : rootIndex;
 };
-const handleRedirectAndNotFound = (inner, match, err) => {
+var handleRedirectAndNotFound = (inner, match, err) => {
   if (!isRedirect(err) && !isNotFound(err)) return;
   if (isRedirect(err) && err.redirectHandled && !err.options.reloadDocument) throw err;
   if (match) {
@@ -263,13 +263,13 @@ const handleRedirectAndNotFound = (inner, match, err) => {
   }
   throw err;
 };
-const shouldSkipLoader = (inner, matchId) => {
+var shouldSkipLoader = (inner, matchId) => {
   const match = inner.router.getMatch(matchId);
   if (!match) return true;
   if (match.ssr === false) return true;
   return false;
 };
-const syncMatchContext = (inner, matchId, index2) => {
+var syncMatchContext = (inner, matchId, index2) => {
   const nextContext = buildMatchContext(inner, index2);
   inner.updateMatch(matchId, (prev) => {
     return {
@@ -278,7 +278,7 @@ const syncMatchContext = (inner, matchId, index2) => {
     };
   });
 };
-const handleSerialError = (inner, index2, err, routerCode) => {
+var handleSerialError = (inner, index2, err, routerCode) => {
   const { id: matchId, routeId } = inner.matches[index2];
   const route = inner.router.looseRoutesById[routeId];
   if (err instanceof Promise) throw err;
@@ -306,7 +306,7 @@ const handleSerialError = (inner, index2, err, routerCode) => {
   });
   if (!inner.preload && !isRedirect(err) && !isNotFound(err)) inner.serialError ??= err;
 };
-const isBeforeLoadSsr = (inner, matchId, index2, route) => {
+var isBeforeLoadSsr = (inner, matchId, index2, route) => {
   const existingMatch = inner.router.getMatch(matchId);
   const parentMatchId = inner.matches[index2 - 1]?.id;
   const parentMatch = parentMatchId ? inner.router.getMatch(parentMatchId) : void 0;
@@ -354,7 +354,7 @@ const isBeforeLoadSsr = (inner, matchId, index2, route) => {
   });
   existingMatch.ssr = parentOverride(tempSsr ?? defaultSsr);
 };
-const setupPendingTimeout = (inner, matchId, route, match) => {
+var setupPendingTimeout = (inner, matchId, route, match) => {
   if (match._nonReactive.pendingTimeout !== void 0) return;
   const pendingMs = route.options.pendingMs ?? inner.router.options.defaultPendingMs;
   if (!!(inner.onReady && false)) {
@@ -364,7 +364,7 @@ const setupPendingTimeout = (inner, matchId, route, match) => {
     match._nonReactive.pendingTimeout = pendingTimeout;
   }
 };
-const preBeforeLoadSetup = (inner, matchId, route) => {
+var preBeforeLoadSetup = (inner, matchId, route) => {
   const existingMatch = inner.router.getMatch(matchId);
   if (!existingMatch._nonReactive.beforeLoadPromise && !existingMatch._nonReactive.loaderPromise) return;
   setupPendingTimeout(inner, matchId, route, existingMatch);
@@ -374,7 +374,7 @@ const preBeforeLoadSetup = (inner, matchId, route) => {
   };
   return existingMatch._nonReactive.beforeLoadPromise ? existingMatch._nonReactive.beforeLoadPromise.then(then) : then();
 };
-const executeBeforeLoad = (inner, matchId, index2, route) => {
+var executeBeforeLoad = (inner, matchId, index2, route) => {
   const match = inner.router.getMatch(matchId);
   let prevLoadPromise = match._nonReactive.loadPromise;
   match._nonReactive.loadPromise = createControlledPromise(() => {
@@ -472,7 +472,7 @@ const executeBeforeLoad = (inner, matchId, index2, route) => {
   }
   updateContext(beforeLoadContext);
 };
-const handleBeforeLoad = (inner, index2) => {
+var handleBeforeLoad = (inner, index2) => {
   const { id: matchId, routeId } = inner.matches[index2];
   const route = inner.router.looseRoutesById[routeId];
   const serverSsr = () => {
@@ -490,7 +490,7 @@ const handleBeforeLoad = (inner, index2) => {
   };
   return serverSsr();
 };
-const executeHead = (inner, matchId, route) => {
+var executeHead = (inner, matchId, route) => {
   const match = inner.router.getMatch(matchId);
   if (!match) return;
   if (!route.options.head && !route.options.scripts && !route.options.headers) return;
@@ -516,7 +516,7 @@ const executeHead = (inner, matchId, route) => {
     };
   });
 };
-const getLoaderContext = (inner, matchPromises, matchId, index2, route) => {
+var getLoaderContext = (inner, matchPromises, matchId, index2, route) => {
   const parentMatchPromise = matchPromises[index2 - 1];
   const { params, loaderDeps, abortController, cause } = inner.router.getMatch(matchId);
   const context = buildMatchContext(inner, index2);
@@ -538,7 +538,7 @@ const getLoaderContext = (inner, matchPromises, matchId, index2, route) => {
     ...inner.router.options.additionalContext
   };
 };
-const runLoader = async (inner, matchPromises, matchId, index2, route) => {
+var runLoader = async (inner, matchPromises, matchId, index2, route) => {
   try {
     const match = inner.router.getMatch(matchId);
     try {
@@ -612,7 +612,7 @@ const runLoader = async (inner, matchPromises, matchId, index2, route) => {
     handleRedirectAndNotFound(inner, match, err);
   }
 };
-const loadRouteMatch = async (inner, matchPromises, index2) => {
+var loadRouteMatch = async (inner, matchPromises, index2) => {
   async function handleLoader(preload, prevMatch, previousRouteMatchId, match2, route2) {
     const age = Date.now() - prevMatch.updatedAt;
     const staleAge = preload ? route2.options.preloadStaleTime ?? inner.router.options.defaultPreloadStaleTime ?? 3e4 : route2.options.staleTime ?? inner.router.options.defaultStaleTime ?? 0;
@@ -831,7 +831,7 @@ function routeNeedsPreload(route) {
   for (const componentType of componentTypes) if (route.options[componentType]?.preload) return true;
   return false;
 }
-const componentTypes = [
+var componentTypes = [
   "component",
   "errorComponent",
   "pendingComponent",
@@ -860,7 +860,6 @@ var RouterCore = class {
     this.subscribers = /* @__PURE__ */ new Set();
     this.isScrollRestoring = false;
     this.isScrollRestorationSetup = false;
-    this.routeBranchCache = /* @__PURE__ */ new WeakMap();
     this.startTransition = (fn) => fn();
     this.update = (newOptions) => {
       const prevOptions = this.options;
@@ -992,7 +991,7 @@ var RouterCore = class {
     this.resolvePathWithBase = (from, path) => {
       return resolvePath({
         base: from,
-        to: path.includes("//") ? cleanPath(path) : path,
+        to: cleanPath(path),
         trailingSlash: this.options.trailingSlash,
         cache: this.resolvePathCache
       });
@@ -1035,22 +1034,15 @@ var RouterCore = class {
         const lightweightResult = this.matchRoutesLightweight(currentLocation);
         if (dest.from && false) ;
         const defaultedFromPath = dest.unsafeRelative === "path" ? currentLocation.pathname : dest.from ?? lightweightResult.fullPath;
-        const destTo = dest.to ? `${dest.to}` : void 0;
+        const fromPath = this.resolvePathWithBase(defaultedFromPath, ".");
         const fromSearch = lightweightResult.search;
         const fromParams = Object.assign(/* @__PURE__ */ Object.create(null), lightweightResult.params);
-        const sourcePath = destTo?.charCodeAt(0) === 47 ? "/" : this.resolvePathWithBase(defaultedFromPath, ".");
-        const nextTo = destTo ? this.resolvePathWithBase(sourcePath, destTo) : sourcePath;
+        const nextTo = dest.to ? this.resolvePathWithBase(fromPath, `${dest.to}`) : this.resolvePathWithBase(fromPath, ".");
         const nextParams = dest.params === false || dest.params === null ? /* @__PURE__ */ Object.create(null) : (dest.params ?? true) === true ? fromParams : Object.assign(fromParams, functionalUpdate$1(dest.params, fromParams));
-        const destRoute = this.routesByPath[trimPathRight(nextTo)];
-        let destRoutes;
-        if (destRoute) destRoutes = this.getRouteBranch(destRoute);
-        else if (nextTo.includes("$")) destRoutes = [];
-        else {
-          const destMatchResult = this.getMatchedRoutes(nextTo);
-          destRoutes = destMatchResult.matchedRoutes;
-          if (this.options.notFoundRoute && (!destMatchResult.foundRoute || destMatchResult.foundRoute.path !== "/" && destMatchResult.routeParams["**"])) destRoutes = [...destRoutes, this.options.notFoundRoute];
-        }
-        if (destRoutes.length && hasKeys(nextParams)) for (const route of destRoutes) {
+        const destMatchResult = this.getMatchedRoutes(nextTo);
+        let destRoutes = destMatchResult.matchedRoutes;
+        if ((!destMatchResult.foundRoute || destMatchResult.foundRoute.path !== "/" && destMatchResult.routeParams["**"]) && this.options.notFoundRoute) destRoutes = [...destRoutes, this.options.notFoundRoute];
+        if (Object.keys(nextParams).length > 0) for (const route of destRoutes) {
           const fn = route.options.params?.stringify ?? route.options.stringifyParams;
           if (fn) try {
             Object.assign(nextParams, fn(nextParams));
@@ -1592,14 +1584,6 @@ var RouterCore = class {
       this.routesById[notFoundRoute.id] = notFoundRoute;
     }
   }
-  getRouteBranch(route) {
-    let branch = this.routeBranchCache.get(route);
-    if (!branch) {
-      branch = buildRouteBranch(route);
-      this.routeBranchCache.set(route, branch);
-    }
-    return branch;
-  }
   get looseRoutesById() {
     return this.routesById;
   }
@@ -1608,7 +1592,7 @@ var RouterCore = class {
   }
   matchRoutesInternal(next, opts) {
     const matchedRoutesResult = this.getMatchedRoutes(next.pathname);
-    const { foundRoute, routeParams } = matchedRoutesResult;
+    const { foundRoute, routeParams, parsedParams } = matchedRoutesResult;
     let { matchedRoutes } = matchedRoutesResult;
     let isGlobalNotFound = false;
     if (foundRoute ? foundRoute.path !== "/" && routeParams["**"] : trimPathRight(next.pathname)) if (this.options.notFoundRoute) matchedRoutes = [...matchedRoutes, this.options.notFoundRoute];
@@ -1660,7 +1644,7 @@ var RouterCore = class {
       const strictParams = existingMatch?._strictParams ?? usedParams;
       let paramsError = void 0;
       if (!existingMatch) try {
-        extractStrictParams(route, strictParams);
+        extractStrictParams(route, usedParams, parsedParams, strictParams);
       } catch (err) {
         if (isNotFound(err) || isRedirect(err)) paramsError = err;
         else paramsError = new PathParamError(err.message, { cause: err });
@@ -1766,7 +1750,7 @@ var RouterCore = class {
   * operations like AbortController, ControlledPromise, loaderDeps, and full match objects.
   */
   matchRoutesLightweight(location) {
-    const { matchedRoutes, routeParams } = this.getMatchedRoutes(location.pathname);
+    const { matchedRoutes, routeParams, parsedParams } = this.getMatchedRoutes(location.pathname);
     const lastRoute = last(matchedRoutes);
     const accumulatedSearch = { ...location.search };
     for (const route of matchedRoutes) try {
@@ -1781,7 +1765,7 @@ var RouterCore = class {
     else {
       const strictParams = Object.assign(/* @__PURE__ */ Object.create(null), routeParams);
       for (const route of matchedRoutes) try {
-        extractStrictParams(route, strictParams);
+        extractStrictParams(route, routeParams, parsedParams ?? {}, strictParams);
       } catch {
       }
       params = strictParams;
@@ -1826,15 +1810,18 @@ function getMatchedRoutes({ pathname, routesById, processedTree }) {
   const routeParams = /* @__PURE__ */ Object.create(null);
   const trimmedPath = trimPathRight(pathname);
   let foundRoute = void 0;
+  let parsedParams = void 0;
   const match = findRouteMatch(trimmedPath, processedTree, true);
   if (match) {
     foundRoute = match.route;
     Object.assign(routeParams, match.rawParams);
+    parsedParams = Object.assign(/* @__PURE__ */ Object.create(null), match.parsedParams);
   }
   return {
     matchedRoutes: match?.branch || [routesById["__root__"]],
     routeParams,
-    foundRoute
+    foundRoute,
+    parsedParams
   };
 }
 function applySearchMiddleware({ search, dest, destRoutes, _includeValidateSearch }) {
@@ -1906,11 +1893,12 @@ function findGlobalNotFoundRouteId(notFoundMode, routes) {
   }
   return rootRouteId;
 }
-function extractStrictParams(route, accumulatedParams) {
+function extractStrictParams(route, referenceParams, parsedParams, accumulatedParams) {
   const parseParams = route.options.params?.parse ?? route.options.parseParams;
-  if (parseParams) {
+  if (parseParams) if (route.options.skipRouteOnParseError) {
+    for (const key in referenceParams) if (key in parsedParams) accumulatedParams[key] = parsedParams[key];
+  } else {
     const result = parseParams(accumulatedParams);
-    if (result === false) throw new Error("Route params.parse returned false for a matched route");
     Object.assign(accumulatedParams, result);
   }
 }
@@ -2128,8 +2116,8 @@ function useLinkProps(options, forwardedRef) {
       }
       if (activeOptions?.includeSearch ?? true) {
         if (currentLocation2.search !== next2.search) {
-          const currentSearchEmpty = !currentLocation2.search || typeof currentLocation2.search === "object" && !hasKeys(currentLocation2.search);
-          const nextSearchEmpty = !next2.search || typeof next2.search === "object" && !hasKeys(next2.search);
+          const currentSearchEmpty = !currentLocation2.search || typeof currentLocation2.search === "object" && Object.keys(currentLocation2.search).length === 0;
+          const nextSearchEmpty = !next2.search || typeof next2.search === "object" && Object.keys(next2.search).length === 0;
           if (!(currentSearchEmpty && nextSearchEmpty)) {
             if (!deepEqual$1(currentLocation2.search, next2.search, {
               partial: !exact,
@@ -3371,107 +3359,7 @@ var Removable = class {
     }
   }
 };
-function infiniteQueryBehavior(pages) {
-  return {
-    onFetch: (context, query) => {
-      const options = context.options;
-      const direction = context.fetchOptions?.meta?.fetchMore?.direction;
-      const oldPages = context.state.data?.pages || [];
-      const oldPageParams = context.state.data?.pageParams || [];
-      let result = { pages: [], pageParams: [] };
-      let currentPage = 0;
-      const fetchFn = async () => {
-        let cancelled = false;
-        const addSignalProperty = (object) => {
-          addConsumeAwareSignal(
-            object,
-            () => context.signal,
-            () => cancelled = true
-          );
-        };
-        const queryFn = ensureQueryFn(context.options, context.fetchOptions);
-        const fetchPage = async (data, param, previous) => {
-          if (cancelled) {
-            return Promise.reject(context.signal.reason);
-          }
-          if (param == null && data.pages.length) {
-            return Promise.resolve(data);
-          }
-          const createQueryFnContext = () => {
-            const queryFnContext2 = {
-              client: context.client,
-              queryKey: context.queryKey,
-              pageParam: param,
-              direction: previous ? "backward" : "forward",
-              meta: context.options.meta
-            };
-            addSignalProperty(queryFnContext2);
-            return queryFnContext2;
-          };
-          const queryFnContext = createQueryFnContext();
-          const page = await queryFn(queryFnContext);
-          const { maxPages } = context.options;
-          const addTo = previous ? addToStart : addToEnd;
-          return {
-            pages: addTo(data.pages, page, maxPages),
-            pageParams: addTo(data.pageParams, param, maxPages)
-          };
-        };
-        if (direction && oldPages.length) {
-          const previous = direction === "backward";
-          const pageParamFn = previous ? getPreviousPageParam : getNextPageParam;
-          const oldData = {
-            pages: oldPages,
-            pageParams: oldPageParams
-          };
-          const param = pageParamFn(options, oldData);
-          result = await fetchPage(oldData, param, previous);
-        } else {
-          const remainingPages = pages ?? oldPages.length;
-          do {
-            const param = currentPage === 0 ? oldPageParams[0] ?? options.initialPageParam : getNextPageParam(options, result);
-            if (currentPage > 0 && param == null) {
-              break;
-            }
-            result = await fetchPage(result, param);
-            currentPage++;
-          } while (currentPage < remainingPages);
-        }
-        return result;
-      };
-      if (context.options.persister) {
-        context.fetchFn = () => {
-          return context.options.persister?.(
-            fetchFn,
-            {
-              client: context.client,
-              queryKey: context.queryKey,
-              meta: context.options.meta,
-              signal: context.signal
-            },
-            query
-          );
-        };
-      } else {
-        context.fetchFn = fetchFn;
-      }
-    }
-  };
-}
-function getNextPageParam(options, { pages, pageParams }) {
-  const lastIndex = pages.length - 1;
-  return pages.length > 0 ? options.getNextPageParam(
-    pages[lastIndex],
-    pages,
-    pageParams[lastIndex],
-    pageParams
-  ) : void 0;
-}
-function getPreviousPageParam(options, { pages, pageParams }) {
-  return pages.length > 0 ? options.getPreviousPageParam?.(pages[0], pages, pageParams[0], pageParams) : void 0;
-}
 var Query = class extends Removable {
-  #queryType;
   #initialState;
   #revertState;
   #cache;
@@ -3496,17 +3384,11 @@ var Query = class extends Removable {
   get meta() {
     return this.options.meta;
   }
-  get queryType() {
-    return this.#queryType;
-  }
   get promise() {
     return this.#retryer?.promise;
   }
   setOptions(options) {
     this.options = { ...this.#defaultOptions, ...options };
-    if (options?._type) {
-      this.#queryType = options._type;
-    }
     this.updateGcTime(this.options.gcTime);
     if (this.state && this.state.data === void 0) {
       const defaultState = getDefaultState$1(this.options);
@@ -3533,8 +3415,8 @@ var Query = class extends Removable {
     });
     return data;
   }
-  setState(state) {
-    this.#dispatch({ type: "setState", state });
+  setState(state, setStateOptions) {
+    this.#dispatch({ type: "setState", state, setStateOptions });
   }
   cancel(options) {
     const promise = this.#retryer?.promise;
@@ -3704,10 +3586,7 @@ var Query = class extends Removable {
       return context2;
     };
     const context = createFetchContext();
-    const behavior = this.#queryType === "infinite" ? infiniteQueryBehavior(
-      this.options.pages
-    ) : this.options.behavior;
-    behavior?.onFetch(context, this);
+    this.options.behavior?.onFetch(context, this);
     this.#revertState = this.state;
     if (this.state.fetchStatus === "idle" || this.state.fetchMeta !== context.fetchOptions?.meta) {
       this.#dispatch({ type: "fetch", meta: context.fetchOptions?.meta });
@@ -3893,6 +3772,105 @@ function getDefaultState$1(options) {
     status: hasData ? "success" : "pending",
     fetchStatus: "idle"
   };
+}
+function infiniteQueryBehavior(pages) {
+  return {
+    onFetch: (context, query) => {
+      const options = context.options;
+      const direction = context.fetchOptions?.meta?.fetchMore?.direction;
+      const oldPages = context.state.data?.pages || [];
+      const oldPageParams = context.state.data?.pageParams || [];
+      let result = { pages: [], pageParams: [] };
+      let currentPage = 0;
+      const fetchFn = async () => {
+        let cancelled = false;
+        const addSignalProperty = (object) => {
+          addConsumeAwareSignal(
+            object,
+            () => context.signal,
+            () => cancelled = true
+          );
+        };
+        const queryFn = ensureQueryFn(context.options, context.fetchOptions);
+        const fetchPage = async (data, param, previous) => {
+          if (cancelled) {
+            return Promise.reject();
+          }
+          if (param == null && data.pages.length) {
+            return Promise.resolve(data);
+          }
+          const createQueryFnContext = () => {
+            const queryFnContext2 = {
+              client: context.client,
+              queryKey: context.queryKey,
+              pageParam: param,
+              direction: previous ? "backward" : "forward",
+              meta: context.options.meta
+            };
+            addSignalProperty(queryFnContext2);
+            return queryFnContext2;
+          };
+          const queryFnContext = createQueryFnContext();
+          const page = await queryFn(queryFnContext);
+          const { maxPages } = context.options;
+          const addTo = previous ? addToStart : addToEnd;
+          return {
+            pages: addTo(data.pages, page, maxPages),
+            pageParams: addTo(data.pageParams, param, maxPages)
+          };
+        };
+        if (direction && oldPages.length) {
+          const previous = direction === "backward";
+          const pageParamFn = previous ? getPreviousPageParam : getNextPageParam;
+          const oldData = {
+            pages: oldPages,
+            pageParams: oldPageParams
+          };
+          const param = pageParamFn(options, oldData);
+          result = await fetchPage(oldData, param, previous);
+        } else {
+          const remainingPages = pages ?? oldPages.length;
+          do {
+            const param = currentPage === 0 ? oldPageParams[0] ?? options.initialPageParam : getNextPageParam(options, result);
+            if (currentPage > 0 && param == null) {
+              break;
+            }
+            result = await fetchPage(result, param);
+            currentPage++;
+          } while (currentPage < remainingPages);
+        }
+        return result;
+      };
+      if (context.options.persister) {
+        context.fetchFn = () => {
+          return context.options.persister?.(
+            fetchFn,
+            {
+              client: context.client,
+              queryKey: context.queryKey,
+              meta: context.options.meta,
+              signal: context.signal
+            },
+            query
+          );
+        };
+      } else {
+        context.fetchFn = fetchFn;
+      }
+    }
+  };
+}
+function getNextPageParam(options, { pages, pageParams }) {
+  const lastIndex = pages.length - 1;
+  return pages.length > 0 ? options.getNextPageParam(
+    pages[lastIndex],
+    pages,
+    pageParams[lastIndex],
+    pageParams
+  ) : void 0;
+}
+function getPreviousPageParam(options, { pages, pageParams }) {
+  return pages.length > 0 ? options.getPreviousPageParam?.(pages[0], pages, pageParams[0], pageParams) : void 0;
 }
 var Mutation = class extends Removable {
   #client;
@@ -4548,14 +4526,14 @@ var QueryClient = class {
     return this.fetchQuery(options).then(noop$1).catch(noop$1);
   }
   fetchInfiniteQuery(options) {
-    options._type = "infinite";
+    options.behavior = infiniteQueryBehavior(options.pages);
     return this.fetchQuery(options);
   }
   prefetchInfiniteQuery(options) {
     return this.fetchInfiniteQuery(options).then(noop$1).catch(noop$1);
   }
   ensureInfiniteQueryData(options) {
-    options._type = "infinite";
+    options.behavior = infiniteQueryBehavior(options.pages);
     return this.ensureQueryData(options);
   }
   resumePausedMutations() {
@@ -13891,7 +13869,7 @@ function RootComponent() {
     ] })
   ] }) }) });
 }
-const $$splitComponentImporter$7 = () => import("./skills-IARW8owp.js");
+const $$splitComponentImporter$7 = () => import("./skills-BtZVTVd6.js");
 const Route$7 = createFileRoute("/skills")({
   head: () => ({
     meta: [{
@@ -13903,7 +13881,7 @@ const Route$7 = createFileRoute("/skills")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$7, "component")
 });
-const $$splitComponentImporter$6 = () => import("./formacao-qfoQyZDt.js");
+const $$splitComponentImporter$6 = () => import("./formacao-G4nil_mz.js");
 const Route$6 = createFileRoute("/formacao")({
   head: () => ({
     meta: [{
@@ -13915,7 +13893,7 @@ const Route$6 = createFileRoute("/formacao")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$6, "component")
 });
-const $$splitComponentImporter$5 = () => import("./experiencias-BOQyB4on.js");
+const $$splitComponentImporter$5 = () => import("./experiencias-BQwabPTB.js");
 const Route$5 = createFileRoute("/experiencias")({
   head: () => ({
     meta: [{
@@ -13927,7 +13905,7 @@ const Route$5 = createFileRoute("/experiencias")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$5, "component")
 });
-const $$splitComponentImporter$4 = () => import("./contato-DdeBs7kG.js");
+const $$splitComponentImporter$4 = () => import("./contato-CzP6zG7z.js");
 const Route$4 = createFileRoute("/contato")({
   head: () => ({
     meta: [{
@@ -13939,7 +13917,7 @@ const Route$4 = createFileRoute("/contato")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$4, "component")
 });
-const $$splitComponentImporter$3 = () => import("./cases-DA_YRMwe.js");
+const $$splitComponentImporter$3 = () => import("./cases-DCPMjsoj.js");
 const Route$3 = createFileRoute("/cases")({
   head: () => ({
     meta: [{
@@ -13951,7 +13929,7 @@ const Route$3 = createFileRoute("/cases")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$3, "component")
 });
-const $$splitComponentImporter$2 = () => import("./case_softfocus_novo-CTf1Z0SE.js");
+const $$splitComponentImporter$2 = () => import("./case_softfocus_novo-BDLOXZUz.js");
 const Route$2 = createFileRoute("/case_softfocus_novo")({
   head: () => ({
     meta: [{
@@ -13963,7 +13941,7 @@ const Route$2 = createFileRoute("/case_softfocus_novo")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-const $$splitComponentImporter$1 = () => import("./case_gamegather-BCgaSz9a.js");
+const $$splitComponentImporter$1 = () => import("./case_gamegather-B7tm1ZCf.js");
 const Route$1 = createFileRoute("/case_gamegather")({
   head: () => ({
     meta: [{
@@ -13975,7 +13953,7 @@ const Route$1 = createFileRoute("/case_gamegather")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-const $$splitComponentImporter = () => import("./index-DOkhBhxQ.js");
+const $$splitComponentImporter = () => import("./index-Cbthte4a.js");
 const Route2 = createFileRoute("/")({
   head: () => ({
     meta: [{

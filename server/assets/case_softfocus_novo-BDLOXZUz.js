@@ -1,6 +1,6 @@
-import { W as jsxRuntimeExports } from "./server-Do46AUw2.js";
-import { P as PageContainer } from "./PageContainer-BKScM67x.js";
-import { S as SectionHeader } from "./SectionHeader-DYoumIUr.js";
+import { U as jsxRuntimeExports } from "./server-CYDZ-g7l.js";
+import { P as PageContainer } from "./PageContainer-CpDVB6jB.js";
+import { S as SectionHeader } from "./SectionHeader-DP2-1M2d.js";
 import "node:async_hooks";
 import "node:stream/web";
 import "node:stream";
@@ -32,7 +32,7 @@ function CaseSoftfocusNovoPage() {
     /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "mt-14", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-semibold tracking-tight", children: "Minha atuação" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground", children: "Atuei por 3 anos como UX Designer na Softfocus, contribuindo para a evolução do Zoom Rural. Ao longo desse período, participei nas seguintes atividades:" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "mt-4 space-y-2 text-lg text-muted-foreground", children: ["Padronização visual e de componentes (Design System)", "Entrevistas com os clientes para mapear melhorias ou testar novas funcionalidades", "Alinhamento e definição das regras de negócio junto ao PM", "Desenho e refinamento de fluxos de navegação", "Prototipação de novas funcionalidades e evolução das funcionalidades existentes", "Descrição técnica das tarefas para os desenvolvedores em aplicativos como Jira e Youtrack", "Handoff para desenvolvimento", "Validação das telas após o desenvolvimento (layout, padrão de componentes e regras de negócio)", "Acompanhamento de melhorias contínuas do produto", "Atualização constante de manuais para os clientes internos e externos"].map((item) => /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex items-start gap-2", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "mt-4 space-y-2 text-lg text-muted-foreground", children: ["Estruturação e evolução do Design System para garantir consistência, escalabilidade e eficiência na experiência do produto", "Condução de entrevistas com clientes para identificar oportunidades, validar hipóteses e direcionar melhorias estratégicas", "Alinhamento com Product Managers para definição de regras de negócio e priorização de soluções", "Mapeamento, desenho e refinamento de fluxos de navegação focados em usabilidade e eficiência operacional", "Prototipação de novas funcionalidades e evolução contínua da experiência dos produtos existentes", "Tradução de requisitos em especificações técnicas claras para desenvolvimento em plataformas como Jira e YouTrack", "Handoff estruturado para desenvolvimento, assegurando consistência entre conceito, interface e implementação", "Validação pós-desenvolvimento para garantir aderência ao layout, componentes e regras de negócio definidas", "Acompanhamento contínuo da evolução do produto com foco em melhoria incremental e otimização da experiência", "Atualização e manutenção de documentações e manuais para apoiar clientes internos e externos com clareza e autonomia"].map((item) => /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex items-start gap-2", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/40" }),
         item
       ] }, item)) })

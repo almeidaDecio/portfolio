@@ -1,6 +1,6 @@
-import { W as jsxRuntimeExports } from "./server-Do46AUw2.js";
-import { P as PageContainer } from "./PageContainer-BKScM67x.js";
-import { S as SectionHeader } from "./SectionHeader-DYoumIUr.js";
+import { U as jsxRuntimeExports } from "./server-CYDZ-g7l.js";
+import { P as PageContainer } from "./PageContainer-CpDVB6jB.js";
+import { S as SectionHeader } from "./SectionHeader-DP2-1M2d.js";
 import "node:async_hooks";
 import "node:stream/web";
 import "node:stream";
@@ -25,7 +25,7 @@ function CaseSoftfocusNovoPage() {
       ] }, item)) })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "mt-14", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-semibold tracking-tight", children: "Processos e fluxos de trabalho" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-semibold tracking-tight", children: "Processos e fluxo de trabalho" }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-4", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-lg font-semibold", children: "Estrutura desenvolvida para a criação do site" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "mt-3 space-y-2 text-base text-muted-foreground", children: ["Visual do site e componentes criados do zero", "Validação de regras de negócio para a construção do site", "Melhorias solicitadas pelos jogadores em pesquisas / entrevistas"].map((item) => /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex items-start gap-2", children: [
