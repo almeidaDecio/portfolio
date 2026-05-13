@@ -1,8 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Download } from "lucide-react";
 import { PageContainer } from "@/components/PageContainer";
-import { SectionHeader } from "@/components/SectionHeader";
-import { Badge } from "@/components/ui/badge";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -11,7 +9,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Product Designer com experiência em produtos digitais, design system, user research, prototipação e design centrado no usuário.",
+          "Product Designer com experiência em produtos digitais, design systems, discovery, prototipação e construção de experiências orientadas a negócio.",
       },
     ],
   }),
@@ -19,17 +17,18 @@ export const Route = createFileRoute("/")({
 });
 
 const keywords = [
+  "Product Design",
   "UX Design",
   "UI Design",
   "Design System",
+  "Discovery",
   "User Research",
   "Prototyping",
-  "Usabilidade",
-  "Product Design",
-  "Discovery",
   "Interface Design",
-  "Design Thinking",
+  "Usabilidade",
   "Jornada do Usuário",
+  "Design Thinking",
+  "SaaS",
   "Scrum / Agile",
 ];
 
@@ -39,44 +38,52 @@ function PerfilPage() {
       {/* HERO */}
       <section className="-mt-6">
         <h1 className="animate-fade-up text-pretty text-5xl font-semibold leading-[1.05] tracking-tight md:text-6xl">
-          Transformando problemas
+          Transformando operações
           <br />
-          complexos em <span className="italic text-muted-foreground">
+          complexas em{" "}
+          <span className="italic text-muted-foreground">
             experiências
             <br />
-            digitais intuitivas
-            <br />
+            digitais mais claras
+            <br />e eficientes
           </span>
         </h1>
 
         <p className="animate-fade-up delay-200 mt-8 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl">
-          Sou Décio D'Almeida, designer focado em produto. comecei no ramo gráfico há
-          30 anos, onde erro não tem Ctrl+Z depois da impressão. Esse jeito de
-          trabalhar — com cuidado, atenção e senso de responsabilidade — foi o
-          que me trouxe para o UX e ainda guia tudo que faço.
+          Sou Décio D'Almeida, Product Designer com foco na criação de
+          produtos digitais escaláveis, unindo experiência do usuário,
+          estratégia de produto e consistência visual para transformar fluxos
+          complexos em soluções mais intuitivas e eficientes.
         </p>
 
         <p className="animate-fade-up delay-200 mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl">
-          Atuo há 5 anos como Product Designer, conduzindo pesquisas,
-          validando soluções e colaborando com stakeholders, times de desenvolvimento e QAs.
-          Tenho experiência em discovery, design system,
-          prototipação e entrega de interfaces com alto padrão visual e técnico
-          — do problema ao pixel.
+          Minha trajetória começou no design gráfico há mais de 30 anos —
+          um ambiente onde precisão, atenção aos detalhes e responsabilidade
+          sempre foram essenciais. Hoje, aplico essa mesma mentalidade no
+          desenvolvimento de plataformas digitais, atuando em discovery,
+          pesquisas, prototipação, design systems e colaboração contínua com
+          stakeholders, times de tecnologia e produto.
+        </p>
+
+        <p className="animate-fade-up delay-200 mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl">
+          Tenho experiência na evolução de sistemas e produtos orientados a
+          negócio, equilibrando usabilidade, clareza operacional e qualidade
+          visual em todas as etapas do processo — da estratégia à entrega.
         </p>
 
         <div className="animate-fade-up delay-300 mt-10 flex flex-wrap items-center gap-3">
           <Link
             to="/cases"
-            className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm min-w-[200px] justify-center font-medium text-primary-foreground transition-all hover:gap-3 hover:bg-primary/90"
+            className="group inline-flex min-w-[200px] items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:gap-3 hover:bg-primary/90"
           >
-            Cases
+            Ver cases
           </Link>
 
           <Link
             to="/contato"
-            className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm min-w-[200px] justify-center font-medium text-foreground transition-colors hover:bg-muted"
+            className="inline-flex min-w-[200px] items-center justify-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-muted"
           >
-            Contato
+            Entrar em contato
           </Link>
 
           <a
@@ -85,7 +92,7 @@ function PerfilPage() {
             className="inline-flex items-center gap-2 px-2 py-3 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
             <Download className="h-4 w-4" />
-            Baixar Curriculum
+            Baixar currículo
           </a>
         </div>
       </section>
