@@ -11,7 +11,7 @@ export const Route = createFileRoute("/experiencias")({
       {
         name: "description",
         content:
-          "Experiência profissional como Product Designer em produtos digitais: Softfocus, Gamegather e mais.",
+          "Experiência profissional em Product Design, produtos digitais B2B SaaS, design systems, discovery e evolução de plataformas digitais.",
       },
     ],
   }),
@@ -36,15 +36,15 @@ const experiences: Experience[] = [
     period: "Jul / 2021 — Fev / 2026",
     location: "Remoto",
     summary:
-      "Atuação em projetos de produtos digitais B2B SaaS, conduzindo discovery, pesquisa com usuários, prototipação e entrega de interfaces. Colaboração próxima com Product Managers, desenvolvedores e QA para evolução contínua de produto.",
+      "Atuação no desenvolvimento e evolução de produtos digitais B2B SaaS voltados a operações complexas. Condução de discovery, pesquisas com usuários, prototipação e definição de fluxos para apoiar tomadas de decisão e otimizar jornadas operacionais. Colaboração contínua com Product Managers, engenharia e QA na construção de soluções escaláveis, alinhadas às necessidades do negócio e da experiência do usuário.",
     skills: [
+      "Product Design",
       "UX Research",
       "Discovery",
       "Design System",
       "Prototyping",
       "Interface Design",
       "Stakeholders",
-      "Product Design",
       "B2B SaaS",
     ],
     tags: [],
@@ -52,11 +52,11 @@ const experiences: Experience[] = [
   },
   {
     company: "Gamegather",
-    role: "Product Designer - Freelancer",
+    role: "Product Designer — Freelancer",
     period: "Ago / 2025 — Jan / 2026",
     location: "Remoto",
     summary:
-      "Criação de experiências digitais para uma plataforma com forte componente de comunidade. Design de interfaces, organização de fluxos, análise de usabilidade e evolução de produtos digitais com foco no engajamento.",
+      "Criação e evolução da experiência digital de uma plataforma orientada à comunidade e interação entre usuários. Desenvolvimento de fluxos, interfaces e melhorias de usabilidade com foco em engajamento, clareza de navegação e fortalecimento da experiência mobile. Participação ativa na estruturação da experiência do produto e refinamento contínuo das funcionalidades.",
     skills: [
       "UI Design",
       "User Flow",
@@ -75,7 +75,7 @@ const experiences: Experience[] = [
     period: "Mar / 2002 — Fev / 2009",
     location: "Presencial",
     summary:
-      "Planejamento e controle de produção, coordenação de cronogramas e equipes para cumprimento de prazos. Preparação de arquivos para impressão offset e digital. Liderança colaborativa de equipes em ambientes de alta demanda.",
+      "Gestão de produção gráfica com foco em planejamento operacional, controle de prazos e coordenação de equipes em ambientes de alta demanda. Responsável pela preparação de arquivos para impressão offset e digital, garantindo qualidade, precisão técnica e eficiência nos processos produtivos. Experiência que consolidou uma forte base em organização, atenção aos detalhes e resolução de problemas complexos.",
     skills: [
       "Gestão de Produção",
       "Impressão Offset",
@@ -94,7 +94,7 @@ const experiences: Experience[] = [
     period: "Set / 2000 — Fev / 2002",
     location: "Presencial",
     summary:
-      "Diagramação e ilustração de matérias para publicação semanal de circulação nacional, com alto nível de exigência editorial e prazos rígidos. Desenvolvimento de layouts para conteúdos financeiros e econômicos com clareza visual e identidade da marca. Colaboração direta com editores e redatores em ambiente de produção jornalística acelerada.",
+      "Desenvolvimento de layouts editoriais e ilustrações para publicação semanal de circulação nacional, atuando em um ambiente de produção acelerada e alto nível de exigência editorial. Criação de soluções visuais para conteúdos financeiros e econômicos, equilibrando clareza da informação, identidade visual e consistência gráfica. Colaboração próxima com equipes de redação e edição.",
     skills: [
       "Diagramação Editorial",
       "Ilustração",
@@ -113,7 +113,7 @@ const experiences: Experience[] = [
     period: "Fev / 2000 — Set / 2000",
     location: "Presencial",
     summary:
-      "Diagramação de matérias e editoriais para publicação semanal de entretenimento e lifestyle de grande circulação nacional. Responsável pela digitalização e tratamento de imagens, garantindo qualidade visual e fidelidade na impressão. Atuação em ritmo acelerado de produção, com atenção a prazos editoriais e padrão visual da revista.",
+      "Atuação na diagramação editorial e tratamento de imagens para publicação semanal de grande circulação nacional. Responsável pela organização visual de conteúdos e preparação de materiais para impressão, garantindo qualidade gráfica, consistência visual e cumprimento de prazos em um ambiente dinâmico de produção editorial.",
     skills: [
       "Diagramação Editorial",
       "Escaneamento de Imagens",
@@ -197,7 +197,7 @@ function ExperienciasPage() {
                         to={exp.caseUrl}
                         className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-muted"
                       >
-                        Ver Case
+                        Ver case
                       </Link>
                     </div>
                   )}
