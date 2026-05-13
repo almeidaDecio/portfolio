@@ -215,7 +215,7 @@ function CaseGamegatherPage() {
         <p className="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
           O trabalho contribuiu para estruturar uma experiência mais
           consistente e escalável para a plataforma, organizando fluxos
-          críticos, fortalecendo a navegação mobile e criando uma base
+          críticos, fortalecendo a navegação e criando uma base
           visual reutilizável para evolução contínua do produto.
         </p>
 
