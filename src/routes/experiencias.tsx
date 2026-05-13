@@ -153,7 +153,15 @@ function ExperienciasPage() {
       <section className="-mt-6">
         <SectionHeader title="Experiência profissional" />
 
-        <div className="mt-4 space-y-6 md:mt-8">
+        <p className="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+          Minha trajetória combina experiência em produtos digitais, operações
+          complexas e produção gráfica de alta exigência técnica. Ao longo da
+          carreira, desenvolvi uma atuação orientada à resolução de problemas,
+          organização de fluxos, colaboração multidisciplinar e construção de
+          experiências digitais escaláveis.
+        </p>
+
+        <div className="mt-8 space-y-6">
           {experiences.map((exp, i) => (
             <article
               key={exp.company}
