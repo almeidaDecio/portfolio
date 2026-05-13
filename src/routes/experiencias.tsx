@@ -70,6 +70,25 @@ const experiences: Experience[] = [
     caseUrl: "/case_gamegather",
   },
   {
+    company: "BMK Indústria Gráfica",
+    role: "Designer / TI",
+    period: "Abr / 2011 — Set / 2020",
+    location: "Presencial",
+    summary:
+      "Criação e finalização de documentos de segurança de alta complexidade (cheques e boletos), com atenção extrema a padrões visuais e normas técnicas. Preparação e otimização de arquivos para impressão em máquinas rotativas e digitais, garantindo fidelidade entre arte-final e produto impresso. Integração ativa com equipes de TI, PCP e produção, desenvolvendo habilidade de comunicação clara em ambientes multidisciplinares. Otimização de processos de produção gráfica, reduzindo erros e aumentando a eficiência operacional.",
+    skills: [
+      "Documentos de Segurança",
+      "Pré-impressão",
+      "Impressão Rotativa",
+      "Impressão Digital",
+      "Arte-Final",
+      "TI",
+      "PCP",
+      "Otimização de Processos",
+    ],
+    tags: [],
+  },
+  {
     company: "Paper Express",
     role: "Supervisor de Produção",
     period: "Mar / 2002 — Fev / 2009",
