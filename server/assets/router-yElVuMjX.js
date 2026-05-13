@@ -1,4 +1,4 @@
-import { r as reactExports, f as functionalUpdate$1, a as arraysEqual, c as createLRUCache, i as isPromise, b as isRedirect, d as isNotFound, e as invariant, g as createControlledPromise, h as rootRouteId, j as isServer$1, k as compileDecodeCharMap, t as trimPath, l as rewriteBasepath, m as composeRewrites, p as processRouteTree, n as processRouteMasks, o as resolvePath, q as cleanPath, s as trimPathRight, u as parseHref, v as executeRewriteInput, w as isDangerousProtocol, x as redirect, y as findSingleMatch, z as deepEqual$1, D as DEFAULT_PROTOCOL_ALLOWLIST, A as interpolatePath, B as nullReplaceEqualDeep, C as replaceEqualDeep$1, E as last, F as decodePath, G as findFlatMatch, H as findRouteMatch, I as executeRewriteOutput, J as encodePathLikeUrl, K as trimPathLeft, L as joinPaths, M as useRouter, N as dummyMatchContext, O as matchContext, P as getDefaultExportFromCjs, Q as requireReactDom, R as exactPathTest, S as removeTrailingSlash, T as React, U as jsxRuntimeExports, V as isModuleNotFoundError, W as useHydrated, X as escapeHtml, Y as isInlinableStylesheet, Z as getAssetCrossOrigin, _ as resolveManifestAssetLink, $ as React$1, a0 as Outlet } from "./server-CYDZ-g7l.js";
+import { r as reactExports, f as functionalUpdate$1, a as arraysEqual, c as createLRUCache, i as isPromise, b as isRedirect, d as isNotFound, e as invariant, g as createControlledPromise, h as rootRouteId, j as isServer$1, k as compileDecodeCharMap, t as trimPath, l as rewriteBasepath, m as composeRewrites, p as processRouteTree, n as processRouteMasks, o as resolvePath, q as cleanPath, s as trimPathRight, u as parseHref, v as executeRewriteInput, w as isDangerousProtocol, x as redirect, y as findSingleMatch, z as deepEqual$1, D as DEFAULT_PROTOCOL_ALLOWLIST, A as interpolatePath, B as nullReplaceEqualDeep, C as replaceEqualDeep$1, E as last, F as decodePath, G as findFlatMatch, H as findRouteMatch, I as executeRewriteOutput, J as encodePathLikeUrl, K as trimPathLeft, L as joinPaths, M as useRouter, N as dummyMatchContext, O as matchContext, P as getDefaultExportFromCjs, Q as requireReactDom, R as exactPathTest, S as removeTrailingSlash, T as React, U as jsxRuntimeExports, V as isModuleNotFoundError, W as useHydrated, X as escapeHtml, Y as isInlinableStylesheet, Z as getAssetCrossOrigin, _ as resolveManifestAssetLink, $ as React$1, a0 as Outlet } from "./server-LQPqZsNI.js";
 var reactUse = reactExports.use;
 function useForwardedRef(ref) {
   const innerRef = reactExports.useRef(null);
@@ -13869,7 +13869,7 @@ function RootComponent() {
     ] })
   ] }) }) });
 }
-const $$splitComponentImporter$7 = () => import("./skills-BtZVTVd6.js");
+const $$splitComponentImporter$7 = () => import("./skills-pLyn1oOB.js");
 const Route$7 = createFileRoute("/skills")({
   head: () => ({
     meta: [{
@@ -13881,7 +13881,7 @@ const Route$7 = createFileRoute("/skills")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$7, "component")
 });
-const $$splitComponentImporter$6 = () => import("./formacao-G4nil_mz.js");
+const $$splitComponentImporter$6 = () => import("./formacao-Bfe5xXhM.js");
 const Route$6 = createFileRoute("/formacao")({
   head: () => ({
     meta: [{
@@ -13893,19 +13893,19 @@ const Route$6 = createFileRoute("/formacao")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$6, "component")
 });
-const $$splitComponentImporter$5 = () => import("./experiencias-BQwabPTB.js");
+const $$splitComponentImporter$5 = () => import("./experiencias-ClFhyggm.js");
 const Route$5 = createFileRoute("/experiencias")({
   head: () => ({
     meta: [{
       title: "Experiências — Décio D'Almeida | Product Designer"
     }, {
       name: "description",
-      content: "Experiência profissional como Product Designer em produtos digitais: Softfocus, Gamegather e mais."
+      content: "Experiência profissional em Product Design, produtos digitais B2B SaaS, design systems, discovery e evolução de plataformas digitais."
     }]
   }),
   component: lazyRouteComponent($$splitComponentImporter$5, "component")
 });
-const $$splitComponentImporter$4 = () => import("./contato-CzP6zG7z.js");
+const $$splitComponentImporter$4 = () => import("./contato-D8BhBTdu.js");
 const Route$4 = createFileRoute("/contato")({
   head: () => ({
     meta: [{
@@ -13917,7 +13917,7 @@ const Route$4 = createFileRoute("/contato")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$4, "component")
 });
-const $$splitComponentImporter$3 = () => import("./cases-DCPMjsoj.js");
+const $$splitComponentImporter$3 = () => import("./cases-CJM51ZbD.js");
 const Route$3 = createFileRoute("/cases")({
   head: () => ({
     meta: [{
@@ -13929,19 +13929,19 @@ const Route$3 = createFileRoute("/cases")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$3, "component")
 });
-const $$splitComponentImporter$2 = () => import("./case_softfocus_novo-BDLOXZUz.js");
+const $$splitComponentImporter$2 = () => import("./case_softfocus_novo-CLbmtdA7.js");
 const Route$2 = createFileRoute("/case_softfocus_novo")({
   head: () => ({
     meta: [{
       title: "Décio D'Almeida — Softfocus Zoom Rural"
     }, {
       name: "description",
-      content: "Case de produto: Softfocus Zoom Rural — plataforma de monitoramento e fiscalização de operações de crédito rural para instituições financeiras."
+      content: "Case de produto: plataforma SaaS para monitoramento e fiscalização de operações de crédito rural para instituições financeiras."
     }]
   }),
   component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-const $$splitComponentImporter$1 = () => import("./case_gamegather-B7tm1ZCf.js");
+const $$splitComponentImporter$1 = () => import("./case_gamegather-CjoTfHO0.js");
 const Route$1 = createFileRoute("/case_gamegather")({
   head: () => ({
     meta: [{
@@ -13953,14 +13953,14 @@ const Route$1 = createFileRoute("/case_gamegather")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-const $$splitComponentImporter = () => import("./index-Cbthte4a.js");
+const $$splitComponentImporter = () => import("./index-DCZLtaCy.js");
 const Route2 = createFileRoute("/")({
   head: () => ({
     meta: [{
       title: "Décio D'Almeida — Product Designer | Perfil"
     }, {
       name: "description",
-      content: "Product Designer com experiência em produtos digitais, design system, user research, prototipação e design centrado no usuário."
+      content: "Product Designer com experiência em produtos digitais, design systems, discovery, prototipação e construção de experiências orientadas a negócio."
     }]
   }),
   component: lazyRouteComponent($$splitComponentImporter, "component")

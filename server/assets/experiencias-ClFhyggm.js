@@ -1,8 +1,8 @@
-import { U as jsxRuntimeExports } from "./server-CYDZ-g7l.js";
-import { c as createLucideIcon, L as Link } from "./router-D-dRQkAs.js";
-import { P as PageContainer } from "./PageContainer-CpDVB6jB.js";
-import { S as SectionHeader } from "./SectionHeader-DP2-1M2d.js";
-import { B as Badge } from "./badge-CnirNAIX.js";
+import { U as jsxRuntimeExports } from "./server-LQPqZsNI.js";
+import { c as createLucideIcon, L as Link } from "./router-yElVuMjX.js";
+import { P as PageContainer } from "./PageContainer-CcHzwQD4.js";
+import { S as SectionHeader } from "./SectionHeader-DANQHETT.js";
+import { B as Badge } from "./badge-D4BS1b7P.js";
 import "node:async_hooks";
 import "node:stream/web";
 import "node:stream";
@@ -29,25 +29,33 @@ const experiences = [{
   role: "Product Designer Pleno",
   period: "Jul / 2021 — Fev / 2026",
   location: "Remoto",
-  summary: "Atuação em projetos de produtos digitais B2B SaaS, conduzindo discovery, pesquisa com usuários, prototipação e entrega de interfaces. Colaboração próxima com Product Managers, desenvolvedores e QA para evolução contínua de produto.",
-  skills: ["UX Research", "Discovery", "Design System", "Prototyping", "Interface Design", "Stakeholders", "Product Design", "B2B SaaS"],
+  summary: "Atuação no desenvolvimento e evolução de produtos digitais B2B SaaS voltados a operações complexas. Condução de discovery, pesquisas com usuários, prototipação e definição de fluxos para apoiar tomadas de decisão e otimizar jornadas operacionais. Colaboração contínua com Product Managers, engenharia e QA na construção de soluções escaláveis, alinhadas às necessidades do negócio e da experiência do usuário.",
+  skills: ["Product Design", "UX Research", "Discovery", "Design System", "Prototyping", "Interface Design", "Stakeholders", "B2B SaaS"],
   tags: [],
   caseUrl: "/case_softfocus_novo"
 }, {
   company: "Gamegather",
-  role: "Product Designer - Freelancer",
+  role: "Product Designer — Freelancer",
   period: "Ago / 2025 — Jan / 2026",
   location: "Remoto",
-  summary: "Criação de experiências digitais para uma plataforma com forte componente de comunidade. Design de interfaces, organização de fluxos, análise de usabilidade e evolução de produtos digitais com foco no engajamento.",
+  summary: "Criação e evolução da experiência digital de uma plataforma orientada à comunidade e interação entre usuários. Desenvolvimento de fluxos, interfaces e melhorias de usabilidade com foco em engajamento, clareza de navegação e fortalecimento da experiência mobile. Participação ativa na estruturação da experiência do produto e refinamento contínuo das funcionalidades.",
   skills: ["UI Design", "User Flow", "Usabilidade", "Wireframing", "Jornada do Usuário", "Comunidade", "Mobile First"],
   tags: [],
   caseUrl: "/case_gamegather"
+}, {
+  company: "BMK Indústria Gráfica",
+  role: "Designer / TI",
+  period: "Abr / 2011 — Set / 2020",
+  location: "Presencial",
+  summary: "Criação e finalização de documentos de segurança de alta complexidade (cheques e boletos), com atenção extrema a padrões visuais e normas técnicas. Preparação e otimização de arquivos para impressão em máquinas rotativas e digitais, garantindo fidelidade entre arte-final e produto impresso. Integração ativa com equipes de TI, PCP e produção, desenvolvendo habilidade de comunicação clara em ambientes multidisciplinares. Otimização de processos de produção gráfica, reduzindo erros e aumentando a eficiência operacional.",
+  skills: ["Documentos de Segurança", "Pré-impressão", "Impressão Rotativa", "Impressão Digital", "Arte-Final", "TI", "PCP", "Otimização de Processos"],
+  tags: []
 }, {
   company: "Paper Express",
   role: "Supervisor de Produção",
   period: "Mar / 2002 — Fev / 2009",
   location: "Presencial",
-  summary: "Planejamento e controle de produção, coordenação de cronogramas e equipes para cumprimento de prazos. Preparação de arquivos para impressão offset e digital. Liderança colaborativa de equipes em ambientes de alta demanda.",
+  summary: "Gestão de produção gráfica com foco em planejamento operacional, controle de prazos e coordenação de equipes em ambientes de alta demanda. Responsável pela preparação de arquivos para impressão offset e digital, garantindo qualidade, precisão técnica e eficiência nos processos produtivos. Experiência que consolidou uma forte base em organização, atenção aos detalhes e resolução de problemas complexos.",
   skills: ["Gestão de Produção", "Impressão Offset", "Pré-impressão", "Gestão de Equipes", "PCP", "Controle de Prazos", "Liderança", "Otimização de Processos"],
   tags: []
 }, {
@@ -55,7 +63,7 @@ const experiences = [{
   role: "Diagramador / Ilustrador",
   period: "Set / 2000 — Fev / 2002",
   location: "Presencial",
-  summary: "Diagramação e ilustração de matérias para publicação semanal de circulação nacional, com alto nível de exigência editorial e prazos rígidos. Desenvolvimento de layouts para conteúdos financeiros e econômicos com clareza visual e identidade da marca. Colaboração direta com editores e redatores em ambiente de produção jornalística acelerada.",
+  summary: "Desenvolvimento de layouts editoriais e ilustrações para publicação semanal de circulação nacional, atuando em um ambiente de produção acelerada e alto nível de exigência editorial. Criação de soluções visuais para conteúdos financeiros e econômicos, equilibrando clareza da informação, identidade visual e consistência gráfica. Colaboração próxima com equipes de redação e edição.",
   skills: ["Diagramação Editorial", "Ilustração", "Design Gráfico", "Identidade Visual", "Produção Jornalística", "Pré-impressão", "Colaboração com Redação", "Cumprimento de Prazos"],
   tags: []
 }, {
@@ -63,7 +71,7 @@ const experiences = [{
   role: "Diagramador",
   period: "Fev / 2000 — Set / 2000",
   location: "Presencial",
-  summary: "Diagramação de matérias e editoriais para publicação semanal de entretenimento e lifestyle de grande circulação nacional. Responsável pela digitalização e tratamento de imagens, garantindo qualidade visual e fidelidade na impressão. Atuação em ritmo acelerado de produção, com atenção a prazos editoriais e padrão visual da revista.",
+  summary: "Atuação na diagramação editorial e tratamento de imagens para publicação semanal de grande circulação nacional. Responsável pela organização visual de conteúdos e preparação de materiais para impressão, garantindo qualidade gráfica, consistência visual e cumprimento de prazos em um ambiente dinâmico de produção editorial.",
   skills: ["Diagramação Editorial", "Escaneamento de Imagens", "Tratamento de Imagens", "Design Gráfico", "Pré-impressão", "Produção Editorial", "Controle de Qualidade", "Cumprimento de Prazos"],
   tags: []
 }];
@@ -95,7 +103,7 @@ function ExperienciasPage() {
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mb-3 text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground", children: "Principais skills" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-wrap gap-2", children: exp.skills.map((s) => /* @__PURE__ */ jsxRuntimeExports.jsx(Badge, { variant: "secondary", className: "rounded-full border border-border bg-secondary px-3 py-1 text-[12px] font-medium", children: s }, s)) })
         ] }),
-        exp.caseUrl && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-8", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: exp.caseUrl, className: "inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-muted", children: "Ver Case" }) })
+        exp.caseUrl && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-8", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: exp.caseUrl, className: "inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-muted", children: "Ver case" }) })
       ] })
     ] }) }, exp.company)) })
   ] }) });
