@@ -87,7 +87,7 @@ function CaseSoftfocusNovoPage() {
         </p>
         <ul className="mt-4 space-y-2 text-lg text-muted-foreground">
           {[
-            "PEstruturação e evolução do Design System para garantir consistência, escalabilidade e eficiência na experiência do produto",
+            "Estruturação e evolução do Design System para garantir consistência, escalabilidade e eficiência na experiência do produto",
             "Condução de entrevistas com clientes para identificar oportunidades, validar hipóteses e direcionar melhorias estratégicas",
             "Alinhamento com Product Managers para definição de regras de negócio e priorização de soluções",
             "Mapeamento, desenho e refinamento de fluxos de navegação focados em usabilidade e eficiência operacional",
