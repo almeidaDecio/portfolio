@@ -136,6 +136,30 @@ function CaseSoftfocusNovoPage() {
             ))}
           </ul>
 
+          <div className="mt-6 flex flex-col gap-3">
+            {[
+              { label: "Research", steps: ["Conversa com PM / Stakeholder"] },
+              { label: "Prototipagem", steps: ["Criação do protótipo", "Validação interna"] },
+              { label: "Desenvolvimento", steps: ["Escrita da tarefa", "Desenvolvimento", "Validação em homologação"] },
+            ].map((lane) => (
+              <div key={lane.label}>
+                <p className="mb-1 text-xs font-medium text-muted-foreground">{lane.label}</p>
+                <div className="flex flex-wrap items-center gap-2 rounded-xl border border-border p-3">
+                  {lane.steps.map((step, i) => (
+                    <span key={step} className="flex items-center gap-2">
+                      <span className="rounded-lg border border-border bg-card px-3 py-1.5 text-sm text-foreground">
+                        {step}
+                      </span>
+                      {i < lane.steps.length - 1 && (
+                        <span className="text-base font-semibold text-foreground/60">→</span>
+                      )}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
           <div className="mt-6">
             <img
               src="/simples.png"
@@ -165,6 +189,30 @@ function CaseSoftfocusNovoPage() {
             ))}
           </ul>
 
+          <div className="mt-6 flex flex-col gap-3">
+            {[
+              { label: "Research", steps: ["Conversa com PM"] },
+              { label: "Prototipagem", steps: ["Criação do protótipo", "Validação com PM", "Validação principais clientes", "Ajustes (se necessário)", "Alinhamento junto ao PM", "Nova validação clientes"] },
+              { label: "Desenvolvimento", steps: ["Escrita da tarefa", "Desenvolvimento", "Validação em homologação"] },
+            ].map((lane) => (
+              <div key={lane.label}>
+                <p className="mb-1 text-xs font-medium text-muted-foreground">{lane.label}</p>
+                <div className="flex flex-wrap items-center gap-2 rounded-xl border border-border p-3">
+                  {lane.steps.map((step, i) => (
+                    <span key={step} className="flex items-center gap-2">
+                      <span className="rounded-lg border border-border bg-card px-3 py-1.5 text-sm text-foreground">
+                        {step}
+                      </span>
+                      {i < lane.steps.length - 1 && (
+                        <span className="text-base font-semibold text-foreground/60">→</span>
+                      )}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
           <div className="mt-6">
             <img
               src="/media.png"
@@ -193,6 +241,30 @@ function CaseSoftfocusNovoPage() {
               </li>
             ))}
           </ul>
+
+          <div className="mt-6 flex flex-col gap-3">
+            {[
+              { label: "Research", steps: ["Conversa com PM", "Entrevista com clientes", "Benchmark", "Desenho do novo fluxo"] },
+              { label: "Prototipagem", steps: ["Criação do protótipo", "Validação com PM", "Validação clientes", "Ajustes", "Alinhamento junto ao PM", "Nova validação clientes"] },
+              { label: "Desenvolvimento", steps: ["Escrita da tarefa", "Desenvolvimento", "Validação em homologação"] },
+            ].map((lane) => (
+              <div key={lane.label}>
+                <p className="mb-1 text-xs font-medium text-muted-foreground">{lane.label}</p>
+                <div className="flex flex-wrap items-center gap-2 rounded-xl border border-border p-3">
+                  {lane.steps.map((step, i) => (
+                    <span key={step} className="flex items-center gap-2">
+                      <span className="rounded-lg border border-border bg-card px-3 py-1.5 text-sm text-foreground">
+                        {step}
+                      </span>
+                      {i < lane.steps.length - 1 && (
+                        <span className="text-base font-semibold text-foreground/60">→</span>
+                      )}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
 
           <div className="mt-6">
             <img
