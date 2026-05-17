@@ -85,8 +85,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Transformando problemas complexos em experiências digitais intuitivas.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: "https://portfolio.decio-almeida-1969.workers.dev/linkedin.png" },
-      { property: "og:url", content: "https://portfolio.decio-almeida-1969.workers.dev/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
