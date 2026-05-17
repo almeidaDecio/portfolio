@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageContainer } from "@/components/PageContainer";
 import { SectionHeader } from "@/components/SectionHeader";
+import { ExpandableImage } from "@/components/ExpandableImage";
 
 export const Route = createFileRoute("/case_gamegather")({
   head: () => ({
@@ -29,7 +30,7 @@ function CaseGamegatherPage() {
 
       {/* IMAGEM ABRE */}
       <div className="mt-4">
-        <img
+        <ExpandableImage
           src="/gamegather_abre.png"
           alt="Game Gather"
           className="w-full rounded-2xl object-cover"
@@ -189,7 +190,7 @@ function CaseGamegatherPage() {
           </div>
 
           <div className="mt-6">
-            <img
+            <ExpandableImage
               src="/gamegather 2.png"
               alt="Game Gather"
               className="w-full rounded-2xl object-cover"
@@ -197,8 +198,24 @@ function CaseGamegatherPage() {
           </div>
 
           <div className="mt-6">
-            <img
+            <ExpandableImage
               src="/gamegather 3.png"
+              alt="Game Gather"
+              className="w-full rounded-2xl object-cover"
+            />
+          </div>
+
+          <div className="mt-6">
+            <ExpandableImage
+              src="/gamegather_6.png"
+              alt="Game Gather"
+              className="w-full rounded-2xl object-cover"
+            />
+          </div>
+
+          <div className="mt-6">
+            <ExpandableImage
+              src="/gamegather_7.png"
               alt="Game Gather"
               className="w-full rounded-2xl object-cover"
             />

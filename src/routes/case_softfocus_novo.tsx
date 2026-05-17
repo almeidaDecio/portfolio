@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageContainer } from "@/components/PageContainer";
 import { SectionHeader } from "@/components/SectionHeader";
+import { ExpandableImage } from "@/components/ExpandableImage";
 
 export const Route = createFileRoute("/case_softfocus_novo")({
   head: () => ({
@@ -26,10 +27,10 @@ function CaseSoftfocusNovoPage() {
 
       {/* IMAGEM ABRE — logo abaixo do título */}
       <div className="mt-4">
-        <img
+        <ExpandableImage
           src="/softfocus_abre.png"
           alt="Softfocus Zoom Rural"
-          className="w-full object-cover rounded-2xl"
+          className="w-full rounded-2xl object-cover"
         />
       </div>
 
@@ -161,7 +162,7 @@ function CaseSoftfocusNovoPage() {
           </div>
 
           <div className="mt-6">
-            <img
+            <ExpandableImage
               src="/simples.png"
               alt="Demandas de baixa complexidade"
               className="w-full rounded-2xl object-cover"
@@ -214,7 +215,7 @@ function CaseSoftfocusNovoPage() {
           </div>
 
           <div className="mt-6">
-            <img
+            <ExpandableImage
               src="/media.png"
               alt="Demandas de média complexidade"
               className="w-full rounded-2xl object-cover"
@@ -267,7 +268,7 @@ function CaseSoftfocusNovoPage() {
           </div>
 
           <div className="mt-6">
-            <img
+            <ExpandableImage
               src="/alta.png"
               alt="Demandas estratégicas e de alta complexidade"
               className="w-full rounded-2xl object-cover"
