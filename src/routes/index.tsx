@@ -87,7 +87,7 @@ function PerfilPage() {
           </Link>
 
           <a
-            href="/CV_Decio_UX.pdf"
+            href="/CV_Decio_PD.pdf"
             download
             className="inline-flex items-center gap-2 px-2 py-3 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
