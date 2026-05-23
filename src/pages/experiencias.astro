@@ -1,0 +1,183 @@
+---
+import Layout from "../components/Layout.astro";
+import PageContainer from "../components/PageContainer.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+import { icon } from "../components/icons";
+
+interface Experience {
+  company: string;
+  role: string;
+  period: string;
+  location: string;
+  summary: string;
+  skills: string[];
+  caseUrl?: string;
+}
+
+const experiences: Experience[] = [
+  {
+    company: "Softfocus",
+    role: "Product Designer Pleno",
+    period: "Jul / 2021 — Fev / 2026",
+    location: "Remoto",
+    summary:
+      "Atuação no desenvolvimento e evolução de produtos digitais B2B SaaS voltados a operações complexas. Condução de discovery, pesquisas com usuários, prototipação e definição de fluxos para apoiar tomadas de decisão e otimizar jornadas operacionais. Colaboração contínua com Product Managers, engenharia e QA na construção de soluções escaláveis, alinhadas às necessidades do negócio e da experiência do usuário.",
+    skills: [
+      "Product Design", "UX Research", "Discovery", "Design System",
+      "Prototyping", "Interface Design", "Stakeholders", "B2B SaaS",
+    ],
+    caseUrl: "/portfolio/case_softfocus_novo",
+  },
+  {
+    company: "Gamegather",
+    role: "Product Designer — Freelancer",
+    period: "Ago / 2025 — Jan / 2026",
+    location: "Remoto",
+    summary:
+      "Criação e evolução da experiência digital de uma plataforma orientada à comunidade e interação entre usuários. Desenvolvimento de fluxos, interfaces e melhorias de usabilidade com foco em engajamento, clareza de navegação e fortalecimento da experiência mobile. Participação ativa na estruturação da experiência do produto e refinamento contínuo das funcionalidades.",
+    skills: [
+      "UI Design", "User Flow", "Usabilidade", "Wireframing",
+      "Jornada do Usuário", "Comunidade", "Mobile First",
+    ],
+    caseUrl: "/portfolio/case_gamegather",
+  },
+  {
+    company: "BMK Indústria Gráfica",
+    role: "Designer / TI",
+    period: "Abr / 2011 — Set / 2020",
+    location: "Presencial",
+    summary:
+      "Criação e finalização de documentos de segurança de alta complexidade, como cheques e boletos, com rigor técnico, precisão visual e conformidade com padrões gráficos e operacionais. Preparação e otimização de arquivos para impressão rotativa e digital, garantindo consistência entre arte-final e produção em larga escala. Atuação integrada com equipes de TI, PCP e produção em ambientes multidisciplinares, fortalecendo processos colaborativos e comunicação entre áreas. Participação contínua na otimização dos fluxos de produção gráfica, contribuindo para redução de falhas, ganho de eficiência operacional e melhoria da qualidade das entregas.",
+    skills: [
+      "Documentos de Segurança", "Pré-impressão", "Impressão Rotativa",
+      "Impressão Digital", "Arte-Final", "TI", "PCP", "Otimização de Processos",
+    ],
+  },
+  {
+    company: "Paper Express",
+    role: "Supervisor de Produção",
+    period: "Mar / 2002 — Fev / 2009",
+    location: "Presencial",
+    summary:
+      "Gestão de produção gráfica com foco em planejamento operacional, controle de prazos e coordenação de equipes em ambientes de alta demanda. Responsável pela preparação de arquivos para impressão offset e digital, garantindo qualidade, precisão técnica e eficiência nos processos produtivos. Experiência que consolidou uma forte base em organização, atenção aos detalhes e resolução de problemas complexos.",
+    skills: [
+      "Gestão de Produção", "Impressão Offset", "Pré-impressão",
+      "Gestão de Equipes", "PCP", "Controle de Prazos", "Liderança",
+      "Otimização de Processos",
+    ],
+  },
+  {
+    company: "Revista Istoé Dinheiro",
+    role: "Diagramador / Ilustrador",
+    period: "Set / 2000 — Fev / 2002",
+    location: "Presencial",
+    summary:
+      "Desenvolvimento de layouts editoriais e ilustrações para publicação semanal de circulação nacional, atuando em um ambiente de produção acelerada e alto nível de exigência editorial. Criação de soluções visuais para conteúdos financeiros e econômicos, equilibrando clareza da informação, identidade visual e consistência gráfica. Colaboração próxima com equipes de redação e edição.",
+    skills: [
+      "Diagramação Editorial", "Ilustração", "Design Gráfico",
+      "Identidade Visual", "Produção Jornalística", "Pré-impressão",
+      "Colaboração com Redação", "Cumprimento de Prazos",
+    ],
+  },
+  {
+    company: "Revista Caras",
+    role: "Diagramador",
+    period: "Fev / 2000 — Set / 2000",
+    location: "Presencial",
+    summary:
+      "Atuação na diagramação editorial e tratamento de imagens para publicação semanal de grande circulação nacional. Responsável pela organização visual de conteúdos e preparação de materiais para impressão, garantindo qualidade gráfica, consistência visual e cumprimento de prazos em um ambiente dinâmico de produção editorial.",
+    skills: [
+      "Diagramação Editorial", "Escaneamento de Imagens",
+      "Tratamento de Imagens", "Design Gráfico", "Pré-impressão",
+      "Produção Editorial", "Controle de Qualidade", "Cumprimento de Prazos",
+    ],
+  },
+];
+---
+
+<Layout
+  pathname={Astro.url.pathname}
+  title="Experiências"
+  description="Experiência profissional em Product Design, produtos digitais B2B SaaS, design systems, discovery e evolução de plataformas digitais."
+>
+  <PageContainer>
+    <section class="-mt-6">
+      <SectionHeader title="Experiência profissional" />
+
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Minha trajetória combina experiência em produtos digitais, operações
+        complexas e produção gráfica de alta exigência técnica. Ao longo da
+        carreira, desenvolvi uma atuação orientada à resolução de problemas,
+        organização de fluxos, colaboração multidisciplinar e construção de
+        experiências digitais escaláveis.
+      </p>
+
+      <div class="mt-8 space-y-6">
+        {experiences.map((exp, i) => (
+          <article
+            class="animate-fade-up group rounded-3xl border border-border bg-card p-5 transition-all hover:border-foreground/20 md:p-6"
+            style={`animation-delay: ${i * 0.08}s`}
+          >
+            <div class="grid gap-6 md:grid-cols-12">
+              <div class="md:col-span-4">
+                <div class="flex items-center gap-3">
+                  <div>
+                    <h3 class="text-xl font-semibold tracking-tight">
+                      {exp.company}
+                    </h3>
+                    <p class="text-sm text-muted-foreground">
+                      {exp.role}
+                    </p>
+                  </div>
+                </div>
+
+                <div class="mt-6 space-y-2 text-sm text-muted-foreground">
+                  <div class="flex items-center gap-2">
+                    <span class="[&>svg]:h-3.5 [&>svg]:w-3.5" set:html={icon("calendar")}></span>
+                    <span>{exp.period}</span>
+                  </div>
+
+                  <div class="flex items-center gap-2">
+                    <span class="[&>svg]:h-3.5 [&>svg]:w-3.5" set:html={icon("mapPin")}></span>
+                    <span>{exp.location}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="md:col-span-8">
+                <p class="text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
+                  {exp.summary}
+                </p>
+
+                <div class="mt-6">
+                  <p class="mb-3 text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
+                    Principais skills
+                  </p>
+
+                  <div class="flex flex-wrap gap-2">
+                    {exp.skills.map((s) => (
+                      <span class="inline-flex items-center rounded-full border border-border bg-secondary px-3 py-1 text-[12px] font-medium text-secondary-foreground">
+                        {s}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {exp.caseUrl && (
+                  <div class="mt-8">
+                    <a
+                      href={exp.caseUrl}
+                      class="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-muted"
+                    >
+                      Ver case
+                    </a>
+                  </div>
+                )}
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  </PageContainer>
+</Layout>

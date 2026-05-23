@@ -1,0 +1,101 @@
+---
+import Layout from "../components/Layout.astro";
+import PageContainer from "../components/PageContainer.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+
+interface Case {
+  slug: string;
+  company: string;
+  subtitle: string;
+  title: string;
+  summary: string;
+  image: string;
+}
+
+const cases: Case[] = [
+  {
+    slug: "/portfolio/case_softfocus_novo",
+    company: "Softfocus",
+    subtitle: "Softfocus — Zoom Rural",
+    title: "Melhorando a experiência na análise e fiscalização do crédito rural",
+    summary:
+      "Solução que transforma o monitoramento de crédito rural em um processo mais simples, integrado e orientado a compliance para instituições financeiras.",
+    image: "/portfolio/dashboard.png",
+  },
+  {
+    slug: "/portfolio/case_gamegather",
+    company: "Gamegather",
+    subtitle: "Freelancer — Portal Gamegather",
+    title: "Conectando jogadores pelo que realmente importa: comunidade e respeito",
+    summary:
+      "Plataforma social que une gamers com base em interesses e reputação comunitária — criando conexões mais saudáveis e experiências de jogo sem toxicidade.",
+    image: "/portfolio/gamegather.png",
+  },
+  {
+    slug: "/portfolio/case_amigo_secreto",
+    company: "Amigo Secreto",
+    subtitle: "Desafio processo seletivo — Softfocus",
+    title: "Transformando o amigo secreto corporativo em uma experiência digital completa",
+    summary:
+      "Aplicativo mobile que transforma o amigo secreto em uma experiência completa — do sorteio à festa, com gamificação, quiz diário e lista de presentes.",
+    image: "/portfolio/amigo_abre.png",
+  },
+  {
+    slug: "/portfolio/case_hurst_capital",
+    company: "Hurst Capital",
+    subtitle: "Teste para vaga de UX/UI Designer",
+    title: "Redesenho de site para o primeiro ecossistema de ativos alternativos do Brasil",
+    summary:
+      "Redesenho das páginas Home e Blog com foco em hierarquia visual, espaçamento generoso e navegação clara — mantendo a credibilidade que o mercado financeiro exige.",
+    image: "/portfolio/Abre_Hurst.png",
+  },
+];
+---
+
+<Layout
+  pathname={Astro.url.pathname}
+  title="Cases"
+  description="Estudos de caso selecionados de Product Design: contexto, problema, processo, solução e resultado."
+>
+  <PageContainer>
+    <section class="-mt-6">
+      <SectionHeader title="Cases" />
+
+      <div class="mt-8 grid gap-6 md:mt-10 md:grid-cols-2">
+        {cases.map((c, i) => (
+          <a
+            href={c.slug}
+            class="animate-fade-up group block overflow-hidden rounded-3xl border border-border bg-card hover-lift"
+            style={`animation-delay: ${i * 0.08}s`}
+          >
+            <div class="relative aspect-[4/2] w-full overflow-hidden bg-muted">
+              {c.image ? (
+                <img
+                  src={c.image}
+                  alt={c.company}
+                  class="h-full w-full object-cover object-top"
+                />
+              ) : (
+                <div class="absolute inset-0 grain opacity-60" />
+              )}
+            </div>
+
+            <div class="p-7">
+              {c.subtitle && (
+                <p class="text-sm font-medium text-muted-foreground">
+                  {c.subtitle}
+                </p>
+              )}
+              <h3 class="mt-3 text-pretty text-lg font-semibold tracking-tight md:text-xl">
+                {c.title}
+              </h3>
+              <p class="mt-3 text-pretty text-sm leading-relaxed text-muted-foreground md:text-base">
+                {c.summary}
+              </p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+  </PageContainer>
+</Layout>

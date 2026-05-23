@@ -1,0 +1,211 @@
+---
+import { icon } from "./icons";
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  pathname: string;
+}
+
+const { title, description, pathname } = Astro.props;
+
+const pageTitle = title
+  ? `${title} — Décio D'Almeida | Product Designer`
+  : "Décio D'Almeida — Product Designer | Portfolio";
+
+const pageDescription = description || "Portfolio de Décio D'Almeida, Product Designer especializado em produtos digitais, design system, user research e interface design.";
+
+const breadcrumb = new Map([
+  ["/portfolio/", "Perfil"],
+  ["/portfolio/experiencias", "Experiências"],
+  ["/portfolio/cases", "Cases"],
+  ["/portfolio/formacao", "Formação"],
+  ["/portfolio/skills", "Skills"],
+  ["/portfolio/contato", "Contato"],
+]);
+
+const caseName = new Map([
+  ["/portfolio/case_softfocus_novo", "Softfocus"],
+  ["/portfolio/case_gamegather", "Gamegather"],
+  ["/portfolio/case_amigo_secreto", "Amigo Secreto"],
+  ["/portfolio/case_hurst_capital", "Hurst Capital"],
+]);
+
+const navItems = [
+  { title: "Perfil", url: "/portfolio/", icon: "user" },
+  { title: "Experiências", url: "/portfolio/experiencias", icon: "briefcase" },
+  { title: "Cases", url: "/portfolio/cases", icon: "folderKanban" },
+  { title: "Formação", url: "/portfolio/formacao", icon: "graduationCap" },
+  { title: "Skills", url: "/portfolio/skills", icon: "sparkles" },
+  { title: "Contato", url: "/portfolio/contato", icon: "mail" },
+];
+
+const isActive = (url) =>
+  url === "/portfolio/" ? pathname === "/portfolio/" : pathname.startsWith(url);
+
+const isHome = pathname === "/portfolio/";
+const isCase = caseName.has(pathname);
+const currentLabel = isCase ? caseName.get(pathname) : breadcrumb.get(pathname);
+
+function breadcrumbSchema() {
+  const parts = [{ name: "Portfolio", path: "/portfolio/" }];
+  if (pathname.startsWith("/portfolio/case_") && currentLabel) {
+    parts.push({ name: "Cases", path: "/portfolio/cases" });
+    parts.push({ name: currentLabel, path: pathname });
+  } else if (!isHome && currentLabel) {
+    parts.push({ name: currentLabel, path: pathname });
+  }
+  return parts;
+}
+const crumbs = breadcrumbSchema();
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
+    <meta name="author" content="Décio D'Almeida" />
+    <meta property="og:title" content="Décio D'Almeida — Product Designer" />
+    <meta property="og:description" content="Transformando problemas complexos em experiências digitais intuitivas." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://portfolio.decio-almeida-1969.workers.dev/linkedin.png" />
+    <meta property="og:url" content="https://portfolio.decio-almeida-1969.workers.dev/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖤</text></svg>" />
+    <script is:inline>
+      document.documentElement.classList.toggle("dark", localStorage.getItem("theme") === "dark");
+    </script>
+  </head>
+  <body>
+    <div id="layout" class="flex min-h-screen w-full bg-background">
+      <!-- Sidebar -->
+      <aside
+        id="sidebar"
+        class="fixed left-0 top-0 z-40 flex h-screen flex-col border-r border-sidebar-border bg-sidebar transition-all duration-300 md:sticky md:translate-x-0"
+        style="width: 16rem"
+      >
+        <div class="flex items-center gap-3 px-4 py-3">
+          <a href="/portfolio/" class="flex items-center gap-3">
+            <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground font-semibold text-sm">
+              D
+            </div>
+            <div class="flex flex-col leading-tight">
+              <span class="text-sm font-semibold tracking-tight text-sidebar-foreground">
+                Décio D'Almeida
+              </span>
+              <span class="text-xs text-muted-foreground">
+                Product Designer
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <nav class="flex-1 px-2 pt-10">
+          <ul class="space-y-1">
+            {navItems.map((item) => (
+              <li>
+                <a
+                  href={item.url}
+                  class="flex h-10 items-center gap-3 rounded-md px-3 text-sm font-medium transition-colors"
+                  class:list={{
+                    "bg-sidebar-accent text-sidebar-accent-foreground": isActive(item.url),
+                    "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground": !isActive(item.url),
+                  }}
+                >
+                  <span class="shrink-0 [&>svg]:h-[18px] [&>svg]:w-[18px]" set:html={icon(item.icon)}>
+                  </span>
+                  <span>{item.title}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main area -->
+      <div class="flex flex-1 flex-col min-w-0">
+        <!-- Header -->
+        <header class="sticky top-0 z-30 flex h-14 items-center gap-3 border-b border-border bg-background/80 px-4 backdrop-blur-md md:px-6">
+          <button
+            id="sidebar-toggle"
+            class="flex h-9 w-9 items-center justify-center rounded-md text-muted-foreground hover:bg-muted hover:text-foreground transition-colors -ml-1"
+            aria-label="Toggle sidebar"
+          >
+            <span set:html={icon("panelLeft")}></span>
+          </button>
+
+          <div class="h-5 w-px bg-border"></div>
+
+          <a href="/portfolio/" class="text-xs font-medium tracking-[0.18em] text-muted-foreground hover:text-foreground transition-colors">
+            Portfolio · 2026
+          </a>
+
+          {!isHome && crumbs.slice(1).map((crumb, j) => (
+            <>
+              <span class="text-xs text-muted-foreground/50">/</span>
+              {isCase && crumb.name === "Cases" && j < crumbs.length - 2 ? (
+                <a href={crumb.path} class="text-xs font-medium tracking-[0.18em] text-muted-foreground hover:text-foreground transition-colors">
+                  {crumb.name}
+                </a>
+              ) : (
+                <span class="text-xs font-medium tracking-[0.18em] text-foreground">
+                  {crumb.name}
+                </span>
+              )}
+            </>
+          ))}
+        </header>
+
+        <!-- Main content -->
+        <main class="flex-1">
+          <slot />
+        </main>
+
+        <!-- Footer -->
+        <footer class="border-t border-border px-6 py-8 text-xs text-muted-foreground">
+          <div class="flex max-w-6xl px-6 md:px-20 lg:px-10 flex-col items-start justify-between gap-3 md:flex-row md:items-center">
+            <span>© 2026 Décio D'Almeida · Product Designer</span>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script>
+      const sidebar = document.getElementById("sidebar");
+      const toggle = document.getElementById("sidebar-toggle");
+      const main = document.querySelector("#layout > div");
+
+      let sidebarOpen = true;
+
+      if (toggle && sidebar) {
+        toggle.addEventListener("click", () => {
+          sidebarOpen = !sidebarOpen;
+          if (sidebarOpen) {
+            sidebar.style.transform = "translateX(0)";
+            sidebar.style.width = "16rem";
+            main.style.marginLeft = "0";
+          } else {
+            sidebar.style.transform = "translateX(-100%)";
+          }
+        });
+      }
+
+      // Close sidebar on mobile after nav click
+      document.querySelectorAll("#sidebar nav a").forEach((link) => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth < 768) {
+            sidebar.style.transform = "translateX(-100%)";
+            sidebarOpen = false;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

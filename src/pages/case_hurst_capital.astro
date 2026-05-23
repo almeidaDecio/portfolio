@@ -1,0 +1,169 @@
+---
+import Layout from "../components/Layout.astro";
+import PageContainer from "../components/PageContainer.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+---
+
+<Layout
+  pathname={Astro.url.pathname}
+  title="Décio D'Almeida — Hurst Capital"
+  description="Case de produto: Hurst Capital — redesenho de site para teste de UX/UI Designer."
+>
+  <PageContainer>
+    <section class="-mt-6">
+      <SectionHeader title="Hurst Capital" />
+
+      <p class="mt-4 text-lg font-medium text-muted-foreground">
+        Redesenho de site — teste para vaga de UX/UI Designer · 2021
+      </p>
+
+
+    </section>
+
+    <section class="mt-14">
+      <h2 class="text-2xl font-semibold tracking-tight">Contexto</h2>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        A Hurst Capital é o primeiro ecossistema de ativos alternativos do Brasil — uma plataforma voltada a investidores que buscam oportunidades fora do mercado tradicional, com foco em due diligence rigorosa e originação própria.
+      </p>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        O teste consistia em redesenhar duas páginas do site: a <strong class="text-foreground">Home</strong> e o <strong class="text-foreground">Blog</strong>, demonstrando conhecimento prático de UX e UI.
+      </p>
+    </section>
+
+    <section class="mt-14">
+      <h2 class="text-2xl font-semibold tracking-tight">Desafio</h2>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        O site original era funcional, mas com problemas claros de hierarquia visual: textos longos sem respiro, imagens pequenas, seções pouco diferenciadas e navegação sem indicação de localização dentro do site. O conteúdo era rico — o problema era como ele estava sendo apresentado.
+      </p>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        O desafio era modernizar sem perder a credibilidade que uma plataforma de investimentos precisa transmitir.
+      </p>
+    </section>
+
+    <section class="mt-14">
+      <h2 class="text-2xl font-semibold tracking-tight">Processo</h2>
+
+      <h3 class="mt-8 text-lg font-semibold">1. Benchmark e referências</h3>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        A primeira etapa foi analisar como concorrentes e referências do mercado financeiro resolviam as mesmas questões — textos, imagens, menu e botões. O objetivo era entender os padrões que usuários desse segmento já estão acostumados, para modernizar sem desorientar.
+      </p>
+
+      <div class="mt-6 space-y-4">
+        <img
+          src="/portfolio/Benchmark_Hurst.png"
+          alt="Benchmark"
+          class="w-full object-contain rounded-2xl"
+        />
+        <img
+          src="/portfolio/Referencias_Hurst.png"
+          alt="Referências"
+          class="w-full object-contain rounded-2xl"
+        />
+      </div>
+
+      <h3 class="mt-8 text-lg font-semibold">2. Decisões de design</h3>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Optei por manter o Design Guide original — cores e fontes — para preservar a identidade da marca. A modernização veio pela estrutura, não pela identidade.
+      </p>
+      <p class="mt-3 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        As principais decisões foram:
+      </p>
+      <ul class="mt-3 space-y-2 text-lg text-muted-foreground">
+        {[
+          "Grid de 12 colunas usando Bootstrap como base, para garantir consistência e facilitar a implementação pelo time de desenvolvimento",
+          "Imagens maiores ocupando mais espaço na composição, criando mais impacto visual e reduzindo a sensação de densidade de texto",
+          "Espaço em branco generoso entre seções, facilitando a leitura e o escaneamento da página",
+          "Separação clara por assunto através de fotos e cores de fundo, criando uma hierarquia visual que guia o usuário naturalmente pelo conteúdo",
+          "Indicação de localização no menu — adicionei cor mais escura no nome da seção atual, para que o usuário saiba sempre onde está dentro do site",
+        ].map((item) => (
+          <li class="flex items-start gap-2">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/40" />
+            {item}
+          </li>
+        ))}
+      </ul>
+
+      <div class="mt-6">
+        <img
+          src="/portfolio/Design_Guide_Hurst.png"
+          alt="Design Guide Hurst"
+          class="w-full object-contain rounded-2xl"
+        />
+      </div>
+
+      <h3 class="mt-8 text-lg font-semibold">3. Execução</h3>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Copiei os textos e baixei as fotos do site original para manter o conteúdo fiel. O redesenho foi feito inteiramente no Adobe XD, com resultado entregue em Desktop para Home e Blog.
+      </p>
+    </section>
+
+    <section class="mt-14">
+      <h2 class="text-2xl font-semibold tracking-tight">Solução</h2>
+
+      <h3 class="mt-6 text-lg font-semibold">Home</h3>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        O hero ganhou uma imagem de impacto e headline em destaque, com hierarquia clara entre título, subtítulo e CTA. As seções seguintes foram reorganizadas com mais respiro visual, alternando fotos e texto de forma equilibrada.         A seção institucional "Por trás da Hurst Capital" foi mantida, apresentando a equipe em cards mais limpos e diretos.
+      </p>
+
+      <div class="mt-6 grid grid-cols-2 gap-4">
+        <div>
+          <p class="mb-2 text-xs font-medium text-muted-foreground">Original</p>
+          <img
+            src="/portfolio/Quem_somos_Original_Hurst.png"
+            alt="Quem somos — Original"
+            class="w-full object-contain rounded-2xl"
+          />
+        </div>
+        <div>
+          <p class="mb-2 text-xs font-medium text-muted-foreground">Redesenho</p>
+          <img
+            src="/portfolio/Quem_Somos_Novo_Hurst.png"
+            alt="Quem somos — Novo"
+            class="w-full object-contain rounded-2xl"
+          />
+        </div>
+      </div>
+
+      <h3 class="mt-6 text-lg font-semibold">Blog</h3>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        O redesenho do blog foi a transformação mais visível. O original apresentava os posts em uma lista densa e pouco escaneável. O novo usa cards com imagem, título e categoria bem definidos, permitindo que o usuário encontre o que procura em segundos.
+      </p>
+
+      <div class="mt-6 grid grid-cols-2 gap-4">
+        <div>
+          <p class="mb-2 text-xs font-medium text-muted-foreground">Original</p>
+          <img
+            src="/portfolio/Blog+Original_Hurst.png"
+            alt="Blog — Original"
+            class="w-full object-contain rounded-2xl"
+          />
+        </div>
+        <div>
+          <p class="mb-2 text-xs font-medium text-muted-foreground">Redesenho</p>
+          <img
+            src="/portfolio/Blog_Novo_Hurst.png"
+            alt="Blog — Novo"
+            class="w-full object-contain rounded-2xl"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-14">
+      <h2 class="text-2xl font-semibold tracking-tight">Resultado</h2>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        O projeto gerou uma chamada para entrevista. O processo não avançou por questão de localização — a vaga era presencial em São Paulo, e eu estou baseado no Paraná.
+      </p>
+    </section>
+
+    <section class="mt-14 mb-16">
+      <h2 class="text-2xl font-semibold tracking-tight">O que eu faria diferente hoje</h2>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Hoje, com mais experiência, vejo que muitos elementos poderiam ser menores e mais contidos. A seção "Por trás da Hurst Capital", por exemplo, ainda ficou densa demais no redesenho — os cards da equipe concentram muita informação entre nome, cargo e texto descritivo, o que compromete o respiro visual que o restante da página conquistou.
+      </p>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Se fosse refazer, reduziria os textos e o tamanho das imagens, deixando os detalhes para um modal, tornando a página ainda mais limpa e equilibrada.
+      </p>
+    </section>
+  </PageContainer>
+</Layout>
