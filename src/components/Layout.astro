@@ -174,34 +174,32 @@ const crumbs = breadcrumbSchema();
           <a href={enPath} class="text-xs tracking-[0.18em] transition-colors text-muted-foreground hover:text-foreground" style={{ fontWeight: locale === "en" ? 800 : 500 }}>
             EN
           </a>
-          {!isHome && <>
-            <span class="text-xs text-muted-foreground/50">|</span>
-            <a href={localeUrl("/")} class="text-xs font-medium tracking-[0.18em] text-muted-foreground hover:text-foreground transition-colors">
-              {t("layout.header.portfolioLabel")}
-            </a>
+          <span class="text-xs text-muted-foreground/50">|</span>
+          <a href={localeUrl("/")} class="text-xs font-medium tracking-[0.18em] text-muted-foreground hover:text-foreground transition-colors">
+            {t("layout.header.portfolioLabel")}
+          </a>
 
-            {crumbs.slice(1).map((crumb, j, arr) => {
-              const isLast = j === arr.length - 1;
-              return (
-                <span class="inline-flex items-center gap-1">
-                  <span class="text-xs text-muted-foreground/50">/</span>
-                  {isLast ? (
-                    <span class="text-xs font-medium tracking-[0.18em] text-foreground">{crumb.name}</span>
-                  ) : (
-                    <a href={crumb.path} class="text-xs font-medium tracking-[0.18em] text-muted-foreground hover:text-foreground transition-colors">{crumb.name}</a>
-                  )}
-                </span>
-              );
-            })}
-            <span class="hidden md:contents">
-              {sections && sections.map((s) => (
-                <span class="inline-flex items-center gap-1">
-                  <span class="text-xs text-muted-foreground/50">/</span>
-                  <a href={`#${s.id}`} class="text-xs font-medium tracking-[0.18em] text-muted-foreground hover:text-foreground transition-colors">{s.name}</a>
-                </span>
-              ))}
-            </span>
-          </>}
+          {!isHome && crumbs.slice(1).map((crumb, j, arr) => {
+            const isLast = j === arr.length - 1;
+            return (
+              <span class="inline-flex items-center gap-1">
+                <span class="text-xs text-muted-foreground/50">/</span>
+                {isLast ? (
+                  <span class="text-xs font-medium tracking-[0.18em] text-foreground">{crumb.name}</span>
+                ) : (
+                  <a href={crumb.path} class="text-xs font-medium tracking-[0.18em] text-muted-foreground hover:text-foreground transition-colors">{crumb.name}</a>
+                )}
+              </span>
+            );
+          })}
+          {!isHome && <span class="hidden md:contents">
+            {sections && sections.map((s) => (
+              <span class="inline-flex items-center gap-1">
+                <span class="text-xs text-muted-foreground/50">/</span>
+                <a href={`#${s.id}`} class="text-xs font-medium tracking-[0.18em] text-muted-foreground hover:text-foreground transition-colors">{s.name}</a>
+              </span>
+            ))}
+          </span>}
         </header>
 
         <!-- Main content -->
