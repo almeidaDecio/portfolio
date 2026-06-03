@@ -1,0 +1,614 @@
+========================================================================
+  PORTFOLIO — ENGLISH TEXTS
+  Décio D'Almeida — Product Designer
+========================================================================
+
+====================================================================
+SITE METADATA (i18n)
+====================================================================
+
+Site Title: Décio D'Almeida — Product Designer
+Site Description: Senior Product Designer specializing in B2B SaaS,
+enterprise workflows, and scalable digital ecosystems.
+OG Description: Designing clarity and efficiency for complex digital
+operations — Senior Product Designer focused on enterprise platforms,
+design systems, and product strategy.
+
+Sidebar name: Décio D'Almeida
+Sidebar role: Product Designer
+
+Navigation: Profile · Experience · Work · Education · Skills · Contact
+
+Breadcrumbs: Portfolio · Profile · Experience · Work · Education ·
+Skills · Contact
+
+Footer: © 2026 Décio D'Almeida · Product Designer
+
+Header: Portfolio · 2026
+
+====================================================================
+HOME (index.astro)
+====================================================================
+
+Hero: Designing clarity and efficiency for complex digital operations.
+
+I am Décio D'Almeida, a Senior Product Designer specializing in B2B
+SaaS, enterprise workflows, and scalable digital ecosystems. I partner
+with cross-functional teams to transform heavy, high-risk data systems
+into intuitive, high-performance user experiences.
+
+My design philosophy is rooted in decades of high-precision system
+design, where visual accuracy and operational alignment are paramount.
+Today, I apply this rigor to AgTech, FinTech, and B2B platforms —
+bridging user research, business strategy, and technical execution to
+deliver measurable product impact.
+
+Buttons: View Case Studies · Get in Touch · Download Resume
+
+====================================================================
+EXPERIENCE (experiencias.astro)
+====================================================================
+
+Title: Experience
+Section: Experience
+
+My career combines digital product design, complex enterprise workflows,
+and high-precision visual systems. Over the years, I have built a
+reputation for problem-solving, structured layout design, and driving
+seamless cross-functional collaboration.
+
+--- Softfocus ---
+Role: Senior Product Designer
+Period: Jul 2021 – Feb 2026
+Location: Remote
+
+Led the product design strategy and end-to-end UX/UI lifecycle for
+complex B2B SaaS enterprise platforms, focusing heavily on AgTech and
+FinTech systems. Collaborated closely with Product Managers, Tech Leads,
+and QA to translate intricate regulatory frameworks (Central Bank
+standards) and heavy data pipelines into simple, high-performance
+dashboards. Conducted user research, mapped complex customer journeys,
+established robust responsive grid layouts, and advanced the company's
+internal Design System. Pioneered product improvements that directly
+enabled sales expansion to Tier-1 financial institutions, including
+Santander and Banco do Brasil.
+
+Skills: Product Discovery · Information Architecture · Responsive Design
+· Design Systems · Regulatory UX · UX Research · B2B SaaS
+
+Button: View Case Study
+
+--- Gamegather ---
+Role: Lead Product Designer (Freelance)
+Period: Aug 2025 – Jan 2026
+Location: Remote
+
+Designed the mobile-first UX/UI architecture for a community-centric
+social matching platform for esports and casual gamers. Collaborated
+directly with stakeholders and developers to map onboarding flows,
+community reputation dashboards, and multiplayer search patterns.
+Conducted user testing and benchmarking of international social
+applications to eliminate interactive friction and foster a safe,
+anti-toxicity environment.
+
+Skills: Mobile-First Design · User Journey Mapping · Rapid Prototyping ·
+Anti-Toxicity UX Patterns · UI Design · Community Products
+
+Button: View Case Study
+
+--- BMK Indústria Gráfica ---
+Role: Technical Systems & Security Design Specialist
+Period: Apr 2011 – Sep 2020
+Location: On-site
+
+Engineered high-security physical documents (bank checks, financial
+slips, official certificates) requiring absolute technical precision
+and compliance with national financial security standards. Optimized
+prepress workflows for high-volume digital and web offset printing,
+ensuring zero-defect production at scale. Partnered with IT, Production
+Planning (PCP), and engineering teams to bridge software layouts with
+industrial manufacturing machinery. Introduced process optimizations
+that significantly reduced file prep errors and enhanced operational
+efficiency.
+
+Skills: High-Precision Visual Engineering · Technical Operations ·
+Systems Alignment · Cross-Functional Optimization · Pre-press
+
+--- Paper Express ---
+Role: Technical Print & Production Supervisor
+Period: Mar 2002 – Feb 2009
+Location: On-site
+
+Supervised operational workflows, production planning, and quality
+control in a fast-paced, high-demand commercial print production
+environment. Managed cross-functional floor teams, audited technical
+assets for offset and digital presses, and resolved complex
+manufacturing constraints. Built a strong foundation in visual system
+organization, strict attention to detail, and process optimization.
+
+Skills: Workflow Management · Quality Assurance · Technical System
+Architecture · Production Management · Process Optimization
+
+--- IstoÉ Dinheiro Magazine ---
+Role: Visual Lead & Editorial Designer
+Period: Sep 2000 – Feb 2002
+Location: On-site
+
+Designed editorial visual structures, data graphics, and illustrations
+for a premium, high-circulation national weekly financial magazine.
+Translated dense economic data, market indicators, and financial reports
+into highly scannable, visually compelling editorial layouts under
+extreme weekly deadlines. Collaborated tightly with editors, writers,
+and copywriters to ensure maximum storytelling impact and editorial
+consistency.
+
+Skills: Visual Communication · Data Visualization · Information
+Hierarchy · Typography · Editorial Design
+
+--- Caras Magazine ---
+Role: Editorial Designer & Image Specialist
+Period: Feb 2000 – Sep 2000
+Location: On-site
+
+Executed high-speed editorial layout design and high-precision image
+retouching for a leading national weekly publication. Maintained visual
+system consistency and managed tight print-production deadlines in a
+highly dynamic, collaborative editorial department.
+
+Skills: Editorial Design · Production Rigor · Visual Quality Control ·
+Image Processing · Pre-press
+
+====================================================================
+WORK (cases.astro)
+====================================================================
+
+Title: Selected Work
+Section: Selected Work
+
+A selection of projects where design made operations simpler, faster,
+and more reliable.
+
+--- Softfocus ---
+AgTech FinTech: Optimizing Agricultural Lending Operations
+
+How we scaled agricultural credit compliance and remote monitoring —
+transforming expensive physical field inspections into a high-precision,
+remote satellite intelligence platform.
+
+Tags: B2B SaaS · AgTech · FinTech · Compliance · UX Research · Design
+Systems
+
+--- Gamegather ---
+Social Matching & Community: Designing an Anti-Toxicity Gaming Platform
+
+Creating a mobile-first social hub that connects multiplayer gamers
+based on playstyle compatibility and community-vetted reputation.
+
+Tags: Consumer · Social · Mobile-First · Community · UX Research · UI
+Design
+
+--- Secret Santa ---
+Secret Santa for Teams: Gamifying Corporate Holiday Celebrations
+
+An end-to-end mobile design sprint completed in one week — driving
+engagement through gamification, interactive gift registries, and
+social mechanics.
+
+Tags: Mobile · Gamification · Design Sprint · UX Research · Prototyping
+
+--- Hurst Capital ---
+FinTech Redesign: Elevating Trust and Scannability in Alternative Assets
+
+Redesigning a financial ecosystem's home and editorial pages to optimize
+visual hierarchy, build investor trust, and simplify high-value
+financial content.
+
+Tags: FinTech · UI/UX · Visual Design · Information Architecture · Brand
+
+====================================================================
+EDUCATION (formacao.astro)
+====================================================================
+
+Title: Education
+Section: Education & Credentials
+
+--- Bachelor's Degree ---
+Advertising & Visual Communication
+UNIP — Universidade Paulista (1988 – 1992)
+
+Established my core foundations in visual storytelling, brand strategy,
+typography, and creative execution — principles that continue to guide
+my digital design philosophy.
+
+--- Postgraduate Degree ---
+Art History
+FAAP — Fundação Armando Alvares Penteado (2013 – 2015)
+
+Refined my visual library, aesthetic criticism, and deep understanding
+of composition, color theory, and visual communication.
+
+--- Professional Certifications ---
+Interaction Design Foundation (IxDF)
+Design Thinking: The Ultimate Guide (2023)
+User Experience: The Beginner's Guide (2023)
+
+Structured my transition into UX research, establishing formal
+frameworks for user-centric problem-solving, product discovery, and
+rapid prototyping.
+
+====================================================================
+SKILLS (skills.astro)
+====================================================================
+
+Title: Skills
+Section: Skills & Design Stack
+
+--- Hard Skills ---
+Product Thinking & UX Strategy
+Interface & Interaction Design
+System Design
+Research & Usability
+Cross-Functional Delivery
+UX Research
+UI/UX Design
+Wireframing
+Prototyping
+Design Systems
+Information Architecture
+User Flows
+User Journey Mapping
+Design Thinking
+Discovery
+Usability Analysis
+Handoff & Specs
+QA & Design Review
+
+--- Tools & Ecosystems ---
+Figma · Adobe XD · FigJam · Miro · Jira · YouTrack · Hotjar · Slack
+Adobe Creative Suite · Photoshop · Illustrator · ChatGPT · Claude
+Gemini · Lovable
+
+--- Soft Skills ---
+Communication · Collaboration · Analytical Thinking · Problem Solving
+Empathy · Facilitation · Critical Thinking · Adaptability
+Attention to Detail · Leadership · Proactivity
+Organized & Self-directed · Cross-Functional Communication
+Meticulous Craftsmanship
+
+====================================================================
+CONTACT (contato.astro)
+====================================================================
+
+Title: Contact
+
+Section title: Let's Build Something Together
+
+I am currently open to full-time opportunities, strategic design
+contracts, and remote collaborations globally.
+
+Based in Porecatu, Paraná, Brazil — Available for remote global work
+across US, European, and Latin American time zones.
+
+E-mail: decio.almeida.1969@gmail.com
+LinkedIn: linkedin.com/in/decio-d-almeida
+
+====================================================================
+CASE STUDY — Softfocus Zoom Rural
+====================================================================
+
+Section: AgTech FinTech: Optimizing Agricultural Lending Operations
+
+How we redesigned satellite-driven remote monitoring, transforming
+expensive field inspections into a scalable compliance platform for
+Tier-1 financial institutions.
+
+Executive Summary:
+
+Zoom Rural is an enterprise B2B SaaS platform that enables financial
+institutions to monitor, audit, and authorize high-value agricultural
+loans. By consolidating satellite imagery, weather intelligence, tax
+invoices, and environmental data, the platform mitigates operational
+risks and ensures compliance with strict national regulatory standards.
+
+As the Lead Product Designer on this product for 3 years, I spearheaded
+the redesign of the remote monitoring dashboard. The project transformed
+a dense, fragmented data interface into an intuitive, high-scannability
+product. This evolution directly enabled our business to acquire Tier-1
+financial giants, including Santander and Banco do Brasil.
+
+Key Metrics: 500+ financial branches · BRL 2B+ in annual transactions
+· 100K+ rural producers impacted
+
+The Challenge:
+
+In agricultural lending, financial institutions must verify that
+approved credit is used exactly as declared by the farmer. Historically,
+this required expensive, unscalable in-person field inspections — forcing
+field agents to physically travel to remote farms to generate reports.
+
+To automate this, Zoom Rural integrated remote sensing, satellite
+imaging, and agrometeorological databases. However, as the product grew,
+we faced a major UX bottleneck:
+- Data Overload: The system began pulling massive data layers — including
+  climatic risk models (ZARC), weather events, crop growth phases, and
+  financial invoice validations.
+- Poor Hierarchy: The UI stacked all this information vertically. Users
+  had to scroll endlessly through massive pages, losing visual context
+  of the satellite map.
+- Conflicting Personas: Different users had conflicting goals. Risk
+  Analysts needed quick, macro-level status summaries, while Field
+  Technicians needed to perform deep technical audits.
+
+My Design & Research Strategy:
+
+1. User Discovery & Persona Alignment:
+I conducted deep user interviews with both Agro-Credit Analysts and
+Technical Agronomists at major lending cooperatives. This research
+revealed a critical divergence in information priorities:
+- The Analyst wanted an immediate 'Healthy / At Risk' verdict on the
+  farm's status to accelerate credit approvals.
+- The Technician needed to verify specific environmental and regulatory
+  details, drill down into crop growth phases, and cross-reference
+  weather anomalies against satellite timelines.
+
+2. Information Architecture: The Nested Navigation Solution:
+The central challenge was presenting high-density data on a single page
+alongside a dynamic satellite map without overwhelming the user. I
+proposed a structured, tabbed layout system:
+- The Primary Canvas: Kept the high-resolution satellite imagery front
+  and center, displaying key crop health indicators.
+- Contextual Data Panes: Grouped data into four highly targeted tabs —
+  Agrometeorological Risk Zoning (ZARC), Crop Cycle Analysis, Weather
+  Anomalies, and Analytics.
+
+This design reduced the page height by 70%, allowing users to access
+any data point with a single, horizontal click while keeping the
+satellite map perfectly in view.
+
+3. Redesigning the Compliance Reports:
+Enterprise users frequently need to download and present audit reports
+to compliance boards. I audited competitive products and restructured
+our reporting engine:
+- Full Comprehensive Report: Streamlined the layout to align with the
+  new desktop visual hierarchy, ensuring regulatory auditability.
+- The One-Page Executive Summary (Zero-to-One): Designed a brand-new,
+  ultra-condensed brief summarizing the entire operation on a single
+  page — a massive competitive differentiator praised by credit managers.
+
+Business Impact & Outcomes:
+- Tier-1 Client Acquisition: Helped Softfocus secure major enterprise
+  accounts, including Santander and Banco do Brasil (the largest
+  agricultural lender in Latin America).
+- Increased Product Adoption: Drove significant growth in daily active
+  usage among existing cooperative clients.
+- Zero-to-One Competitive Edge: The simplified executive report became
+  a key differentiator in product demos and corporate pitches.
+
+====================================================================
+CASE STUDY — Gamegather
+====================================================================
+
+Section: Gamegather: Designing an Anti-Toxicity Gaming Community
+
+How we architected a mobile-first social platform that matches players
+based on behavioral compatibility, style of play, and peer-vetted
+reputation.
+
+Executive Summary:
+
+Gamegather is a mobile-first social networking platform built to connect
+online gamers based on playstyle, interests, and behavior. The platform
+was designed to combat online toxicity and help casual and competitive
+players easily discover safe, engaging multiplayer communities.
+
+As a Contract Product Designer, I spent 6 months driving the core UX
+architecture, user research, navigation models, and responsive interface
+design.
+
+The Challenge:
+
+In modern multiplayer gaming, players face two massive friction points:
+- Extreme Toxicity: Standard matchmaking algorithms only group players
+  by skill level, completely ignoring behavioral alignment. This exposes
+  users to verbal abuse and toxic behavior.
+- In-App Fragmentation: Gamers rely on a chaotic mix of Discord servers,
+  subreddits, and third-party apps just to find a reliable team.
+
+Our challenge was to design a unified, mobile-first experience that
+lowered the friction of finding compatible players while building
+active, self-policing community loops.
+
+My Design Process:
+
+1. Competitive Benchmarking:
+I analyzed leading community platforms, social apps, and gaming tools —
+including Discord, Tinder, and esports trackers. The key discovery was
+that while existing apps excel at messaging and grouping, they fail at
+trust and behavior validation. This created a huge opportunity to
+position Gamegather around a behavioral reputation system.
+
+2. User Research & Behavioral Architecture:
+I conducted interviews with casual and competitive gamers to understand
+how they evaluate trust online. We identified that 'good gaming' isn't
+just about winning — it's about communication style, casualness vs.
+competitiveness, and respect.
+
+From this, I designed:
+- Player Profile Cards: Focused on playstyle tags (e.g., 'Chill,'
+  'Tactical,' 'No Mic Needed') rather than just rank.
+- Reputation Loop: A post-match endorsement system that allows teammates
+  to award badges for positive behavior — preventing text-based
+  moderation issues.
+
+3. Mobile-First Navigation:
+Given that gamers use social apps on their phones while sitting at their
+PCs or consoles, a streamlined, single-handed mobile navigation was
+essential. I designed a bottom-bar-centric layout with quick access to:
+- Discover Hub: Tailored player recommendations.
+- Lobbies: Active groups seeking players.
+- Inbox & Messages: Instant communication.
+
+Design & Visual Direction:
+
+The interface utilizes a sleek dark-mode aesthetic with vibrant,
+high-contrast neon accents, capturing the modern energy of gaming
+culture without compromising on accessibility. The typography and card
+systems were structured for extremely fast scanning, allowing users to
+evaluate a group's compatibility in under three seconds.
+
+====================================================================
+CASE STUDY — Secret Santa (Amigo Secreto)
+====================================================================
+
+Section: Secret Santa for Teams: Gamifying Corporate Holiday Celebrations
+
+How I designed, prototyped, and validated a mobile-first gift-exchange
+app with interactive gamification in a high-intensity, one-week design
+sprint.
+
+Context & The Brief:
+
+As part of the hiring process for Softfocus, I was given a one-week open
+design challenge: create a digital solution to streamline corporate
+Secret Santa gift exchanges. The prompt addressed a real operational
+headache — as corporate teams grow and transition to remote/hybrid
+setups, holiday gift exchanges become chaotic.
+
+The brief required: automated drawing mechanics, interactive gift
+registries, participant profile tracking, mechanics to boost the chance
+of drawing a specific person, and crowdsourced proposals. Bonus goal:
+gamification elements — daily quizzes, unlockable hints, and
+achievements.
+
+The Challenge:
+
+- Automated drawing mechanics
+- Interactive gift registries with store links
+- Draw details and participant profile tracking
+- Mechanics to strategically boost the chance of drawing a specific person
+- Crowdsourced proposals (e.g., voting to adjust the budget)
+- Gamification: daily quizzes, unlockable hints, achievements
+
+My Design Process:
+
+1. Functional Mapping & Architecture:
+To succeed in a high-velocity sprint, I first mapped the requirements
+into discrete functional modules: matchmaking (automated draw logic with
+customizable exclusion rules), registry (a visual catalog for store links
+and price ranges), interaction (private in-app messaging), and
+gamification (daily micro-challenges to unlock clues).
+
+2. Bifurcated User Journeys:
+- The Organizer: Needs seamless group creation, invitation management,
+  rule configuration, and automated draw execution.
+- The Participant: Demands frictionless entry, rapid registry setup,
+  private chatting, and quick access to gamified activities.
+
+3. Competitor Benchmarking:
+I reviewed five global holiday-drawing apps. The research revealed that
+while competitors managed drawing mechanics well, they lacked ongoing
+user engagement — participants downloaded the app, drew a name, and
+immediately uninstalled it. This validated my decision to focus heavily
+on in-app messaging and gamification to drive continuous daily retention.
+
+4. Brand & UI Design System:
+- Visual Metaphor: Interfaces inspired by layered wrapping paper, bows,
+  and holiday patterns.
+- Color Palette: Premium Deep Slate (#1D3557), Warm Teal (#457B9D),
+  Crimson Red (#E63946), and Winter Mint (#A8DADC).
+- Typography: Proza Libre for warm, playful headings and Open Sans for
+  highly readable body copy.
+
+5. Prototyping & Usability Testing:
+I built a fully functional high-fidelity prototype in Figma. On day 6,
+I ran rapid usability tests with five users. Group creation and the
+gamified daily quiz were highly intuitive. The gift registry flow was
+initially confusing — I quickly redesigned the screen to place
+user-added wishlist items above automated store recommendations.
+
+Retrospective & Strategic Reflection:
+
+This high-fidelity project was highly successful, serving as the primary
+baseline that led to my recruitment and subsequent five-year career at
+Softfocus.
+
+Looking back with years of B2B SaaS experience, I identify two key areas
+for improvement:
+- Accessibility (WCAG Compliance): The teal color (#457B9D) against a
+  white background falls below the WCAG AA contrast ratio of 4.5:1.
+- Product Refinement: I would streamline the product registry layout to
+  utilize a more compact card system for smaller mobile screens.
+
+====================================================================
+CASE STUDY — Hurst Capital
+====================================================================
+
+Section: Hurst Capital: Redesigning the Alternative Asset Investment
+Experience
+
+How I redesigned the home and editorial pages for a leading financial
+platform, balancing high-density investment data with premium visual
+trust.
+
+Context & The Brief:
+
+Hurst Capital is Latin America's pioneer in alternative asset
+investments, offering access to high-yield, non-traditional assets like
+private equity, real estate, litigation funding, and intellectual
+property.
+
+As part of a professional UX/UI evaluation challenge, I was tasked with
+redesigning two core touchpoints: the Home Page and the Editorial Blog.
+The primary goal was to modernize the aesthetic, establish a rigorous
+visual hierarchy, and build deep credibility without alienating the
+platform's sophisticated investor base.
+
+The Challenge:
+
+The existing site suffered from severe visual hierarchy challenges:
+- High Cognitive Load: Extremely long, dense blocks of text with no
+  visual breathing room.
+- Underwhelming Visuals: Small, low-impact imagery that failed to
+  capture the institutional magnitude of alternative assets.
+- Poor Navigation: A rigid header menu that failed to provide clear
+  orientation or structural context.
+
+My Redesign Process:
+
+1. Market Benchmarking:
+I analyzed premium international investment platforms — Stripe,
+Wealthfront, and premium asset management sites — noting how they
+handled generous negative space, strong structured typographic systems,
+and clean cards-based layouts.
+
+2. Key Design System Decisions:
+- Responsive Grid: Implemented a rigid 12-column Bootstrap grid system.
+- Negative Space & Contrast: Introduced generous margins between content
+  blocks.
+- Typographic Hierarchy: Dramatically increased the scale of hero
+  headers.
+- Global Navigation Anchors: Redesigned the navigation bar with a
+  prominent active-state indicator.
+
+3. Execution & Touchpoints:
+
+The Home Page Redesign:
+I transformed the hero section with an impactful, high-resolution
+background asset, a powerful left-aligned headline, and a prominent CTA.
+Subsequent blocks were divided into clean, alternating content
+containers.
+
+The Blog & Editorial Redesign:
+The original blog listed financial articles in a dense, uninviting
+vertical list. I redesigned it into a modern, responsive card-based grid.
+Each card dynamically displays the category tag, editorial image,
+read-time, and bold title, enabling investors to find relevant analysis
+in seconds.
+
+Retrospective & Strategic Refinement:
+
+The redesign was highly successful, generating a direct invitation to
+final-round interviews. Critically evaluating this project today, I
+believe the team card module could be streamlined further — using a
+modal system to display full professional bios while keeping the primary
+layout ultra-clean.

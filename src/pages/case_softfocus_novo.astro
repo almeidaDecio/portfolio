@@ -8,92 +8,158 @@ import SectionHeader from "../components/SectionHeader.astro";
   pathname={Astro.url.pathname}
   title="Décio D'Almeida — Softfocus Zoom Rural"
   description="Case de produto: Softfocus Zoom Rural — plataforma de monitoramento e fiscalização de operações de crédito rural para instituições financeiras."
+  sections={[
+    { name: "Produto", id: "produto" },
+    { name: "Desafio", id: "desafio" },
+    { name: "Minha atuação", id: "atuacao" },
+    { name: "Deep dive", id: "deepdive" },
+    { name: "Processos e fluxo", id: "processos" },
+    { name: "Resultados", id: "resultados" },
+  ]}
 >
   <PageContainer>
     <section class="-mt-6">
-      <SectionHeader title="Softfocus - Zoom rural" />
-    </section>
+      <SectionHeader title="Softfocus — Zoom Rural" />
 
-    <div class="mt-4">
-      <img
-        src="/portfolio/softfocus_abre.png"
-        alt="Softfocus Zoom Rural"
-        class="w-full object-cover rounded-2xl"
-      />
-    </div>
-
-    <section class="mt-8">
-      <h2 class="text-2xl font-semibold tracking-tight">Produto</h2>
-      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
-        O Zoom Rural é uma plataforma SaaS desenvolvida para apoiar
-        instituições financeiras no monitoramento e fiscalização de operações
-        de crédito rural. O produto centraliza dados, automatiza validações e
-        utiliza imagens de satélite para simplificar análises complexas,
-        reduzir riscos operacionais e aumentar a eficiência em processos que
-        envolvem compliance, documentação e acompanhamento das operações em
-        larga escala.
+      <p class="mt-1 text-lg font-medium text-muted-foreground">
+        Como transformamos o monitoramento de crédito rural — de vistorias presenciais a análise remota em escala
       </p>
 
-      <div class="mt-6 flex flex-wrap gap-3">
+    </section>
+
+    <section class="mt-8">
+      <h2 id="produto" class="scroll-mt-20 text-2xl font-semibold tracking-tight">Produto</h2>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        O Zoom Rural é uma plataforma SaaS que apoia instituições financeiras no monitoramento e fiscalização de operações de crédito rural, centralizando dados, automatizando validações de notas fiscais, orçamentos e utilizando imagens de satélite para reduzir riscos operacionais em um ambiente altamente regulado.
+      </p>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Seus principais usuários são analistas de crédito rural de cooperativas e bancos, e técnicos agrícolas responsáveis por fiscalizar operações de alto valor junto ao Banco Central.
+      </p>
+
+      <div class="mt-6 grid grid-cols-1 justify-items-start gap-3 sm:flex sm:flex-wrap sm:items-center max-sm:w-fit">
         {[
-          { value: "+500", label: "Agências financeiras" },
-          { value: "2 bi/ano", label: "transacionados" },
-          { value: "100 mil", label: "Produtores Rurais impactados" },
+          { value: "50 mil", label: "produtores rurais impactados" },
+          { value: "500+", label: "agências financeiras" },
+          { value: "R$ 1 bi/ano", label: "transacionados" },
         ].map((item) => (
-          <div class="flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm">
+          <div class="flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm w-full sm:w-auto">
             <span class="font-semibold text-foreground">{item.value}</span>
             <span class="text-muted-foreground">{item.label}</span>
           </div>
         ))}
       </div>
+
+      <div class="mt-6">
+        <img
+          src="/Listagem_Zoom.png"
+          alt="Softfocus Zoom Rural"
+          class="w-full object-cover rounded-2xl"
+        />
+      </div>
     </section>
 
     <section class="mt-14">
-      <h2 class="text-2xl font-semibold tracking-tight">Desafio</h2>
+      <h2 id="desafio" class="scroll-mt-20 text-2xl font-semibold tracking-tight">Desafio</h2>
       <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
-        O principal desafio era transformar processos altamente fragmentados e
-        dependentes de validações manuais em uma experiência mais eficiente,
-        rastreável e escalável para instituições financeiras. O cenário
-        envolvia grande volume documental, exigências regulatórias,
-        fiscalização do Banco Central, validações fiscais e monitoramento
-        contínuo das lavouras, tornando as operações lentas, suscetíveis a
-        falhas e difíceis de escalar.
+        Antes do Zoom Rural, fiscalizar uma operação de crédito rural exigia que um técnico, normalmente terceirizado, se deslocasse fisicamente até a plantação para confirmar o que o produtor havia declarado. Um processo caro, lento e impossível de escalar quando se fala em 500+ agências e centenas de operações simultâneas.
+      </p>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Além da vistoria presencial, o cenário envolvia grande volume documental, exigências regulatórias do Banco Central, validações fiscais e monitoramento contínuo das lavouras. Os relatórios exigidos no processo (comprovação fiscal, validações socioambientais e sensoriamento remoto, entre outros) eram gerados em planilhas, aumentando o risco de inconsistências e retrabalho.
+      </p>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        O desafio era transformar esse ecossistema complexo em uma experiência rastreável, eficiente e escalável para analistas e técnicos que precisam tomar decisões de alto risco com rapidez e precisão.
       </p>
     </section>
 
     <section class="mt-14">
-      <h2 class="text-2xl font-semibold tracking-tight">Minha atuação</h2>
+      <h2 id="atuacao" class="scroll-mt-20 text-2xl font-semibold tracking-tight">Minha atuação</h2>
       <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
-        Atuei por 3 anos na evolução do Zoom Rural como Product Designer,
-        colaborando diretamente com Product Managers, engenharia, QA e
-        stakeholders na construção de soluções para um ecossistema de
-        operações financeiras complexas. Minha atuação envolveu discovery,
-        definição de fluxos, pesquisas com clientes, prototipação e evolução
-        contínua da experiência do produto.
+        Atuei por quase 5 anos na Softfocus como Product Designer. Nos primeiros anos, fui alocado em diferentes produtos da empresa, o que me deu visão ampla do ecossistema. Em seguida, passei 3 anos dedicado ao Zoom Rural, cobrindo o ciclo completo, desde o discovery, pesquisa com clientes, prototipação, evolução do design system e handoff para desenvolvimento.
       </p>
-      <ul class="mt-4 space-y-2 text-lg text-muted-foreground">
-        {[
-          "Estruturação e evolução de Design Systems para garantir consistência visual, escalabilidade e eficiência na construção dos produtos",
-          "Condução de entrevistas e validações com clientes para identificar oportunidades, mapear dores e orientar decisões de produto",
-          "Colaboração com Product Managers na definição de regras de negócio, priorização e alinhamento estratégico das soluções",
-          "Criação e refinamento de fluxos de navegação com foco em usabilidade, clareza e eficiência operacional",
-          "Prototipação de novas funcionalidades e evolução contínua da experiência dos produtos digitais",
-          "Elaboração de especificações funcionais e documentação técnica para desenvolvimento em ferramentas como Jira e YouTrack",
-          "Handoff estruturado para desenvolvimento, garantindo alinhamento entre design, viabilidade técnica e implementação",
-          "Validação e acompanhamento das entregas desenvolvidas para assegurar consistência visual, aderência ao Design System e conformidade com regras de negócio",
-          "Atuação contínua na melhoria da experiência do produto com foco em evolução incremental e qualidade da entrega",
-          "Produção e atualização de documentações e manuais para apoiar clientes internos e externos",
-        ].map((item) => (
-          <li class="flex items-start gap-2">
-            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/40" />
-            {item}
-          </li>
-        ))}
-      </ul>
     </section>
 
     <section class="mt-14">
-      <h2 class="text-2xl font-semibold tracking-tight">Processos e fluxos de trabalho</h2>
+      <h2 id="deepdive" class="scroll-mt-20 text-2xl font-semibold tracking-tight">Deep Dive — Sensoriamento remoto</h2>
+
+      <h3 class="mt-8 text-lg font-semibold">1. O contexto</h3>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        A fiscalização do crédito rural é uma das etapas mais críticas no processo de financiamento agrícola. Após liberar o recurso, a instituição financeira precisa confirmar que o dinheiro foi utilizado pelo produtor exatamente como previsto no projeto aprovado. Tudo isso em um ambiente regulado pelo Banco Central, onde o uso indevido do crédito rural tem consequências financeiras e legais sérias.
+      </p>
+
+      <h3 class="mt-8 text-lg font-semibold">2. O usuário</h3>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Os principais usuários dessa parte do sistema são analistas de crédito rural de cooperativas e bancos, e técnicos agrícolas responsáveis pela fiscalização das operações. Para esses profissionais, a velocidade e a clareza das informações são determinantes, qualquer dificuldade em interpretar os dados pode comprometer uma decisão de alto risco ou atrasar uma operação inteira.
+      </p>
+
+      <h3 class="mt-8 text-lg font-semibold">3. O problema</h3>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Quando entrei no projeto, a seção de Sensoriamento remoto exibia apenas imagens de satélite com informações básicas. Com a evolução do produto, passamos a incorporar muito mais dados: análise do ZARC com tabela de risco, fases de desenvolvimento da cultura, eventos climáticos como geadas e chuvas excessivas, além de gráficos.
+      </p>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        O volume de informação cresceu, mas a interface não acompanhou. Tudo estava empilhado verticalmente, exigindo scroll extenso para encontrar qualquer dado. A maior dor deixou de ser a ausência de informação e passou a ser a dificuldade de consumir o que já existia.
+      </p>
+
+      <div class="mt-6">
+        <img
+          src="/SR_Antigo.png"
+          alt="Sensoriamento Remoto — versão anterior"
+          class="w-full rounded-2xl object-cover"
+        />
+      </div>
+
+      <h3 class="mt-8 text-lg font-semibold">4. Discovery</h3>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Conduzi conversas com técnicos agrícolas e analistas financeiros para entender quais grupos de informação faziam mais sentido para cada perfil e quais precisavam de maior destaque. A descoberta principal foi que os dois perfis tinham prioridades distintas: o analista queria ver o status da lavoura de forma rápida e consolidada; o técnico precisava mergulhar nos dados específicos de cada fase e evento climático. Essa distinção foi determinante para as decisões de hierarquia e organização da interface.
+      </p>
+
+      <h3 class="mt-8 text-lg font-semibold">5. A decisão</h3>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        O sistema já usava abas como padrão de navegação. A decisão mais difícil foi introduzir abas dentro da aba de sensoriamento remoto, uma estrutura aninhada que, se mal executada, poderia aumentar a confusão em vez de reduzi-la.
+      </p>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Optei por manter na visão principal apenas os dados essenciais da plantação, com a imagem de satélite em destaque. Cada camada de informação (ZARC, fases da cultura, eventos climáticos e gráficos) ganhou sua própria aba com as informações importantes destacadas, acessível com um clique, sem necessidade de scroll. O resultado foi uma interface onde qualquer informação podia ser encontrada de imediato, só de bater o olho na navegação.
+      </p>
+
+      <div class="mt-6">
+        <img
+          src="/SR_Novo.png"
+          alt="Sensoriamento Remoto — nova versão"
+          class="w-full rounded-2xl object-cover"
+        />
+      </div>
+
+      <h3 class="mt-8 text-lg font-semibold">6. Os relatórios</h3>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Com a interface reorganizada, o próximo passo foi pensar em como levar para o relatório essas mudanças feitas no desktop. Após analisar os relatórios oferecidos por concorrentes e conduzir conversas com clientes, refiz o relatório completo para se adequar as mudanças e criei um relatório simplificado, que condensava o resumo geral em uma única página, algo que nenhum concorrente oferecia. Esse formato foi elogiado pelos clientes pela clareza e pela agilidade que trazia ao processo de análise, sem abrir mão da profundidade para quem precisasse dela.
+      </p>
+
+      <div class="mt-6 grid grid-cols-2 gap-4">
+        <div>
+          <p class="mb-2 text-xs font-medium text-muted-foreground">Relatório completo</p>
+          <img
+            src="/relatorio_completo.png"
+            alt="Relatório completo"
+            class="w-full object-contain rounded-2xl"
+          />
+        </div>
+        <div>
+          <p class="mb-2 text-xs font-medium text-muted-foreground">Relatório simplificado</p>
+          <img
+            src="/relatorio_simples.png"
+            alt="Relatório simplificado"
+            class="w-full object-contain rounded-2xl"
+          />
+        </div>
+      </div>
+
+      <h3 class="mt-8 text-lg font-semibold">7. Impacto</h3>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Ao transformar uma interface densa e fragmentada em uma experiência clara e navegável, a funcionalidade ganhou maturidade suficiente para que a Softfocus entrasse com força total no mercado de monitoramento por imagens de satélite — abrindo portas para POCs e novas prospecções com grandes instituições financeiras.
+      </p>
+    </section>
+
+    <section class="mt-14">
+      <h2 id="processos" class="scroll-mt-20 text-2xl font-semibold tracking-tight">Processos e fluxos de trabalho</h2>
 
       <div class="mt-4">
         <h3 class="text-lg font-semibold">Demandas de baixa complexidade</h3>
@@ -138,7 +204,7 @@ import SectionHeader from "../components/SectionHeader.astro";
 
         <div class="mt-6">
           <img
-            src="/portfolio/simples.png"
+            src="/perfis.png"
             alt="Demandas de baixa complexidade"
             class="w-full rounded-2xl object-cover"
           />
@@ -188,7 +254,7 @@ import SectionHeader from "../components/SectionHeader.astro";
 
         <div class="mt-6">
           <img
-            src="/portfolio/media.png"
+            src="/Regras.png"
             alt="Demandas de média complexidade"
             class="w-full rounded-2xl object-cover"
           />
@@ -238,7 +304,7 @@ import SectionHeader from "../components/SectionHeader.astro";
 
         <div class="mt-6">
           <img
-            src="/portfolio/alta.png"
+            src="/SR_demanda.png"
             alt="Demandas estratégicas e de alta complexidade"
             class="w-full rounded-2xl object-cover"
           />
@@ -247,7 +313,7 @@ import SectionHeader from "../components/SectionHeader.astro";
     </section>
 
     <section class="mt-14 mb-16">
-      <h2 class="text-2xl font-semibold tracking-tight">Resultados</h2>
+      <h2 id="resultados" class="scroll-mt-20 text-2xl font-semibold tracking-tight">Resultados</h2>
 
       <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
         As melhorias implementadas contribuíram para ampliar a adoção do
@@ -274,5 +340,14 @@ import SectionHeader from "../components/SectionHeader.astro";
         </div>
       </div>
     </section>
+
+    <div class="mt-8 flex justify-start">
+      <a
+        href="#"
+        class="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-xs font-medium tracking-[0.18em] text-muted-foreground transition-colors hover:text-foreground"
+      >
+        ↑ Voltar ao topo
+      </a>
+    </div>
   </PageContainer>
 </Layout>

@@ -14,40 +14,40 @@ interface Case {
 
 const cases: Case[] = [
   {
-    slug: "/portfolio/case_softfocus_novo",
+    slug: "/case_softfocus_novo",
     company: "Softfocus",
     subtitle: "Softfocus — Zoom Rural",
     title: "Melhorando a experiência na análise e fiscalização do crédito rural",
     summary:
       "Solução que transforma o monitoramento de crédito rural em um processo mais simples, integrado e orientado a compliance para instituições financeiras.",
-    image: "/portfolio/dashboard.png",
+    image: "/dashboard.png",
   },
   {
-    slug: "/portfolio/case_gamegather",
+    slug: "/case_gamegather",
     company: "Gamegather",
     subtitle: "Freelancer — Portal Gamegather",
     title: "Conectando jogadores pelo que realmente importa: comunidade e respeito",
     summary:
-      "Plataforma social que une gamers com base em interesses e reputação comunitária — criando conexões mais saudáveis e experiências de jogo sem toxicidade.",
-    image: "/portfolio/gamegather.png",
+      "Plataforma social que une gamers com base em interesses e reputação comunitária, criando conexões mais saudáveis e experiências de jogo sem toxicidade.",
+    image: "/gamegather.png",
   },
   {
-    slug: "/portfolio/case_amigo_secreto",
+    slug: "/case_amigo_secreto",
     company: "Amigo Secreto",
     subtitle: "Desafio processo seletivo — Softfocus",
     title: "Transformando o amigo secreto corporativo em uma experiência digital completa",
     summary:
-      "Aplicativo mobile que transforma o amigo secreto em uma experiência completa — do sorteio à festa, com gamificação, quiz diário e lista de presentes.",
-    image: "/portfolio/amigo_abre.png",
+      "Aplicativo mobile que transforma o amigo secreto em uma experiência completa desde o sorteio até a festa, com gamificação, quiz diário e lista de presentes.",
+    image: "/amigo_abre.png",
   },
   {
-    slug: "/portfolio/case_hurst_capital",
+    slug: "/case_hurst_capital",
     company: "Hurst Capital",
     subtitle: "Teste para vaga de UX/UI Designer",
     title: "Redesenho de site para o primeiro ecossistema de ativos alternativos do Brasil",
     summary:
-      "Redesenho das páginas Home e Blog com foco em hierarquia visual, espaçamento generoso e navegação clara — mantendo a credibilidade que o mercado financeiro exige.",
-    image: "/portfolio/Abre_Hurst.png",
+      "Redesenho das páginas Home e Blog com foco em hierarquia visual, espaçamento generoso e navegação clara, mantendo a credibilidade que o mercado financeiro exige.",
+    image: "/Abre_Hurst.png",
   },
 ];
 ---
@@ -65,7 +65,7 @@ const cases: Case[] = [
         {cases.map((c, i) => (
           <a
             href={c.slug}
-            class="animate-fade-up group block overflow-hidden rounded-3xl border border-border bg-card hover-lift"
+             class="animate-fade-up group block overflow-hidden rounded-3xl border border-border bg-card hover-lift max-sm:border-foreground/15"
             style={`animation-delay: ${i * 0.08}s`}
           >
             <div class="relative aspect-[4/2] w-full overflow-hidden bg-muted">

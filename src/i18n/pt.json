@@ -1,0 +1,39 @@
+{
+  "layout": {
+    "siteTitle": "Décio D'Almeida — Product Designer | Portfólio",
+    "siteDescription": "Portfólio de Décio D'Almeida, Product Designer especializado em produtos digitais, design system, user research e interface design.",
+    "ogDescription": "Transformando problemas complexos em experiências digitais intuitivas.",
+    "sidebar": {
+      "name": "Décio D'Almeida",
+      "role": "Product Designer"
+    },
+    "nav": {
+      "perfil": "Perfil",
+      "experiencias": "Experiências",
+      "cases": "Cases",
+      "formacao": "Formação",
+      "skills": "Skills",
+      "contato": "Contato"
+    },
+    "breadcrumb": {
+      "portfolio": "Portfólio",
+      "perfil": "Perfil",
+      "experiencias": "Experiências",
+      "cases": "Cases",
+      "formacao": "Formação",
+      "skills": "Skills",
+      "contato": "Contato"
+    },
+    "caseNames": {
+      "softfocus": "Softfocus",
+      "gamegather": "Gamegather",
+      "amigoSecreto": "Amigo Secreto",
+      "hurstCapital": "Hurst Capital"
+    },
+    "header": {
+      "toggleSidebar": "Toggle sidebar",
+      "portfolioLabel": "Portfólio · 2026"
+    },
+    "footer": "© 2026 Décio D'Almeida · Product Designer"
+  }
+}

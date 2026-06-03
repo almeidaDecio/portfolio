@@ -1,0 +1,185 @@
+---
+import Layout from "../../components/Layout.astro";
+import PageContainer from "../../components/PageContainer.astro";
+import SectionHeader from "../../components/SectionHeader.astro";
+import { icon } from "../../components/icons";
+
+interface Experience {
+  company: string;
+  role: string;
+  period: string;
+  location: string;
+  summary: string;
+  skills: string[];
+  caseUrl?: string;
+}
+
+const experiences: Experience[] = [
+  {
+    company: "Softfocus",
+    role: "Lead Product Designer",
+    period: "Jul 2021 – Feb 2026",
+    location: "Remote",
+    summary:
+      "Led the product design strategy and end-to-end UX/UI lifecycle for complex B2B SaaS enterprise platforms, focusing heavily on AgTech and FinTech systems. Collaborated closely with Product Managers, Tech Leads, and QA to translate complex regulatory frameworks (Central Bank compliance) and massive data pipelines into intuitive, high-performance enterprise dashboards. Conducted user research, mapped complex customer journeys, established robust responsive grid layouts, and advanced the company's internal Design System. Pioneered product improvements that directly enabled the business to land Tier-1 enterprise clients, including Santander and Banco do Brasil.",
+    skills: [
+      "Product Discovery", "Information Architecture", "Responsive Design",
+      "Design Systems", "Regulatory UX", "UX Research", "B2B SaaS",
+    ],
+    caseUrl: "/en/case_softfocus_novo",
+  },
+  {
+    company: "Gamegather",
+    role: "Lead Product Designer (Freelance)",
+    period: "Aug 2025 – Jan 2026",
+    location: "Remote",
+    summary:
+      "Designed the mobile-first UX/UI architecture for a community-centric social matching platform for esports and casual gamers. Collaborated directly with stakeholders and developers to map onboarding flows, community reputation dashboards, and multiplayer search patterns. Conducted user testing and benchmarking of international social applications to eliminate interactive friction and foster a safe, anti-toxicity environment.",
+    skills: [
+      "Mobile-First Design", "User Journey Mapping", "Rapid Prototyping",
+      "Anti-Toxicity UX Patterns", "UI Design", "Community Products",
+    ],
+    caseUrl: "/en/case_gamegather",
+  },
+  {
+    company: "BMK Indústria Gráfica",
+    role: "Technical Systems & Security Design Specialist",
+    period: "Apr 2011 – Sep 2020",
+    location: "On-site",
+    summary:
+      "Engineered high-security physical documents (bank checks, financial slips, official certificates) requiring absolute technical precision and compliance with national financial security standards. Optimized prepress workflows for high-volume digital and web offset printing, ensuring zero-defect production at scale. Partnered with IT, Production Planning (PCP), and engineering teams to bridge software layouts with industrial manufacturing machinery. Introduced process optimizations that significantly reduced file prep errors and enhanced operational efficiency.",
+    skills: [
+      "High-Precision Visual Engineering", "Technical Operations",
+      "Systems Alignment", "Cross-Functional Optimization", "Pre-press",
+    ],
+  },
+  {
+    company: "Paper Express",
+    role: "Technical Print & Production Supervisor",
+    period: "Mar 2002 – Feb 2009",
+    location: "On-site",
+    summary:
+      "Supervised operational workflows, production planning, and quality control in a fast-paced, high-demand commercial print production environment. Managed cross-functional floor teams, audited technical assets for offset and digital presses, and resolved complex manufacturing constraints. Built a strong foundation in visual system organization, strict attention to detail, and process optimization.",
+    skills: [
+      "Workflow Management", "Quality Assurance", "Technical System Architecture",
+      "Production Management", "Process Optimization",
+    ],
+  },
+  {
+    company: "IstoÉ Dinheiro Magazine",
+    role: "Visual Lead & Editorial Designer",
+    period: "Sep 2000 – Feb 2002",
+    location: "On-site",
+    summary:
+      "Designed editorial visual structures, data graphics, and illustrations for a premium, high-circulation national weekly financial magazine. Translated dense economic data, market indicators, and financial reports into highly scannable, visually compelling editorial layouts under extreme weekly deadlines. Collaborated tightly with editors, writers, and copywriters to ensure maximum storytelling impact and editorial consistency.",
+    skills: [
+      "Visual Communication", "Data Visualization", "Information Hierarchy",
+      "Typography", "Editorial Design",
+    ],
+  },
+  {
+    company: "Caras Magazine",
+    role: "Editorial Designer & Image Specialist",
+    period: "Feb 2000 – Sep 2000",
+    location: "On-site",
+    summary:
+      "Executed high-speed editorial layout design and high-precision image retouching for a leading national weekly publication. Maintained visual system consistency and managed tight print-production deadlines in a highly dynamic, collaborative editorial department.",
+    skills: [
+      "Editorial Design", "Production Rigor", "Visual Quality Control",
+      "Image Processing", "Pre-press",
+    ],
+  },
+];
+
+const companyId = (name: string) =>
+  name.toLowerCase().replace(/[^a-zà-ú0-9]+/g, "-").replace(/(^-|-$)/g, "");
+---
+
+<Layout
+  pathname={Astro.url.pathname}
+  title="Experience"
+  description="Professional experience in Product Design, B2B SaaS digital products, design systems, discovery, and digital platform evolution."
+  sections={experiences.map((exp) => ({ name: exp.company, id: companyId(exp.company) }))}
+  lang="en"
+>
+  <PageContainer>
+    <section class="-mt-6">
+      <SectionHeader title="Experience" />
+
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        I specialize in bridging digital product design, complex enterprise
+        workflows, and high-precision visual systems.
+        I have a proven track record of solving complex workflow challenges,
+        designing structured layouts, and driving seamless cross-functional collaboration.
+      </p>
+
+      <div class="mt-8 space-y-6">
+        {experiences.map((exp, i) => (
+          <article
+            id={companyId(exp.company)}
+            class="scroll-mt-20 animate-fade-up group rounded-3xl border border-border bg-card p-5 transition-all hover:border-foreground/20 md:p-6 max-sm:border-foreground/15"
+            style={`animation-delay: ${i * 0.08}s`}
+          >
+            <div class="grid md:grid-cols-12" style={i === 0 ? "gap:0" : "gap:1.5rem"}>
+              <div class="md:col-span-4">
+                <div class="flex items-center gap-3">
+                  <div>
+                    <h3 class="text-xl font-semibold tracking-tight">
+                      {exp.company}
+                    </h3>
+                    <p class="text-sm text-muted-foreground">
+                      {exp.role}
+                    </p>
+                  </div>
+                </div>
+
+                <div class="mt-6 space-y-2 text-sm text-muted-foreground">
+                  <div class="flex items-center gap-2">
+                    <span class="[&>svg]:h-3.5 [&>svg]:w-3.5" set:html={icon("calendar")}></span>
+                    <span>{exp.period}</span>
+                  </div>
+
+                  <div class="flex items-center gap-2">
+                    <span class="[&>svg]:h-3.5 [&>svg]:w-3.5" set:html={icon("mapPin")}></span>
+                    <span>{exp.location}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="md:col-span-8">
+                <p class="text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
+                  {exp.summary}
+                </p>
+
+                <div class="mt-6">
+                  <p class="mb-3 text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
+                    Key Skills
+                  </p>
+
+                  <div class="flex flex-wrap gap-2">
+                    {exp.skills.map((s) => (
+                      <span class="inline-flex items-center rounded-full border border-border bg-secondary px-3 py-1 text-[12px] font-medium text-secondary-foreground">
+                        {s}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {exp.caseUrl && (
+                  <div class="mt-8">
+                    <a
+                      href={exp.caseUrl}
+                      class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 sm:w-auto"
+                    >
+                      View Case Study
+                    </a>
+                  </div>
+                )}
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  </PageContainer>
+</Layout>

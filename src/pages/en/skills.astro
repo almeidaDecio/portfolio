@@ -1,0 +1,111 @@
+---
+import Layout from "../../components/Layout.astro";
+import PageContainer from "../../components/PageContainer.astro";
+import SectionHeader from "../../components/SectionHeader.astro";
+
+const groups = [
+  {
+    title: "Hard Skills",
+    eyebrow: "Technical competencies",
+    items: [
+      "Product Thinking & UX Strategy",
+      "Interface & Interaction Design",
+      "System Design",
+      "Research & Usability",
+      "Cross-Functional Delivery",
+      "UX Research",
+      "UI/UX Design",
+      "Wireframing",
+      "Prototyping",
+      "Design Systems",
+      "Information Architecture",
+      "User Flows",
+      "User Journey Mapping",
+      "Design Thinking",
+      "Discovery",
+      "Usability Analysis",
+      "Handoff & Specs",
+      "QA & Design Review",
+    ],
+  },
+  {
+    title: "Tools & Ecosystems",
+    eyebrow: "Daily stack",
+    items: [
+      "Figma",
+      "Adobe XD",
+      "FigJam",
+      "Miro",
+      "Jira",
+      "YouTrack",
+      "Hotjar",
+      "Slack",
+      "Adobe Creative Suite",
+      "Photoshop",
+      "Illustrator",
+      "ChatGPT",
+      "Claude",
+      "Gemini",
+      "Lovable",
+    ],
+  },
+  {
+    title: "Soft Skills",
+    eyebrow: "Behavioral",
+    items: [
+      "Communication",
+      "Collaboration",
+      "Analytical Thinking",
+      "Problem Solving",
+      "Empathy",
+      "Facilitation",
+      "Critical Thinking",
+      "Adaptability",
+      "Attention to Detail",
+      "Leadership",
+      "Proactivity",
+      "Organized & Self-directed",
+      "Cross-Functional Communication",
+      "Meticulous Craftsmanship",
+    ],
+  },
+];
+---
+
+<Layout
+  pathname={Astro.url.pathname}
+  title="Skills"
+  description="Hard skills, tools, and soft skills of Décio D'Almeida, Product Designer."
+  lang="en"
+>
+  <PageContainer>
+    <section class="-mt-6">
+      <SectionHeader title="Skills & Design Stack" />
+
+      <div class="mt-4 grid gap-6 md:mt-8 md:grid-cols-3">
+        {groups.map((g, i) => (
+          <section
+            class="animate-fade-up group rounded-3xl border border-border bg-card p-5 transition-all hover:border-foreground/20 md:p-6"
+            style={`animation-delay: ${i * 0.08}s`}
+          >
+            <span class="text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
+              {g.eyebrow}
+            </span>
+
+            <h3 class="mt-2 text-2xl font-semibold tracking-tight">
+              {g.title}
+            </h3>
+
+            <div class="mt-6 flex flex-wrap gap-2">
+              {g.items.map((item) => (
+                <span class="inline-flex items-center rounded-full border border-border bg-secondary px-3 py-1 text-[12px] font-medium text-secondary-foreground">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
+    </section>
+  </PageContainer>
+</Layout>

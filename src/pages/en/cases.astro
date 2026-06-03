@@ -1,0 +1,98 @@
+---
+import Layout from "../../components/Layout.astro";
+import PageContainer from "../../components/PageContainer.astro";
+import SectionHeader from "../../components/SectionHeader.astro";
+
+interface Case {
+  slug: string;
+  company: string;
+  subtitle: string;
+  title: string;
+  summary: string;
+  image: string;
+}
+
+const cases: Case[] = [
+  {
+    slug: "/en/case_softfocus_novo",
+    company: "Softfocus",
+    subtitle: "Softfocus - Zoom Rural",
+    title: "How we scaled agricultural credit compliance and remote monitoring — transforming expensive physical field inspections into a high-precision, remote satellite intelligence platform.",
+    summary: "B2B SaaS · AgTech · FinTech · Compliance · UX Research · Design Systems",
+    image: "/dashboard.png",
+  },
+  {
+    slug: "/en/case_gamegather",
+    company: "Gamegather",
+    subtitle: "Social Matching & Community: Designing an Anti-Toxicity Gaming Platform",
+    title: "Creating a mobile-first social hub that connects multiplayer gamers based on playstyle compatibility and community-vetted reputation.",
+    summary: "Consumer · Social · Mobile-First · Community · UX Research · UI Design",
+    image: "/gamegather.png",
+  },
+  {
+    slug: "/en/case_amigo_secreto",
+    company: "Secret Santa",
+    subtitle: "Enterprise Engagement: Gamifying Internal Culture for Hybrid Teams",
+    title: "An end-to-end mobile design sprint completed in one week — driving engagement through gamification, interactive gift registries, and social mechanics.",
+    summary: "Mobile · Gamification · Design Sprint · UX Research · Prototyping",
+    image: "/amigo_abre.png",
+  },
+  {
+    slug: "/en/case_hurst_capital",
+    company: "Hurst Capital",
+    subtitle: "FinTech Redesign: Elevating Trust and Scannability in Alternative Assets",
+    title: "Redesigning a financial ecosystem's home and editorial pages to optimize visual hierarchy, build investor trust, and simplify high-value financial content.",
+    summary: "FinTech · UI/UX · Visual Design · Information Architecture · Brand",
+    image: "/Abre_Hurst.png",
+  },
+];
+---
+
+<Layout
+  pathname={Astro.url.pathname}
+  title="Selected Work"
+  description="A selection of projects where design made operations simpler, faster, and more reliable."
+  lang="en"
+>
+  <PageContainer>
+    <section class="-mt-6">
+      <SectionHeader title="Selected Work" />
+
+      <div class="mt-8 grid gap-6 md:mt-10 md:grid-cols-2">
+        {cases.map((c, i) => (
+          <a
+            href={c.slug}
+             class="animate-fade-up group block overflow-hidden rounded-3xl border border-border bg-card hover-lift max-sm:border-foreground/15"
+            style={`animation-delay: ${i * 0.08}s`}
+          >
+            <div class="relative aspect-[4/2] w-full overflow-hidden bg-muted">
+              {c.image ? (
+                <img
+                  src={c.image}
+                  alt={c.company}
+                  class="h-full w-full object-cover object-top"
+                />
+              ) : (
+                <div class="absolute inset-0 grain opacity-60" />
+              )}
+            </div>
+
+            <div class="p-7">
+              {c.subtitle && (
+                <p class="text-sm font-medium text-muted-foreground">
+                  {c.subtitle}
+                </p>
+              )}
+              <h3 class="mt-3 text-pretty text-lg font-semibold tracking-tight md:text-xl">
+                {c.title}
+              </h3>
+              <p class="mt-3 text-pretty text-sm leading-relaxed text-muted-foreground md:text-base">
+                {c.summary}
+              </p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+  </PageContainer>
+</Layout>

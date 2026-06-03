@@ -1,0 +1,188 @@
+{
+  "home": {
+    "title": "Transformando operações complexas em experiências digitais mais claras e eficientes",
+    "paragraphs": [
+      "Sou Décio D'Almeida, Product Designer com foco na criação de produtos digitais escaláveis, unindo experiência do usuário, estratégia de produto e consistência visual para transformar fluxos complexos em soluções mais intuitivas e eficientes.",
+      "Minha trajetória começou no design gráfico há mais de 30 anos em um ambiente onde precisão, atenção aos detalhes e responsabilidade sempre foram essenciais. Hoje, aplico essa mesma mentalidade no desenvolvimento de plataformas digitais, atuando em discovery, pesquisas, prototipação, design systems e colaboração contínua com stakeholders, times de tecnologia e produto.",
+      "Tenho experiência na evolução de sistemas e produtos orientados a negócio, equilibrando usabilidade, clareza operacional e qualidade visual em todas as etapas do processo."
+    ],
+    "buttons": {
+      "verCases": "Ver cases",
+      "contato": "Entrar em contato",
+      "curriculo": "Baixar currículo"
+    },
+    "keywords": ["Product Design", "UX Design", "UI Design", "Design System", "Discovery", "User Research", "Prototyping", "Interface Design", "Usabilidade", "Jornada do Usuário", "Design Thinking", "SaaS", "Scrum / Agile"]
+  },
+  "cases": {
+    "title": "Cases",
+    "description": "Estudos de caso selecionados de Product Design: contexto, problema, processo, solução e resultado.",
+    "sectionTitle": "Cases",
+    "items": [
+      {
+        "subtitle": "Softfocus — Zoom Rural",
+        "title": "Melhorando a experiência na análise e fiscalização do crédito rural",
+        "summary": "Solução que transforma o monitoramento de crédito rural em um processo mais simples, integrado e orientado a compliance para instituições financeiras.",
+        "company": "Softfocus"
+      },
+      {
+        "subtitle": "Freelancer — Portal Gamegather",
+        "title": "Conectando jogadores pelo que realmente importa: comunidade e respeito",
+        "summary": "Plataforma social que une gamers com base em interesses e reputação comunitária, criando conexões mais saudáveis e experiências de jogo sem toxicidade.",
+        "company": "Gamegather"
+      },
+      {
+        "subtitle": "Desafio processo seletivo — Softfocus",
+        "title": "Transformando o amigo secreto corporativo em uma experiência digital completa",
+        "summary": "Aplicativo mobile que transforma o amigo secreto em uma experiência completa desde o sorteio até a festa, com gamificação, quiz diário e lista de presentes.",
+        "company": "Amigo Secreto"
+      },
+      {
+        "subtitle": "Teste para vaga de UX/UI Designer",
+        "title": "Redesenho de site para o primeiro ecossistema de ativos alternativos do Brasil",
+        "summary": "Redesenho das páginas Home e Blog com foco em hierarquia visual, espaçamento generoso e navegação clara, mantendo a credibilidade que o mercado financeiro exige.",
+        "company": "Hurst Capital"
+      }
+    ]
+  },
+  "experiencias": {
+    "title": "Experiências",
+    "description": "Experiência profissional em Product Design, produtos digitais B2B SaaS, design systems, discovery e evolução de plataformas digitais.",
+    "sectionTitle": "Experiência profissional",
+    "intro": "Minha trajetória combina experiência em produtos digitais, operações complexas e produção gráfica de alta exigência técnica. Ao longo da carreira, desenvolvi uma atuação orientada à resolução de problemas, organização de fluxos, colaboração multidisciplinar e construção de experiências digitais escaláveis.",
+    "skillsLabel": "Principais skills",
+    "verCase": "Ver case",
+    "items": [
+      {
+        "role": "Product Designer Pleno",
+        "period": "Jul / 2021 — Fev / 2026",
+        "location": "Remoto",
+        "summary": "Atuação no desenvolvimento e evolução de produtos digitais B2B SaaS voltados a operações complexas. Condução de discovery, pesquisas com usuários, prototipação e definição de fluxos para apoiar tomadas de decisão e otimizar jornadas operacionais. Colaboração contínua com Product Managers, engenharia e QA na construção de soluções escaláveis, alinhadas às necessidades do negócio e da experiência do usuário.",
+        "skills": ["Product Design", "UX Research", "Discovery", "Design System", "Prototyping", "Interface Design", "Stakeholders", "B2B SaaS"]
+      },
+      {
+        "role": "Product Designer — Freelancer",
+        "period": "Ago / 2025 — Jan / 2026",
+        "location": "Remoto",
+        "summary": "Criação e evolução da experiência digital de uma plataforma orientada à comunidade e interação entre usuários. Desenvolvimento de fluxos, interfaces e melhorias de usabilidade com foco em engajamento, clareza de navegação e fortalecimento da experiência mobile. Participação ativa na estruturação da experiência do produto e refinamento contínuo das funcionalidades.",
+        "skills": ["UI Design", "User Flow", "Usabilidade", "Wireframing", "Jornada do Usuário", "Comunidade", "Mobile First"]
+      },
+      {
+        "role": "Designer / TI",
+        "period": "Abr / 2011 — Set / 2020",
+        "location": "Presencial",
+        "summary": "Criação e finalização de documentos de segurança de alta complexidade, como cheques e boletos, com rigor técnico, precisão visual e conformidade com padrões gráficos e operacionais. Preparação e otimização de arquivos para impressão rotativa e digital, garantindo consistência entre arte-final e produção em larga escala. Atuação integrada com equipes de TI, PCP e produção em ambientes multidisciplinares, fortalecendo processos colaborativos e comunicação entre áreas. Participação contínua na otimização dos fluxos de produção gráfica, contribuindo para redução de falhas, ganho de eficiência operacional e melhoria da qualidade das entregas.",
+        "skills": ["Documentos de Segurança", "Pré-impressão", "Impressão Rotativa", "Impressão Digital", "Arte-Final", "TI", "PCP", "Otimização de Processos"]
+      },
+      {
+        "role": "Supervisor de Produção",
+        "period": "Mar / 2002 — Fev / 2009",
+        "location": "Presencial",
+        "summary": "Gestão de produção gráfica com foco em planejamento operacional, controle de prazos e coordenação de equipes em ambientes de alta demanda. Responsável pela preparação de arquivos para impressão offset e digital, garantindo qualidade, precisão técnica e eficiência nos processos produtivos. Experiência que consolidou uma forte base em organização, atenção aos detalhes e resolução de problemas complexos.",
+        "skills": ["Gestão de Produção", "Impressão Offset", "Pré-impressão", "Gestão de Equipes", "PCP", "Controle de Prazos", "Liderança", "Otimização de Processos"]
+      },
+      {
+        "role": "Diagramador / Ilustrador",
+        "period": "Set / 2000 — Fev / 2002",
+        "location": "Presencial",
+        "summary": "Desenvolvimento de layouts editoriais e ilustrações para publicação semanal de circulação nacional, atuando em um ambiente de produção acelerada e alto nível de exigência editorial. Criação de soluções visuais para conteúdos financeiros e econômicos, equilibrando clareza da informação, identidade visual e consistência gráfica. Colaboração próxima com equipes de redação e edição.",
+        "skills": ["Diagramação Editorial", "Ilustração", "Design Gráfico", "Identidade Visual", "Produção Jornalística", "Pré-impressão", "Colaboração com Redação", "Cumprimento de Prazos"]
+      },
+      {
+        "role": "Diagramador",
+        "period": "Fev / 2000 — Set / 2000",
+        "location": "Presencial",
+        "summary": "Atuação na diagramação editorial e tratamento de imagens para publicação semanal de grande circulação nacional. Responsável pela organização visual de conteúdos e preparação de materiais para impressão, garantindo qualidade gráfica, consistência visual e cumprimento de prazos em um ambiente dinâmico de produção editorial.",
+        "skills": ["Diagramação Editorial", "Escaneamento de Imagens", "Tratamento de Imagens", "Design Gráfico", "Pré-impressão", "Produção Editorial", "Controle de Qualidade", "Cumprimento de Prazos"]
+      }
+    ]
+  },
+  "formacao": {
+    "title": "Formação",
+    "description": "Formação acadêmica, cursos e certificações em Product Design e pesquisa.",
+    "sectionTitle": "Formação acadêmica e contínua",
+    "items": [
+      {
+        "type": "Graduação",
+        "title": "Publicidade e Propaganda",
+        "institution": "UNIP — Universidade Paulista",
+        "period": "1988 — 1992",
+        "description": "Base que desenvolveu o olhar para comunicação visual, narrativa de marca e criação, habilidades que permeiam toda a minha trajetória em design."
+      },
+      {
+        "type": "Pós-graduação",
+        "title": "História da Arte",
+        "institution": "FAAP — Fundação Armando Alvares Penteado",
+        "period": "2013 — 2015",
+        "description": "Onde aprimorei minha sensibilidade estética, repertório visual e capacidade de leitura crítica da imagem, elementos que influenciam diretamente meu olhar como designer."
+      },
+      {
+        "type": "Curso",
+        "title": "IxDF — The Interaction Design Foundation",
+        "institution": "Design Thinking: The Ultimate Guide (2023)\nUser Experience: The Beginner's Guide (2023)",
+        "period": "2023",
+        "description": "Cursos que estruturaram a transição para o UX, consolidando metodologias de pesquisa, ideação e resolução de problemas centrada no usuário."
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills",
+    "description": "Hard skills, ferramentas e soft skills de Décio D'Almeida, Product Designer.",
+    "sectionTitle": "Stack de design e habilidades",
+    "groups": [
+      {
+        "eyebrow": "Competências técnicas",
+        "title": "Hard Skills",
+        "items": ["UX Research", "UI/UX Design", "Wireframing", "Prototipagem", "Design System", "Usabilidade", "Arquitetura da Informação", "User Flow", "Jornada do Usuário", "Design Thinking", "Discovery", "Análise de Usabilidade", "Handoff", "Controle de Qualidade"]
+      },
+      {
+        "eyebrow": "Stack do dia a dia",
+        "title": "Ferramentas",
+        "items": ["Figma", "Adobe XD", "FigJam", "Miro", "Jira", "Hotjar", "Slack", "YouTrack", "Pacote Adobe", "Photoshop", "Illustrator", "Adobe Acrobat", "InDesign", "Pacote Office", "ChatGPT", "Lovable", "Stitch", "Claude Design", "Gemini"]
+      },
+      {
+        "eyebrow": "Comportamentais",
+        "title": "Soft Skills",
+        "items": ["Comunicação", "Colaboração", "Pensamento Analítico", "Resolução de Problemas", "Empatia", "Facilitação", "Organização", "Pensamento Crítico", "Adaptabilidade", "Atenção a Detalhes", "Liderança", "Proatividade"]
+      }
+    ]
+  },
+  "contato": {
+    "title": "Contato",
+    "description": "Entre em contato com Décio D'Almeida: e-mail e LinkedIn.",
+    "sectionTitle": "Vamos conversar?",
+    "sectionDescription": "Aberto a oportunidades full-time, contratos e colaborações\nBaseado na cidade de Porecatu, PR",
+    "channels": [
+      { "label": "E-mail" },
+      { "label": "LinkedIn" }
+    ],
+    "copyButton": "Copiar"
+  },
+  "caseGamegather": {
+    "title": "Décio D'Almeida — Plataforma social para comunidade gamer",
+    "description": "Case de produto: plataforma digital voltada à conexão entre jogadores, comunidades e experiências multiplayer com foco em navegação mobile-first e usabilidade.",
+    "sectionTitles": ["Produto", "Desafio", "Minha atuação", "Telas"],
+    "subtitle": "",
+    "sections": {}
+  },
+  "caseAmigoSecreto": {
+    "title": "Décio D'Almeida — Amigão Oculto",
+    "description": "Case de produto: Amigão Oculto — aplicativo mobile para amigo secreto corporativo.",
+    "sectionTitles": ["Contexto", "Desafio", "Processo", "Solução", "Resultado", "O que faria diferente"],
+    "subtitle": "Desafio de processo seletivo — Softfocus · julho de 2021",
+    "sections": {}
+  },
+  "caseHurstCapital": {
+    "title": "Décio D'Almeida — Hurst Capital",
+    "description": "Case de produto: Hurst Capital — redesenho de site para teste de UX/UI Designer.",
+    "sectionTitles": ["Contexto", "Desafio", "Processo", "Solução", "Resultado", "O que faria diferente"],
+    "subtitle": "Redesenho de site — teste para vaga de UX/UI Designer · 2021",
+    "sections": {}
+  },
+  "caseSoftfocus": {
+    "title": "Décio D'Almeida — Softfocus Zoom Rural",
+    "description": "Case de produto: Softfocus Zoom Rural — plataforma de monitoramento e fiscalização de operações de crédito rural para instituições financeiras.",
+    "sectionTitles": ["Produto", "Desafio", "Minha atuação", "Deep dive", "Processos e fluxo", "Resultados"],
+    "subtitle": "Como transformamos o monitoramento de crédito rural — de vistorias presenciais a análise remota em escala",
+    "sections": {}
+  }
+}

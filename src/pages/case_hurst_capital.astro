@@ -8,12 +8,20 @@ import SectionHeader from "../components/SectionHeader.astro";
   pathname={Astro.url.pathname}
   title="Décio D'Almeida — Hurst Capital"
   description="Case de produto: Hurst Capital — redesenho de site para teste de UX/UI Designer."
+  sections={[
+    { name: "Contexto", id: "contexto" },
+    { name: "Desafio", id: "desafio" },
+    { name: "Processo", id: "processo" },
+    { name: "Solução", id: "solucao" },
+    { name: "Resultado", id: "resultado" },
+    { name: "O que faria diferente", id: "diferente" },
+  ]}
 >
   <PageContainer>
     <section class="-mt-6">
       <SectionHeader title="Hurst Capital" />
 
-      <p class="mt-4 text-lg font-medium text-muted-foreground">
+      <p class="mt-1 text-lg font-medium text-muted-foreground">
         Redesenho de site — teste para vaga de UX/UI Designer · 2021
       </p>
 
@@ -21,9 +29,8 @@ import SectionHeader from "../components/SectionHeader.astro";
     </section>
 
     <section class="mt-14">
-      <h2 class="text-2xl font-semibold tracking-tight">Contexto</h2>
-      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
-        A Hurst Capital é o primeiro ecossistema de ativos alternativos do Brasil — uma plataforma voltada a investidores que buscam oportunidades fora do mercado tradicional, com foco em due diligence rigorosa e originação própria.
+      <h2 id="contexto" class="scroll-mt-20 text-2xl font-semibold tracking-tight">Contexto</h2>      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        A Hurst Capital é o primeiro ecossistema de ativos alternativos do Brasil, uma plataforma voltada a investidores que buscam oportunidades fora do mercado tradicional, com foco em due diligence rigorosa e originação própria.
       </p>
       <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
         O teste consistia em redesenhar duas páginas do site: a <strong class="text-foreground">Home</strong> e o <strong class="text-foreground">Blog</strong>, demonstrando conhecimento prático de UX e UI.
@@ -31,9 +38,8 @@ import SectionHeader from "../components/SectionHeader.astro";
     </section>
 
     <section class="mt-14">
-      <h2 class="text-2xl font-semibold tracking-tight">Desafio</h2>
-      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
-        O site original era funcional, mas com problemas claros de hierarquia visual: textos longos sem respiro, imagens pequenas, seções pouco diferenciadas e navegação sem indicação de localização dentro do site. O conteúdo era rico — o problema era como ele estava sendo apresentado.
+      <h2 id="desafio" class="scroll-mt-20 text-2xl font-semibold tracking-tight">Desafio</h2>      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        O site original era funcional, mas com problemas claros de hierarquia visual: textos longos sem respiro, imagens pequenas, seções pouco diferenciadas e navegação sem indicação de localização dentro do site. O conteúdo era rico: o problema era como ele estava sendo apresentado.
       </p>
       <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
         O desafio era modernizar sem perder a credibilidade que uma plataforma de investimentos precisa transmitir.
@@ -41,21 +47,20 @@ import SectionHeader from "../components/SectionHeader.astro";
     </section>
 
     <section class="mt-14">
-      <h2 class="text-2xl font-semibold tracking-tight">Processo</h2>
-
+      <h2 id="processo" class="scroll-mt-20 text-2xl font-semibold tracking-tight">Processo</h2>
       <h3 class="mt-8 text-lg font-semibold">1. Benchmark e referências</h3>
       <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
-        A primeira etapa foi analisar como concorrentes e referências do mercado financeiro resolviam as mesmas questões — textos, imagens, menu e botões. O objetivo era entender os padrões que usuários desse segmento já estão acostumados, para modernizar sem desorientar.
+        A primeira etapa foi analisar como concorrentes e referências do mercado financeiro resolviam as mesmas questões: textos, imagens, menu e botões. O objetivo era entender os padrões que usuários desse segmento já estão acostumados, para modernizar sem desorientar.
       </p>
 
       <div class="mt-6 space-y-4">
         <img
-          src="/portfolio/Benchmark_Hurst.png"
+          src="/Benchmark_Hurst.png"
           alt="Benchmark"
           class="w-full object-contain rounded-2xl"
         />
         <img
-          src="/portfolio/Referencias_Hurst.png"
+          src="/Referencias_Hurst.png"
           alt="Referências"
           class="w-full object-contain rounded-2xl"
         />
@@ -63,7 +68,7 @@ import SectionHeader from "../components/SectionHeader.astro";
 
       <h3 class="mt-8 text-lg font-semibold">2. Decisões de design</h3>
       <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
-        Optei por manter o Design Guide original — cores e fontes — para preservar a identidade da marca. A modernização veio pela estrutura, não pela identidade.
+        Optei por manter o Design Guide original para preservar a identidade da marca. A modernização veio pela estrutura, não pela identidade.
       </p>
       <p class="mt-3 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
         As principais decisões foram:
@@ -85,7 +90,7 @@ import SectionHeader from "../components/SectionHeader.astro";
 
       <div class="mt-6">
         <img
-          src="/portfolio/Design_Guide_Hurst.png"
+          src="/Design_Guide_Hurst.png"
           alt="Design Guide Hurst"
           class="w-full object-contain rounded-2xl"
         />
@@ -98,8 +103,7 @@ import SectionHeader from "../components/SectionHeader.astro";
     </section>
 
     <section class="mt-14">
-      <h2 class="text-2xl font-semibold tracking-tight">Solução</h2>
-
+      <h2 id="solucao" class="scroll-mt-20 text-2xl font-semibold tracking-tight">Solução</h2>
       <h3 class="mt-6 text-lg font-semibold">Home</h3>
       <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
         O hero ganhou uma imagem de impacto e headline em destaque, com hierarquia clara entre título, subtítulo e CTA. As seções seguintes foram reorganizadas com mais respiro visual, alternando fotos e texto de forma equilibrada.         A seção institucional "Por trás da Hurst Capital" foi mantida, apresentando a equipe em cards mais limpos e diretos.
@@ -109,7 +113,7 @@ import SectionHeader from "../components/SectionHeader.astro";
         <div>
           <p class="mb-2 text-xs font-medium text-muted-foreground">Original</p>
           <img
-            src="/portfolio/Quem_somos_Original_Hurst.png"
+            src="/Quem_somos_Original_Hurst.png"
             alt="Quem somos — Original"
             class="w-full object-contain rounded-2xl"
           />
@@ -117,7 +121,7 @@ import SectionHeader from "../components/SectionHeader.astro";
         <div>
           <p class="mb-2 text-xs font-medium text-muted-foreground">Redesenho</p>
           <img
-            src="/portfolio/Quem_Somos_Novo_Hurst.png"
+            src="/Quem_Somos_Novo_Hurst.png"
             alt="Quem somos — Novo"
             class="w-full object-contain rounded-2xl"
           />
@@ -133,7 +137,7 @@ import SectionHeader from "../components/SectionHeader.astro";
         <div>
           <p class="mb-2 text-xs font-medium text-muted-foreground">Original</p>
           <img
-            src="/portfolio/Blog+Original_Hurst.png"
+            src="/Blog+Original_Hurst.png"
             alt="Blog — Original"
             class="w-full object-contain rounded-2xl"
           />
@@ -141,7 +145,7 @@ import SectionHeader from "../components/SectionHeader.astro";
         <div>
           <p class="mb-2 text-xs font-medium text-muted-foreground">Redesenho</p>
           <img
-            src="/portfolio/Blog_Novo_Hurst.png"
+            src="/Blog_Novo_Hurst.png"
             alt="Blog — Novo"
             class="w-full object-contain rounded-2xl"
           />
@@ -150,16 +154,14 @@ import SectionHeader from "../components/SectionHeader.astro";
     </section>
 
     <section class="mt-14">
-      <h2 class="text-2xl font-semibold tracking-tight">Resultado</h2>
-      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+      <h2 id="resultado" class="scroll-mt-20 text-2xl font-semibold tracking-tight">Resultado</h2>      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
         O projeto gerou uma chamada para entrevista. O processo não avançou por questão de localização — a vaga era presencial em São Paulo, e eu estou baseado no Paraná.
       </p>
     </section>
 
     <section class="mt-14 mb-16">
-      <h2 class="text-2xl font-semibold tracking-tight">O que eu faria diferente hoje</h2>
-      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
-        Hoje, com mais experiência, vejo que muitos elementos poderiam ser menores e mais contidos. A seção "Por trás da Hurst Capital", por exemplo, ainda ficou densa demais no redesenho — os cards da equipe concentram muita informação entre nome, cargo e texto descritivo, o que compromete o respiro visual que o restante da página conquistou.
+      <h2 id="diferente" class="scroll-mt-20 text-2xl font-semibold tracking-tight">O que eu faria diferente hoje</h2>      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Hoje, com mais experiência, vejo que muitos elementos poderiam ser menores e mais contidos. A seção "Por trás da Hurst Capital", por exemplo, ainda ficou densa demais no redesenho, os cards da equipe concentram muita informação entre nome, cargo e texto descritivo, o que compromete o respiro visual que o restante da página conquistou.
       </p>
       <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
         Se fosse refazer, reduziria os textos e o tamanho das imagens, deixando os detalhes para um modal, tornando a página ainda mais limpa e equilibrada.

@@ -1,57 +1,79 @@
 ---
 import { icon } from "./icons";
+import { useTranslations } from "../i18n";
 import "../styles/global.css";
 
 interface Props {
   title?: string;
   description?: string;
   pathname: string;
+  sections?: { name: string; id: string }[];
+  lang?: string;
 }
 
-const { title, description, pathname } = Astro.props;
+const { title, description, pathname, sections, lang } = Astro.props;
+const locale = lang || Astro.currentLocale || "pt";
+const { t } = useTranslations(locale);
+
+const ptPath = pathname.replace(/^\/en/, "") || "/";
+const enPath = pathname.startsWith("/en") ? pathname : (pathname === "/" ? "/en" : `/en${pathname}`);
 
 const pageTitle = title
   ? `${title} — Décio D'Almeida | Product Designer`
-  : "Décio D'Almeida — Product Designer | Portfolio";
+  : t("layout.siteTitle");
 
-const pageDescription = description || "Portfolio de Décio D'Almeida, Product Designer especializado em produtos digitais, design system, user research e interface design.";
+const pageDescription = description || t("layout.siteDescription");
 
 const breadcrumb = new Map([
-  ["/portfolio/", "Perfil"],
-  ["/portfolio/experiencias", "Experiências"],
-  ["/portfolio/cases", "Cases"],
-  ["/portfolio/formacao", "Formação"],
-  ["/portfolio/skills", "Skills"],
-  ["/portfolio/contato", "Contato"],
+  ["/", t("layout.breadcrumb.perfil")],
+  ["/experiencias", t("layout.breadcrumb.experiencias")],
+  ["/cases", t("layout.breadcrumb.cases")],
+  ["/formacao", t("layout.breadcrumb.formacao")],
+  ["/skills", t("layout.breadcrumb.skills")],
+  ["/contato", t("layout.breadcrumb.contato")],
 ]);
 
 const caseName = new Map([
-  ["/portfolio/case_softfocus_novo", "Softfocus"],
-  ["/portfolio/case_gamegather", "Gamegather"],
-  ["/portfolio/case_amigo_secreto", "Amigo Secreto"],
-  ["/portfolio/case_hurst_capital", "Hurst Capital"],
+  ["/case_softfocus_novo", t("layout.caseNames.softfocus")],
+  ["/case_gamegather", t("layout.caseNames.gamegather")],
+  ["/case_amigo_secreto", t("layout.caseNames.amigoSecreto")],
+  ["/case_hurst_capital", t("layout.caseNames.hurstCapital")],
 ]);
 
 const navItems = [
-  { title: "Perfil", url: "/portfolio/", icon: "user" },
-  { title: "Experiências", url: "/portfolio/experiencias", icon: "briefcase" },
-  { title: "Cases", url: "/portfolio/cases", icon: "folderKanban" },
-  { title: "Formação", url: "/portfolio/formacao", icon: "graduationCap" },
-  { title: "Skills", url: "/portfolio/skills", icon: "sparkles" },
-  { title: "Contato", url: "/portfolio/contato", icon: "mail" },
+  { title: t("layout.nav.perfil"), url: "/", icon: "user" },
+  { title: t("layout.nav.experiencias"), url: "/experiencias", icon: "briefcase" },
+  { title: t("layout.nav.cases"), url: "/cases", icon: "folderKanban" },
+  { title: t("layout.nav.formacao"), url: "/formacao", icon: "graduationCap" },
+  { title: t("layout.nav.skills"), url: "/skills", icon: "sparkles" },
+  { title: t("layout.nav.contato"), url: "/contato", icon: "mail" },
 ];
 
-const isActive = (url) =>
-  url === "/portfolio/" ? pathname === "/portfolio/" : pathname.startsWith(url);
+function localeUrl(path: string): string {
+  if (locale === "pt") return path;
+  if (path === "/") return "/en";
+  return `/en${path}`;
+}
 
-const isHome = pathname === "/portfolio/";
-const isCase = caseName.has(pathname);
-const currentLabel = isCase ? caseName.get(pathname) : breadcrumb.get(pathname);
+const isActive = (url: string) =>
+  locale === "pt"
+    ? url === "/" ? pathname === "/" : pathname.startsWith(url)
+    : url === "/"
+      ? pathname.replace("/en", "") === ""
+      : pathname.replace("/en", "").startsWith(url);
+
+const isHome = locale === "pt" ? pathname === "/" : pathname.replace("/en", "") === "";
+const isCase = caseName.has(pathname) || caseName.has(pathname.replace("/en", ""));
+
+const cleanPath = pathname.replace(/^\/en/, "") || "/";
+const currentLabel = isCase
+  ? caseName.get(pathname) || caseName.get(cleanPath)
+  : breadcrumb.get(pathname) || breadcrumb.get(cleanPath);
 
 function breadcrumbSchema() {
-  const parts = [{ name: "Portfolio", path: "/portfolio/" }];
-  if (pathname.startsWith("/portfolio/case_") && currentLabel) {
-    parts.push({ name: "Cases", path: "/portfolio/cases" });
+  const parts = [{ name: t("layout.breadcrumb.portfolio"), path: localeUrl("/") }];
+  if (cleanPath.startsWith("/case_") && currentLabel) {
+    parts.push({ name: t("layout.breadcrumb.cases"), path: localeUrl("/cases") });
     parts.push({ name: currentLabel, path: pathname });
   } else if (!isHome && currentLabel) {
     parts.push({ name: currentLabel, path: pathname });
@@ -62,7 +84,7 @@ const crumbs = breadcrumbSchema();
 ---
 
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang={locale === "en" ? "en" : "pt-BR"}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -70,7 +92,7 @@ const crumbs = breadcrumbSchema();
     <meta name="description" content={pageDescription} />
     <meta name="author" content="Décio D'Almeida" />
     <meta property="og:title" content="Décio D'Almeida — Product Designer" />
-    <meta property="og:description" content="Transformando problemas complexos em experiências digitais intuitivas." />
+    <meta property="og:description" content={t("layout.ogDescription")} />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://portfolio.decio-almeida-1969.workers.dev/linkedin.png" />
     <meta property="og:url" content="https://portfolio.decio-almeida-1969.workers.dev/" />
@@ -92,16 +114,16 @@ const crumbs = breadcrumbSchema();
         style="width: 16rem"
       >
         <div class="flex items-center gap-3 px-4 py-3">
-          <a href="/portfolio/" class="flex items-center gap-3">
+          <a href={localeUrl("/")} class="flex items-center gap-3">
             <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground font-semibold text-sm">
               D
             </div>
             <div class="flex flex-col leading-tight">
               <span class="text-sm font-semibold tracking-tight text-sidebar-foreground">
-                Décio D'Almeida
+                {t("layout.sidebar.name")}
               </span>
               <span class="text-xs text-muted-foreground">
-                Product Designer
+                {t("layout.sidebar.role")}
               </span>
             </div>
           </a>
@@ -112,7 +134,7 @@ const crumbs = breadcrumbSchema();
             {navItems.map((item) => (
               <li>
                 <a
-                  href={item.url}
+                  href={localeUrl(item.url)}
                   class="flex h-10 items-center gap-3 rounded-md px-3 text-sm font-medium transition-colors"
                   class:list={{
                     "bg-sidebar-accent text-sidebar-accent-foreground": isActive(item.url),
@@ -136,22 +158,36 @@ const crumbs = breadcrumbSchema();
           <button
             id="sidebar-toggle"
             class="flex h-9 w-9 items-center justify-center rounded-md text-muted-foreground hover:bg-muted hover:text-foreground transition-colors -ml-1"
-            aria-label="Toggle sidebar"
+            aria-label={t("layout.header.toggleSidebar")}
           >
-            <span set:html={icon("panelLeft")}></span>
+            <span class="md:hidden [&>svg]:h-5 [&>svg]:w-5" set:html={icon("menu")}></span>
+            <span class="hidden md:inline" set:html={icon("panelLeft")}></span>
           </button>
 
           <div class="h-5 w-px bg-border"></div>
 
-          <a href="/portfolio/" class="text-xs font-medium tracking-[0.18em] text-muted-foreground hover:text-foreground transition-colors">
-            Portfolio · 2026
+          <a href={ptPath} class="text-xs tracking-[0.18em] transition-colors text-muted-foreground hover:text-foreground" style={{ fontWeight: locale === "pt" ? 800 : 500 }}>
+            PT
+          </a>
+          <span class="text-xs text-muted-foreground/40">/</span>
+          <a href={enPath} class="text-xs tracking-[0.18em] transition-colors text-muted-foreground hover:text-foreground" style={{ fontWeight: locale === "en" ? 800 : 500 }}>
+            EN
+          </a>
+          <span class="text-xs text-muted-foreground/50">|</span>
+          <a href={localeUrl("/")} class="text-xs font-medium tracking-[0.18em] text-muted-foreground hover:text-foreground transition-colors">
+            {t("layout.header.portfolioLabel")}
           </a>
 
+          <span class="hidden md:contents">
           {!isHome && crumbs.slice(1).map((crumb, j) => (
             <>
               <span class="text-xs text-muted-foreground/50">/</span>
-              {isCase && crumb.name === "Cases" && j < crumbs.length - 2 ? (
+              {isCase && crumb.name === t("layout.breadcrumb.cases") && j < crumbs.length - 2 ? (
                 <a href={crumb.path} class="text-xs font-medium tracking-[0.18em] text-muted-foreground hover:text-foreground transition-colors">
+                  {crumb.name}
+                </a>
+              ) : isCase && j === crumbs.slice(1).length - 1 ? (
+                <a href="#" class="cursor-pointer text-xs font-medium tracking-[0.18em] text-foreground hover:text-foreground transition-colors">
                   {crumb.name}
                 </a>
               ) : (
@@ -161,6 +197,15 @@ const crumbs = breadcrumbSchema();
               )}
             </>
           ))}
+          {sections && sections.map((s) => (
+            <>
+              <span class="text-xs text-muted-foreground/50">/</span>
+              <a href={`#${s.id}`} class="text-xs font-medium tracking-[0.18em] text-muted-foreground hover:text-foreground transition-colors">
+                {s.name}
+              </a>
+            </>
+          ))}
+          </span>
         </header>
 
         <!-- Main content -->
@@ -171,7 +216,7 @@ const crumbs = breadcrumbSchema();
         <!-- Footer -->
         <footer class="border-t border-border px-6 py-8 text-xs text-muted-foreground">
           <div class="flex max-w-6xl px-6 md:px-20 lg:px-10 flex-col items-start justify-between gap-3 md:flex-row md:items-center">
-            <span>© 2026 Décio D'Almeida · Product Designer</span>
+            <span>{t("layout.footer")}</span>
           </div>
         </footer>
       </div>
@@ -182,7 +227,10 @@ const crumbs = breadcrumbSchema();
       const toggle = document.getElementById("sidebar-toggle");
       const main = document.querySelector("#layout > div");
 
-      let sidebarOpen = true;
+      let sidebarOpen = window.innerWidth >= 768;
+      if (!sidebarOpen) {
+        sidebar.style.transform = "translateX(-100%)";
+      }
 
       if (toggle && sidebar) {
         toggle.addEventListener("click", () => {

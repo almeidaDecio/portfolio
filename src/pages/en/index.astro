@@ -1,0 +1,61 @@
+---
+import Layout from "../../components/Layout.astro";
+import PageContainer from "../../components/PageContainer.astro";
+import { icon } from "../../components/icons";
+---
+
+<Layout pathname={Astro.url.pathname} lang="en">
+  <PageContainer>
+    <section class="-mt-6">
+      <h1 class="animate-fade-up text-pretty text-5xl font-semibold leading-[1.05] tracking-tight md:text-6xl">
+        Turning complex
+        <br />
+        data operations into{" "}
+        <span class="italic text-muted-foreground">
+          high-performance
+          <br />digital products.
+        </span>
+      </h1>
+
+      <p class="animate-fade-up delay-200 mt-6 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl">
+        I am Décio D'Almeida, a Senior Product Designer specializing in
+        B2B SaaS, enterprise workflows, and scalable digital ecosystems.
+        I partner with cross-functional teams to transform dense,
+        high-risk data systems into intuitive, high-performance user experiences.
+      </p>
+
+      <p class="animate-fade-up delay-200 mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl">
+        My design philosophy is rooted in decades of high-precision system
+        design, where visual accuracy and operational alignment are paramount.
+        Today, I apply this rigor to AgTech, FinTech, and B2B platforms —
+        bridging user research, business strategy, and technical execution
+        to deliver measurable product impact.
+      </p>
+
+      <div class="animate-fade-up delay-300 mt-10 flex flex-col gap-3 md:flex-row md:items-center md:gap-3">
+        <a
+          href="/en/cases"
+          class="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:gap-3 hover:bg-primary/90 md:w-auto md:min-w-[200px]"
+        >
+          View Case Studies
+        </a>
+
+        <a
+          href="/en/contato"
+          class="inline-flex w-full items-center justify-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-muted md:w-auto md:min-w-[200px]"
+        >
+          Get in Touch
+        </a>
+
+        <a
+          href="/CV_Decio_PD.pdf"
+          download
+          class="inline-flex w-full items-center justify-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-muted md:w-auto md:min-w-[200px]"
+        >
+          <span class="[&>svg]:h-4 [&>svg]:w-4" set:html={icon("download")}></span>
+          Download Resume
+        </a>
+      </div>
+    </section>
+  </PageContainer>
+</Layout>

@@ -1,0 +1,24 @@
+---
+import { useTranslations } from "../i18n";
+
+const { currentLang } = Astro.props as { currentLang: string };
+const { t } = useTranslations(currentLang);
+
+const targetLang = currentLang === "pt" ? "en" : "pt";
+const label = targetLang === "en" ? "EN" : "PT";
+
+const currentPath = Astro.url.pathname;
+const targetPath = targetLang === "en"
+  ? currentPath === "/"
+    ? "/en"
+    : `/en${currentPath}`
+  : currentPath.replace(/^\/en/, "") || "/";
+---
+
+<a
+  href={targetPath}
+  class="flex h-7 w-9 items-center justify-center rounded-md text-xs font-semibold uppercase tracking-wider text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
+  aria-label={targetLang === "en" ? "Switch to English" : "Mudar para Português"}
+>
+  {label}
+</a>

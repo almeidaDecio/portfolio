@@ -1,0 +1,201 @@
+---
+import Layout from "../../components/Layout.astro";
+import PageContainer from "../../components/PageContainer.astro";
+import SectionHeader from "../../components/SectionHeader.astro";
+---
+
+<Layout
+  pathname={Astro.url.pathname}
+  title="Décio D'Almeida — Softfocus Zoom Rural"
+  description="Softfocus - Zoom Rural case study: optimizing agricultural lending operations through satellite-driven remote monitoring and compliance design."
+  sections={[
+    { name: "Executive Summary", id: "summary" },
+    { name: "Challenge", id: "desafio" },
+    { name: "Design Strategy", id: "strategy" },
+    { name: "Impact", id: "resultados" },
+  ]}
+  lang="en"
+>
+  <PageContainer>
+    <section class="-mt-6">
+      <SectionHeader title="Softfocus - Zoom Rural" />
+
+      <p class="mt-1 text-lg font-medium text-muted-foreground">
+        How we redesigned satellite-driven remote monitoring, transforming expensive field inspections into a scalable compliance platform for Tier-1 financial institutions.
+      </p>
+    </section>
+
+    <div class="mt-6">
+      <img
+        src="/Listagem_Zoom.png"
+        alt="Softfocus Zoom Rural"
+        class="w-full object-cover rounded-2xl"
+      />
+    </div>
+
+    <section class="mt-14">
+      <h2 id="summary" class="scroll-mt-20 text-2xl font-semibold tracking-tight">Executive Summary</h2>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Zoom Rural is an enterprise B2B SaaS platform that enables financial institutions to monitor, audit, and authorize high-value agricultural loans. By consolidating satellite imagery, weather intelligence, tax invoices, and environmental data, the platform mitigates operational risks and ensures compliance with strict national regulatory standards.
+      </p>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        As the Lead Product Designer on this product for 3 years, I spearheaded the redesign of the remote monitoring dashboard. The project transformed a dense, fragmented data interface into an intuitive, highly scannable experience. This evolution directly enabled the business to land Tier-1 enterprise clients, including Santander and Banco do Brasil.
+      </p>
+
+      <div class="mt-6 grid grid-cols-1 justify-items-start gap-3 sm:flex sm:flex-wrap sm:items-center max-sm:w-fit">
+        {[
+          { value: "500+", label: "financial branches" },
+          { value: "BRL 2B+", label: "in annual transactions" },
+          { value: "100K+", label: "rural producers impacted" },
+        ].map((item) => (
+          <div class="flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm w-full sm:w-auto">
+            <span class="font-semibold text-foreground">{item.value}</span>
+            <span class="text-muted-foreground">{item.label}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-14">
+      <h2 id="desafio" class="scroll-mt-20 text-2xl font-semibold tracking-tight">The Challenge</h2>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        In agricultural lending, financial institutions must verify that approved credit is used exactly as declared by the farmer. Historically, this required expensive, unscalable in-person field inspections — forcing field agents to physically travel to remote farms to generate reports.
+      </p>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        To automate this, Zoom Rural integrated remote sensing, satellite imaging, and agrometeorological databases. However, as the product grew, we faced a major UX bottleneck:
+      </p>
+      <ul class="mt-4 space-y-3 text-base text-muted-foreground">
+        {[
+          "Data Overload: The system pulled massive, high-volume data layers — including agrometeorological risk models (ZARC), weather events, crop growth phases, and financial invoice validations.",
+          "Poor Hierarchy: The UI stacked all this information vertically. Users had to scroll endlessly through massive pages, losing visual context of the satellite map.",
+          "Conflicting Personas: Different users had conflicting goals. Risk Analysts needed quick, macro-level status summaries, while Field Technicians needed to perform deep technical audits.",
+        ].map((item) => (
+          <li class="flex items-start gap-2">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/40" />
+            {item}
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="mt-14">
+      <h2 id="strategy" class="scroll-mt-20 text-2xl font-semibold tracking-tight">My Design & Research Strategy</h2>
+
+      <h3 class="mt-8 text-lg font-semibold">1. User Discovery & Persona Alignment</h3>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        I conducted deep user interviews with both Agro-Credit Analysts and Technical Agronomists at major lending cooperatives. This research revealed a critical divergence in information priorities:
+      </p>
+      <ul class="mt-3 space-y-2 text-base text-muted-foreground">
+        {[
+          "The Analyst wanted an immediate \"Healthy / At Risk\" verdict on the farm's status to accelerate credit approvals.",
+          "The Technician needed to verify specific environmental and regulatory details, drill down into crop growth phases, and cross-reference weather anomalies against satellite timelines.",
+        ].map((item) => (
+          <li class="flex items-start gap-2">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/40" />
+            {item}
+          </li>
+        ))}
+      </ul>
+
+      <h3 class="mt-8 text-lg font-semibold">2. Information Architecture: The Nested Navigation Solution</h3>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        The central challenge was presenting high-density data on a single page alongside a dynamic satellite map without overwhelming the user. I proposed a structured, tabbed layout system:
+      </p>
+      <ul class="mt-3 space-y-2 text-base text-muted-foreground">
+        {[
+          "The Primary Canvas: Kept the high-resolution satellite imagery front and center, displaying key crop health indicators.",
+          "Contextual Data Panes: Grouped data into four highly targeted tabs — Agrometeorological Risk Zoning (ZARC), Crop Cycle Analysis, Weather Anomalies, and Analytics.",
+        ].map((item) => (
+          <li class="flex items-start gap-2">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/40" />
+            {item}
+          </li>
+        ))}
+      </ul>
+      <p class="mt-3 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        This design reduced the page height by 70%, allowing users to access any data point with a single, horizontal click while keeping the satellite map perfectly in view.
+      </p>
+
+      <div class="mt-6">
+        <img
+          src="/SR_Antigo.png"
+          alt="Remote Sensing — previous version"
+          class="w-full rounded-2xl object-cover"
+        />
+      </div>
+
+      <div class="mt-4">
+        <img
+          src="/SR_Novo.png"
+          alt="Remote Sensing — new version"
+          class="w-full rounded-2xl object-cover"
+        />
+      </div>
+
+      <h3 class="mt-8 text-lg font-semibold">3. Redesigning the Compliance Reports</h3>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Enterprise users frequently need to download and present audit reports to compliance boards. I audited competitive products and restructured our reporting engine:
+      </p>
+      <ul class="mt-3 space-y-2 text-base text-muted-foreground">
+        {[
+          "Full Comprehensive Report: Streamlined the layout to align with the new desktop visual hierarchy, ensuring regulatory auditability.",
+          "The One-Page Executive Summary (Zero-to-One): Designed a brand-new, ultra-condensed brief summarizing the entire operation on a single page — a massive competitive differentiator praised by credit managers.",
+        ].map((item) => (
+          <li class="flex items-start gap-2">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/40" />
+            {item}
+          </li>
+        ))}
+      </ul>
+
+      <div class="mt-6 grid grid-cols-2 gap-4">
+        <div>
+          <p class="mb-2 text-xs font-medium text-muted-foreground">Full report</p>
+          <img
+            src="/relatorio_completo.png"
+            alt="Full report"
+            class="w-full object-contain rounded-2xl"
+          />
+        </div>
+        <div>
+          <p class="mb-2 text-xs font-medium text-muted-foreground">Executive summary</p>
+          <img
+            src="/relatorio_simples.png"
+            alt="Executive summary"
+            class="w-full object-contain rounded-2xl"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-14 mb-16">
+      <h2 id="resultados" class="scroll-mt-20 text-2xl font-semibold tracking-tight">Business Impact & Outcomes</h2>
+
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        The redesign elevated the platform from a utility tool to a highly mature enterprise product, opening the door for massive enterprise accounts:
+      </p>
+
+      <ul class="mt-4 space-y-3 text-base text-muted-foreground">
+        {[
+          "Tier-1 Client Acquisition: Helped Softfocus secure major enterprise accounts, including Santander and Banco do Brasil (the largest agricultural lender in Latin America).",
+          "Increased Product Adoption: Drove significant growth in daily active usage among existing cooperative clients, who reported faster operational turnaround times.",
+          "Zero-to-One Competitive Edge: The simplified executive report became a key differentiator in product demos and corporate pitches.",
+        ].map((item) => (
+          <li class="flex items-start gap-2">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/40" />
+            {item}
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <div class="mt-8 flex justify-start">
+      <a
+        href="#"
+        class="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-xs font-medium tracking-[0.18em] text-muted-foreground transition-colors hover:text-foreground"
+      >
+        ↑ Back to top
+      </a>
+    </div>
+  </PageContainer>
+</Layout>

@@ -1,0 +1,168 @@
+---
+import Layout from "../../components/Layout.astro";
+import PageContainer from "../../components/PageContainer.astro";
+import SectionHeader from "../../components/SectionHeader.astro";
+---
+
+<Layout
+  pathname={Astro.url.pathname}
+  title="Décio D'Almeida — Hurst Capital"
+  description="FinTech redesign case study: elevating trust and scannability in alternative assets investment platform."
+  sections={[
+    { name: "Context", id: "contexto" },
+    { name: "Challenge", id: "desafio" },
+    { name: "Process", id: "processo" },
+    { name: "Retrospective", id: "retro" },
+  ]}
+  lang="en"
+>
+  <PageContainer>
+    <section class="-mt-6">
+      <SectionHeader title="Hurst Capital: Redesigning the Alternative Asset Investment Experience" />
+
+      <p class="mt-1 text-lg font-medium text-muted-foreground">
+        How I redesigned the home and editorial pages for a leading financial platform, balancing high-density investment data with premium visual trust.
+      </p>
+    </section>
+
+    <section class="mt-14">
+      <h2 id="contexto" class="scroll-mt-20 text-2xl font-semibold tracking-tight">Context & The Brief</h2>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Hurst Capital is Latin America's pioneer in alternative asset investments, offering access to high-yield, non-traditional assets like private equity, real estate, litigation funding, and intellectual property.
+      </p>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        As part of a professional UX/UI evaluation challenge, I was tasked with redesigning two core touchpoints of their digital platform: the Home Page and the Editorial Blog. The primary goal was to modernize the aesthetic, establish a rigorous visual hierarchy, and build deep credibility without alienating the platform's sophisticated investor base.
+      </p>
+    </section>
+
+    <section class="mt-14">
+      <h2 id="desafio" class="scroll-mt-20 text-2xl font-semibold tracking-tight">The Challenge</h2>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        The existing site suffered from severe visual hierarchy challenges:
+      </p>
+      <ul class="mt-4 space-y-3 text-base text-muted-foreground">
+        {[
+          "High Cognitive Load: Extremely long, dense blocks of text with no visual breathing room.",
+          "Underwhelming Visuals: Small, low-impact imagery that failed to capture the institutional magnitude of alternative assets.",
+          "Poor Navigation: A rigid header menu that failed to provide the user with clear orientation or structural context.",
+        ].map((item) => (
+          <li class="flex items-start gap-2">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/40" />
+            {item}
+          </li>
+        ))}
+      </ul>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        The strategic challenge was to balance information density with premium visual trust — allowing sophisticated investors to scan complex financial assets quickly while maintaining a world-class institutional aesthetic.
+      </p>
+    </section>
+
+    <section class="mt-14">
+      <h2 id="processo" class="scroll-mt-20 text-2xl font-semibold tracking-tight">My Redesign Process</h2>
+
+      <h3 class="mt-8 text-lg font-semibold">1. Market Benchmarking</h3>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        I analyzed premium international investment platforms — such as Stripe, Wealthfront, and premium asset management sites — to dissect their layout structures. I noted how these platforms handled three critical elements: generous negative space to convey premium exclusivity, strong structured typographic systems to establish analytical credibility, and clean cards-based layouts for complex financial structures.
+      </p>
+
+      <div class="mt-6 space-y-4">
+        <img
+          src="/Benchmark_Hurst.png"
+          alt="Benchmark"
+          class="w-full object-contain rounded-2xl"
+        />
+        <img
+          src="/Referencias_Hurst.png"
+          alt="References"
+          class="w-full object-contain rounded-2xl"
+        />
+      </div>
+
+      <h3 class="mt-8 text-lg font-semibold">2. Key Design System Decisions</h3>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        To respect the existing brand equity, I retained Hurst Capital's core design guide, focusing my improvements entirely on structural architecture and layout engineering:
+      </p>
+      <ul class="mt-3 space-y-2 text-base text-muted-foreground">
+        {[
+          "Responsive Grid: Implemented a rigid 12-column Bootstrap grid system to simplify responsive handoffs for front-end developers.",
+          "Negative Space & Contrast: Introduced generous margins between content blocks, giving the investor's eyes a clear pathway to scan.",
+          "Typographic Hierarchy: Dramatically increased the scale of hero headers to establish an instant focal point.",
+          "Global Navigation Anchors: Redesigned the navigation bar to include a prominent active-state indicator, providing immediate user orientation.",
+        ].map((item) => (
+          <li class="flex items-start gap-2">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/40" />
+            {item}
+          </li>
+        ))}
+      </ul>
+
+      <div class="mt-6">
+        <img
+          src="/Design_Guide_Hurst.png"
+          alt="Hurst Design Guide"
+          class="w-full object-contain rounded-2xl"
+        />
+      </div>
+
+      <h3 class="mt-8 text-lg font-semibold">3. Execution & Touchpoints</h3>
+
+      <h4 class="mt-4 text-base font-semibold text-foreground">The Home Page Redesign</h4>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        I redesigned the hero section using a high-impact visual asset and a powerful left-aligned headline to convey the institutional trust required by high-net-worth investors, backed by a prominent CTA to drive conversion. Subsequent blocks were divided into clean, alternating content containers. The "Team Behind Hurst" section was redesigned into a series of clean, structured professional cards.
+      </p>
+
+      <div class="mt-6 grid grid-cols-2 gap-4">
+        <div>
+          <p class="mb-2 text-xs font-medium text-muted-foreground">Original</p>
+          <img
+            src="/Quem_somos_Original_Hurst.png"
+            alt="Who we are — Original"
+            class="w-full object-contain rounded-2xl"
+          />
+        </div>
+        <div>
+          <p class="mb-2 text-xs font-medium text-muted-foreground">Redesign</p>
+          <img
+            src="/Quem_Somos_Novo_Hurst.png"
+            alt="Who we are — Redesign"
+            class="w-full object-contain rounded-2xl"
+          />
+        </div>
+      </div>
+
+      <h4 class="mt-6 text-base font-semibold text-foreground">The Blog & Editorial Redesign</h4>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        The original blog listed financial articles in a dense, uninviting vertical list. I redesigned the blog into a modern, responsive card-based grid. Each card dynamically displays the category tag, a high-quality editorial image, the read-time, and a bold title, enabling investors to find relevant analysis in seconds.
+      </p>
+
+      <div class="mt-6 grid grid-cols-2 gap-4">
+        <div>
+          <p class="mb-2 text-xs font-medium text-muted-foreground">Original</p>
+          <img
+            src="/Blog+Original_Hurst.png"
+            alt="Blog — Original"
+            class="w-full object-contain rounded-2xl"
+          />
+        </div>
+        <div>
+          <p class="mb-2 text-xs font-medium text-muted-foreground">Redesign</p>
+          <img
+            src="/Blog_Novo_Hurst.png"
+            alt="Blog — Redesign"
+            class="w-full object-contain rounded-2xl"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-14 mb-16">
+      <h2 id="retro" class="scroll-mt-20 text-2xl font-semibold tracking-tight">Retrospective & Strategic Refinement</h2>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        The redesign was highly successful, generating a direct invitation to final-round interviews.
+      </p>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Critically evaluating this project today, I believe the team card module could be streamlined even further. The current cards carry a high density of information (name, role, and a short bio), which slightly compromises the visual breathing room of the page. If I were to redesign this module today, I would leverage a clean, high-performance modal system — displaying only the name and title on the primary card and letting users click to read the full professional bio in an elegant pop-up modal, maintaining an ultra-clean layout.
+      </p>
+    </section>
+  </PageContainer>
+</Layout>

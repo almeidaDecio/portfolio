@@ -1,0 +1,39 @@
+{
+  "layout": {
+    "siteTitle": "Décio D'Almeida — Product Designer",
+    "siteDescription": "Senior Product Designer specializing in B2B SaaS, enterprise workflows, and scalable digital ecosystems.",
+    "ogDescription": "Turning complex data operations into high-performance digital products — Senior Product Designer focused on enterprise platforms, design systems, and product strategy.",
+    "sidebar": {
+      "name": "Décio D'Almeida",
+      "role": "Product Designer"
+    },
+    "nav": {
+      "perfil": "Profile",
+      "experiencias": "Experience",
+      "cases": "Work",
+      "formacao": "Education",
+      "skills": "Skills",
+      "contato": "Contact"
+    },
+    "breadcrumb": {
+      "portfolio": "Portfolio",
+      "perfil": "Profile",
+      "experiencias": "Experience",
+      "cases": "Work",
+      "formacao": "Education",
+      "skills": "Skills",
+      "contato": "Contact"
+    },
+    "caseNames": {
+      "softfocus": "Softfocus",
+      "gamegather": "Gamegather",
+      "amigoSecreto": "Secret Santa",
+      "hurstCapital": "Hurst Capital"
+    },
+    "header": {
+      "toggleSidebar": "Toggle sidebar",
+      "portfolioLabel": "Portfolio · 2026"
+    },
+    "footer": "© 2026 Décio D'Almeida · Product Designer"
+  }
+}

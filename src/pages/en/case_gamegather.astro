@@ -1,0 +1,147 @@
+---
+import Layout from "../../components/Layout.astro";
+import PageContainer from "../../components/PageContainer.astro";
+import SectionHeader from "../../components/SectionHeader.astro";
+---
+
+<Layout
+  pathname={Astro.url.pathname}
+  title="Décio D'Almeida — Gamegather"
+  description="Social matching platform case study: designing an anti-toxicity gaming community with mobile-first UX."
+  sections={[
+    { name: "Executive Summary", id: "summary" },
+    { name: "Challenge", id: "desafio" },
+    { name: "Process", id: "processo" },
+    { name: "Visual Direction", id: "visual" },
+    { name: "Screens", id: "telas" },
+  ]}
+  lang="en"
+>
+  <PageContainer>
+    <section class="-mt-6">
+      <SectionHeader title="Gamegather: Designing an Anti-Toxicity Gaming Community" />
+
+      <p class="mt-2 text-sm text-muted-foreground">
+        <a href="https://gamegather.io/" target="_blank" rel="noreferrer" class="underline hover:text-foreground transition-colors">https://gamegather.io/</a>
+      </p>
+    </section>
+
+    <div class="mt-4">
+      <img
+        src="/gamegather_abre.png"
+        alt="Game Gather"
+        class="w-full rounded-2xl object-cover"
+      />
+    </div>
+
+    <section class="mt-14">
+      <h2 id="summary" class="scroll-mt-20 text-2xl font-semibold tracking-tight">Executive Summary</h2>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Gamegather is a mobile-first social networking platform built to connect online gamers based on playstyle, interests, and behavior. The platform was designed to combat online toxicity and help casual and competitive players easily discover safe, engaging multiplayer communities.
+      </p>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        As a Contract Product Designer, I spent 6 months driving the core UX architecture, user research, navigation models, and responsive interface design.
+      </p>
+    </section>
+
+    <section class="mt-14">
+      <h2 id="desafio" class="scroll-mt-20 text-2xl font-semibold tracking-tight">The Challenge</h2>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        In modern multiplayer gaming, players face two massive friction points:
+      </p>
+      <ul class="mt-4 space-y-3 text-base text-muted-foreground">
+        {[
+          "Extreme Toxicity: Standard matchmaking algorithms only group players by skill level, completely ignoring behavioral alignment. This exposes users to verbal abuse and toxic behavior.",
+          "In-App Fragmentation: Gamers rely on a chaotic mix of Discord servers, subreddits, and third-party apps just to find a reliable team.",
+        ].map((item) => (
+          <li class="flex items-start gap-2">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/40" />
+            {item}
+          </li>
+        ))}
+      </ul>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Our challenge was to design a unified, mobile-first experience that lowered the friction of finding compatible players while building active, self-policing community loops.
+      </p>
+    </section>
+
+    <section class="mt-14">
+      <h2 id="processo" class="scroll-mt-20 text-2xl font-semibold tracking-tight">My Design Process</h2>
+
+      <h3 class="mt-8 text-lg font-semibold">1. Competitive Benchmarking</h3>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        I analyzed leading community platforms, social apps, and gaming tools — including Discord, Tinder, and esports trackers. The key discovery was that while existing apps excel at messaging and grouping, they fail at trust and behavior validation. This created a huge opportunity to position Gamegather around a behavioral reputation system.
+      </p>
+
+      <h3 class="mt-8 text-lg font-semibold">2. User Research & Behavioral Architecture</h3>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        I conducted interviews with casual and competitive gamers to understand how they evaluate trust online. We identified that "good gaming" isn't just about winning — it's about communication style, casualness vs. competitiveness, and respect.
+      </p>
+      <p class="mt-3 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        From this, I designed:
+      </p>
+      <ul class="mt-3 space-y-2 text-base text-muted-foreground">
+        {[
+          "Player Profile Cards: Focused on playstyle tags (e.g., \"Chill,\" \"Tactical,\" \"No Mic Needed\") rather than just rank.",
+          "Reputation Loop: A post-match endorsement system that allows teammates to award badges for positive behavior — preventing text-based moderation issues.",
+        ].map((item) => (
+          <li class="flex items-start gap-2">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/40" />
+            {item}
+          </li>
+        ))}
+      </ul>
+
+      <h3 class="mt-8 text-lg font-semibold">3. Mobile-First Navigation</h3>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Given that gamers use social apps on their phones while sitting at their PCs or consoles, a streamlined, single-handed mobile navigation was essential. I designed a bottom-bar-centric layout with quick access to:
+      </p>
+      <ul class="mt-3 space-y-2 text-base text-muted-foreground">
+        {[
+          "Discover Hub: Tailored player recommendations.",
+          "Lobbies: Active groups seeking players.",
+          "Inbox & Messages: Instant communication.",
+        ].map((item) => (
+          <li class="flex items-start gap-2">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/40" />
+            {item}
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="mt-14">
+      <h2 id="visual" class="scroll-mt-20 text-2xl font-semibold tracking-tight">Design & Visual Direction</h2>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        The interface utilizes a sleek dark-mode aesthetic with vibrant, high-contrast neon accents, capturing the modern energy of gaming culture without compromising on accessibility. The typography and card systems were structured for extremely fast scanning, allowing users to evaluate a group's compatibility in under three seconds.
+      </p>
+    </section>
+
+    <section class="mt-14">
+      <h2 id="telas" class="scroll-mt-20 text-2xl font-semibold tracking-tight">Screens</h2>
+      <div class="mt-4 space-y-4">
+        <div>
+          <img src="/mobile_gamagather_1.png" alt="Game Gather - Mobile Screen 1" class="w-full object-cover" />
+        </div>
+        <div>
+          <img src="/mobile_gamagather_2.png" alt="Game Gather - Mobile Screen 2" class="w-full object-cover" />
+        </div>
+      </div>
+      <div class="mt-4 space-y-4">
+        <div>
+          <img src="/Gamegather_05.png" alt="Game Gather - Screen 5" class="w-full rounded-2xl object-cover" />
+        </div>
+        <div>
+          <img src="/Gamegather_06.png" alt="Game Gather - Screen 6" class="w-full rounded-2xl object-cover" />
+        </div>
+        <div>
+          <img src="/Gamegather_07.png" alt="Game Gather - Screen 7" class="w-full rounded-2xl object-cover" />
+        </div>
+        <div>
+          <img src="/Gamegather_08.png" alt="Game Gather - Screen 8" class="w-full rounded-2xl object-cover" />
+        </div>
+      </div>
+    </section>
+
+  </PageContainer>
+</Layout>

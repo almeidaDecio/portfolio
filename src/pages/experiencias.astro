@@ -26,7 +26,7 @@ const experiences: Experience[] = [
       "Product Design", "UX Research", "Discovery", "Design System",
       "Prototyping", "Interface Design", "Stakeholders", "B2B SaaS",
     ],
-    caseUrl: "/portfolio/case_softfocus_novo",
+    caseUrl: "/case_softfocus_novo",
   },
   {
     company: "Gamegather",
@@ -39,7 +39,7 @@ const experiences: Experience[] = [
       "UI Design", "User Flow", "Usabilidade", "Wireframing",
       "Jornada do Usuário", "Comunidade", "Mobile First",
     ],
-    caseUrl: "/portfolio/case_gamegather",
+    caseUrl: "/case_gamegather",
   },
   {
     company: "BMK Indústria Gráfica",
@@ -93,12 +93,16 @@ const experiences: Experience[] = [
     ],
   },
 ];
+
+const companyId = (name: string) =>
+  name.toLowerCase().replace(/[^a-zà-ú0-9]+/g, "-").replace(/(^-|-$)/g, "");
 ---
 
 <Layout
   pathname={Astro.url.pathname}
   title="Experiências"
   description="Experiência profissional em Product Design, produtos digitais B2B SaaS, design systems, discovery e evolução de plataformas digitais."
+  sections={experiences.map((exp) => ({ name: exp.company, id: companyId(exp.company) }))}
 >
   <PageContainer>
     <section class="-mt-6">
@@ -115,7 +119,8 @@ const experiences: Experience[] = [
       <div class="mt-8 space-y-6">
         {experiences.map((exp, i) => (
           <article
-            class="animate-fade-up group rounded-3xl border border-border bg-card p-5 transition-all hover:border-foreground/20 md:p-6"
+            id={companyId(exp.company)}
+            class="scroll-mt-20 animate-fade-up group rounded-3xl border border-border bg-card p-5 transition-all hover:border-foreground/20 md:p-6 max-sm:border-foreground/15"
             style={`animation-delay: ${i * 0.08}s`}
           >
             <div class="grid gap-6 md:grid-cols-12">
@@ -167,7 +172,7 @@ const experiences: Experience[] = [
                   <div class="mt-8">
                     <a
                       href={exp.caseUrl}
-                      class="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-muted"
+                      class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 sm:w-auto"
                     >
                       Ver case
                     </a>
