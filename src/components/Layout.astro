@@ -178,22 +178,28 @@ const crumbs = breadcrumbSchema();
             {t("layout.header.portfolioLabel")}
           </a>
 
+          {!isHome && (
           <span class="hidden md:contents">
-          {!isHome && crumbs.slice(1).map((crumb, j) => (
-            <>
-              <span class="text-xs text-muted-foreground/50">/</span>
-              {isCase && crumb.name === t("layout.breadcrumb.cases") && j < crumbs.length - 2 ? (
-                <a href={crumb.path} class="text-xs font-medium tracking-[0.18em] text-muted-foreground hover:text-foreground transition-colors">
-                  {crumb.name}
-                </a>
-              ) : isCase && j === crumbs.slice(1).length - 1 ? (
-                <a href="#" class="cursor-pointer text-xs font-medium tracking-[0.18em] text-foreground hover:text-foreground transition-colors">
-                  {crumb.name}
-                </a>
-              ) : (
-                <span class="text-xs font-medium tracking-[0.18em] text-foreground">
-                  {crumb.name}
-                </span>
+            {crumbs.slice(1).map((crumb, j) => (
+              <span class="inline-flex items-center gap-0">
+                <span class="text-xs text-muted-foreground/50">/</span>
+                {isCase && crumb.name === t("layout.breadcrumb.cases") && j < crumbs.slice(1).length - 2 ? (
+                  <a href={crumb.path} class="text-xs font-medium tracking-[0.18em] text-muted-foreground hover:text-foreground transition-colors">{crumb.name}</a>
+                ) : isCase && j === crumbs.slice(1).length - 1 ? (
+                  <a href="#" class="cursor-pointer text-xs font-medium tracking-[0.18em] text-foreground hover:text-foreground transition-colors">{crumb.name}</a>
+                ) : (
+                  <span class="text-xs font-medium tracking-[0.18em] text-foreground">{crumb.name}</span>
+                )}
+              </span>
+            ))}
+            {sections && sections.map((s) => (
+              <span class="inline-flex items-center gap-0">
+                <span class="text-xs text-muted-foreground/50">/</span>
+                <a href={`#${s.id}`} class="text-xs font-medium tracking-[0.18em] text-muted-foreground hover:text-foreground transition-colors">{s.name}</a>
+              </span>
+            ))}
+          </span>
+          )}
               )}
             </>
           ))}
