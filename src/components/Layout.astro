@@ -11,7 +11,8 @@ interface Props {
   lang?: string;
 }
 
-const { title, description, pathname, sections, lang } = Astro.props;
+const { title, description, pathname: rawPathname, sections, lang } = Astro.props;
+const pathname = rawPathname.replace(/\/$/, "");
 const locale = lang || Astro.currentLocale || "pt";
 const { t } = useTranslations(locale);
 
@@ -178,39 +179,26 @@ const crumbs = breadcrumbSchema();
             {t("layout.header.portfolioLabel")}
           </a>
 
-          {!isHome && (
-          <span class="hidden md:contents">
-            {crumbs.slice(1).map((crumb, j) => (
+          {crumbs.slice(1).map((crumb, j, arr) => {
+            const isLast = j === arr.length - 1;
+            return (
               <span class="inline-flex items-center gap-0">
                 <span class="text-xs text-muted-foreground/50">/</span>
-                {isCase && crumb.name === t("layout.breadcrumb.cases") && j < crumbs.slice(1).length - 2 ? (
-                  <a href={crumb.path} class="text-xs font-medium tracking-[0.18em] text-muted-foreground hover:text-foreground transition-colors">{crumb.name}</a>
-                ) : isCase && j === crumbs.slice(1).length - 1 ? (
-                  <a href="#" class="cursor-pointer text-xs font-medium tracking-[0.18em] text-foreground hover:text-foreground transition-colors">{crumb.name}</a>
-                ) : (
+                {isLast ? (
                   <span class="text-xs font-medium tracking-[0.18em] text-foreground">{crumb.name}</span>
+                ) : (
+                  <a href={crumb.path} class="text-xs font-medium tracking-[0.18em] text-muted-foreground hover:text-foreground transition-colors">{crumb.name}</a>
                 )}
               </span>
-            ))}
+            );
+          })}
+          <span class="hidden md:contents">
             {sections && sections.map((s) => (
               <span class="inline-flex items-center gap-0">
                 <span class="text-xs text-muted-foreground/50">/</span>
                 <a href={`#${s.id}`} class="text-xs font-medium tracking-[0.18em] text-muted-foreground hover:text-foreground transition-colors">{s.name}</a>
               </span>
             ))}
-          </span>
-          )}
-              )}
-            </>
-          ))}
-          {sections && sections.map((s) => (
-            <>
-              <span class="text-xs text-muted-foreground/50">/</span>
-              <a href={`#${s.id}`} class="text-xs font-medium tracking-[0.18em] text-muted-foreground hover:text-foreground transition-colors">
-                {s.name}
-              </a>
-            </>
-          ))}
           </span>
         </header>
 
