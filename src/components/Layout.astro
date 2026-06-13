@@ -1,6 +1,7 @@
 ---
 import { icon } from "./icons";
 import { useTranslations } from "../i18n";
+import PremiumBackground from "./PremiumBackground.astro";
 import "../styles/global.css";
 
 interface Props {
@@ -15,6 +16,13 @@ const { title, description, pathname: rawPathname, sections, lang } = Astro.prop
 const pathname = rawPathname.replace(/\/$/, "") || "/";
 const locale = lang || Astro.currentLocale || "pt";
 const { t } = useTranslations(locale);
+
+const bgVariant = pathname === "/" || pathname === "/en" ? "default" :
+  pathname.startsWith("/experiencias") || pathname.startsWith("/en/experiencias") ? "rotate180" :
+  pathname.startsWith("/cases") || pathname.startsWith("/en/cases") || pathname.startsWith("/case_") || pathname.startsWith("/en/case_") ? "flip" :
+  pathname.startsWith("/formacao") || pathname.startsWith("/en/formacao") ? "flip-rotate" :
+  pathname.startsWith("/skills") || pathname.startsWith("/en/skills") ? "rotate180" :
+  "default";
 
 const ptPath = pathname.replace(/^\/en/, "") || "/";
 const enPath = pathname.startsWith("/en") ? pathname : (pathname === "/" ? "/en" : `/en${pathname}`);
@@ -35,6 +43,7 @@ const breadcrumb = new Map([
 ]);
 
 const caseName = new Map([
+  ["/case_ajustacv", t("layout.caseNames.ajustacv")],
   ["/case_softfocus_novo", t("layout.caseNames.softfocus")],
   ["/case_gamegather", t("layout.caseNames.gamegather")],
   ["/case_amigo_secreto", t("layout.caseNames.amigoSecreto")],
@@ -107,7 +116,8 @@ const crumbs = breadcrumbSchema();
     </script>
   </head>
   <body>
-    <div id="layout" class="flex min-h-screen w-full bg-background">
+    <PremiumBackground variant={bgVariant} />
+    <div id="layout" class="flex min-h-screen w-full">
       <!-- Sidebar -->
       <aside
         id="sidebar"

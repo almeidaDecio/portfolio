@@ -1,0 +1,114 @@
+---
+export type BgVariant = "default" | "rotate180" | "flip" | "flip-rotate";
+
+interface Props {
+  variant?: BgVariant;
+}
+
+const { variant = "default" } = Astro.props;
+
+const transformMap: Record<BgVariant, string> = {
+  default: "",
+  rotate180: "rotate(180deg)",
+  flip: "scale(-1, 1)",
+  "flip-rotate": "scale(-1, -1)",
+};
+
+const bgTransform = transformMap[variant];
+const innerStyle = bgTransform ? `transform: ${bgTransform}; transition: transform 0.6s ease` : "";
+---
+
+<div
+  aria-hidden="true"
+  class="pointer-events-none fixed inset-0 -z-10 overflow-hidden"
+>
+<div
+  class="absolute inset-0"
+  style={innerStyle}
+>
+  <!-- Gradiente base diagonal mais claro -->
+  <div
+    class="absolute inset-0"
+    style="background: linear-gradient(145deg, oklch(0.995 0.001 95) 0%, oklch(0.99 0.002 95) 50%, oklch(0.98 0.003 95) 100%)"
+  />
+
+  <!-- Foco de luz radial suave -->
+  <div
+    class="absolute inset-0"
+    style="background: radial-gradient(110% 75% at 50% -15%, oklch(1 0 0 / 0.9) 0%, oklch(1 0 0 / 0) 60%)"
+  />
+
+  <!-- Brilho sutil no canto superior direito -->
+  <div
+    class="absolute inset-0"
+    style="background: radial-gradient(70% 55% at 90% 10%, oklch(0.97 0.005 95 / 0.3) 0%, oklch(0.97 0.005 95 / 0) 60%)"
+  />
+
+  <!-- Composição geométrica em linhas finas -->
+  <svg
+    class="absolute inset-0 h-full w-full"
+    preserveAspectRatio="xMidYMid slice"
+    viewBox="0 0 1440 900"
+    fill="none"
+  >
+    <defs>
+      <radialGradient id="lineFade" cx="50%" cy="32%" r="78%">
+        <stop offset="0%" stop-color="white" stop-opacity="1" />
+        <stop offset="62%" stop-color="white" stop-opacity="0.6" />
+        <stop offset="100%" stop-color="white" stop-opacity="0" />
+      </radialGradient>
+      <mask id="fadeMask">
+        <rect width="1440" height="900" fill="url(#lineFade)" />
+      </mask>
+    </defs>
+
+    <g
+      mask="url(#fadeMask)"
+      stroke="oklch(0.35 0.02 270)"
+      stroke-opacity="0.08"
+      stroke-width="1"
+    >
+      <line x1="-200" y1="900" x2="900" y2="-200" />
+      <line x1="-60" y1="900" x2="1040" y2="-200" />
+      <line x1="80" y1="900" x2="1180" y2="-200" />
+      <line x1="220" y1="900" x2="1320" y2="-200" />
+      <line x1="360" y1="900" x2="1460" y2="-200" />
+      <line x1="500" y1="900" x2="1600" y2="-200" />
+
+      <line x1="0" y1="300" x2="1440" y2="300" stroke-opacity="0.08" />
+      <line x1="0" y1="620" x2="1440" y2="620" stroke-opacity="0.08" />
+    </g>
+
+    <g
+      mask="url(#fadeMask)"
+      stroke="oklch(0.35 0.02 270)"
+      stroke-opacity="0.06"
+      stroke-width="1"
+      fill="none"
+    >
+      <circle cx="1300" cy="120" r="160" />
+      <circle cx="1300" cy="120" r="280" />
+      <circle cx="1300" cy="120" r="400" />
+      <circle cx="1300" cy="120" r="520" />
+    </g>
+
+    <g fill="oklch(0.35 0.02 270)" fill-opacity="0.08" mask="url(#fadeMask)">
+      <circle cx="1300" cy="120" r="2.5" />
+      <circle cx="360" cy="300" r="2" />
+      <circle cx="680" cy="620" r="2" />
+    </g>
+  </svg>
+
+  <!-- Vinheta -->
+  <div
+    class="absolute inset-0"
+    style="background: radial-gradient(125% 125% at 50% 40%, transparent 55%, oklch(0.2 0.01 270 / 0.04) 100%)"
+  />
+
+  <!-- Grão fino -->
+  <div
+    class="absolute inset-0 opacity-[0.03] mix-blend-multiply"
+    style="background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size: 160px 160px"
+  />
+</div>
+</div>

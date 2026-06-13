@@ -29,6 +29,7 @@ export interface Translation {
       gamegather: string;
       amigoSecreto: string;
       hurstCapital: string;
+      ajustacv: string;
     };
     header: {
       toggleSidebar: string;

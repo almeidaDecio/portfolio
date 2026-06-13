@@ -1,0 +1,266 @@
+---
+import Layout from "../components/Layout.astro";
+import PageContainer from "../components/PageContainer.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+---
+
+<Layout
+  pathname={Astro.url.pathname}
+  title="Décio D'Almeida — AjustaCV"
+  description="Case de produto: AjustaCV — plataforma inteligente para análise de vagas, personalização de currículos e gestão de candidaturas."
+  sections={[
+    { name: "Produto", id: "produto" },
+    { name: "Desafio", id: "desafio" },
+
+    { name: "Objetivos", id: "objetivos" },
+    { name: "Meu papel", id: "meupapel" },
+    { name: "Trade-offs", id: "decisoes" },
+    { name: "Validação", id: "validacao" },
+    { name: "Arquitetura", id: "solucao" },
+    { name: "Stack", id: "stack" },
+    { name: "Impacto", id: "impacto" },
+    { name: "Próximos passos", id: "proximos" },
+  ]}
+>
+  <PageContainer>
+    <section class="-mt-6">
+      <SectionHeader title="AjustaCV" />
+
+      <p class="mt-1 text-lg font-medium text-muted-foreground">
+        Do aprendizado ao produto: como estudar IA aplicada ao design resolveu um problema que todo candidato conhece
+      </p>
+
+      <div class="mt-6">
+        <img src="/AjustaCv_Abre.png" alt="AjustaCV - abertura" class="w-full object-cover rounded-2xl" />
+      </div>
+    </section>
+
+    <section class="mt-14">
+      <h2 id="produto" class="scroll-mt-20 text-2xl font-semibold tracking-tight">O ponto de partida</h2>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Decidi aprender a trabalhar com inteligência artificial de forma estruturada, criando um curso para mim mesmo sobre como usar skills e agentes de IA no processo de design, do discovery à entrega.
+      </p>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        A metodologia era simples: aprender fazendo. Mas para que o aprendizado fosse real, precisava de um problema real para resolver. Não um exercício fictício, não um redesign de app famoso.
+      </p>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Descobri um problema para resolver na minha própria rotina: eu estava em busca ativa de uma nova oportunidade como Product Designer, e o processo de candidatura era caótico.
+      </p>
+    </section>
+
+    <section class="mt-14">
+      <h2 id="desafio" class="scroll-mt-20 text-2xl font-semibold tracking-tight">O problema que eu conhecia por dentro</h2>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Cada vaga exigia o mesmo ritual manual: ler a descrição completa, identificar palavras-chave relevantes para ATS, reescrever as seções estratégicas do currículo, gerar um novo PDF e registrar o andamento em alguma planilha que logo ficava desatualizada.
+      </p>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Ferramentas como Jobscan, Enhancv e SkillSyncer resolvem partes isoladas desse processo. Uma analisa palavras-chave, outra formata o currículo, outra organiza candidaturas. Mas o candidato continua sendo o elo manual entre elas, repetindo o mesmo esforço para cada vaga.
+      </p>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Esse era o problema que eu conhecia por dentro e que valia a pena resolver.
+      </p>
+    </section>
+
+    <section class="mt-14">
+      <h2 id="nasceu" class="scroll-mt-20 text-2xl font-semibold tracking-tight">O que nasceu disso</h2>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        O AjustaCV é o produto que emergiu desse contexto: uma plataforma que centraliza todo o processo de candidatura em um único fluxo. A descrição da vaga entra no sistema, a IA local extrai os requisitos, um algoritmo calcula a aderência com um currículo base, a IA personaliza as seções estratégicas e o kanban organiza o acompanhamento das candidaturas.
+      </p>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Não foi planejado como produto desde o início. Foi crescendo à medida que cada etapa do aprendizado encontrava uma etapa do problema real.
+      </p>
+    </section>
+
+    <section class="mt-14">
+      <h2 id="processo" class="scroll-mt-20 text-2xl font-semibold tracking-tight">O processo de design</h2>
+
+      <h3 class="mt-6 text-lg font-semibold">Entendendo o problema antes de construir a solução</h3>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Antes de qualquer linha de código ou prompt, mapeei a jornada completa de candidatura em seis etapas, do momento em que o candidato descobre uma vaga até o acompanhamento do processo seletivo. Esse mapeamento revelou onde estavam os maiores atritos e, mais importante, quais deles a tecnologia poderia eliminar sem comprometer o controle do candidato sobre o próprio currículo.
+      </p>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Analisei também como o mercado estava resolvendo o problema. Jobscan, Enhancv e SkillSyncer tinham abordagens distintas, mas todas compartilhavam o mesmo limite: resolviam a peça, não a jornada. Esse gap confirmou o escopo do projeto.
+      </p>
+
+      <div class="mt-6">
+        <img src="/fluxo_ajustaCV.png" alt="Fluxo do problema à candidatura" class="w-full object-cover rounded-2xl" />
+      </div>
+
+      <h3 class="mt-8 text-lg font-semibold">Definindo o que construir, e o que não construir</h3>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Quatro princípios funcionaram como filtro para cada decisão ao longo do projeto:
+      </p>
+
+      <div class="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
+        {[
+          { title: "Centralizar a jornada", desc: "em uma única plataforma, da análise da vaga ao acompanhamento das candidaturas, eliminando a necessidade de alternar entre ferramentas." },
+          { title: "Priorizar por aderência", desc: "calculando automaticamente a compatibilidade entre currículo e vaga para que o esforço de personalização fosse direcionado para onde tinha maior retorno." },
+          { title: "Personalizar apenas o que gera valor", desc: "preservando a identidade profissional nas seções que não precisavam mudar para cada vaga e protegendo dados quantitativos críticos contra alucinações da IA." },
+          { title: "Garantir privacidade e controle", desc: "processando tudo localmente, sem enviar dados pessoais a serviços externos de IA." },
+        ].map((item) => (
+          <div class="rounded-2xl border border-border bg-card px-5 py-5 md:px-6">
+            <p class="text-lg font-medium text-foreground">{item.title}</p>
+            <p class="mt-1 text-sm text-muted-foreground">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      <h3 class="mt-8 text-lg font-semibold">As decisões que moldaram o produto</h3>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Cada decisão de design revelou algo sobre como trabalhar com IA em um contexto de produto real, e foi aí que o aprendizado se tornou mais denso.
+      </p>
+
+      <div class="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
+        <div class="rounded-2xl border border-border bg-card px-5 py-5 md:px-6">
+          <p class="text-lg font-medium text-foreground">IA local em vez de APIs externas</p>
+          <p class="mt-1 text-sm text-muted-foreground">A escolha por processamento local com Ollama garantiu privacidade total e zero custo por requisição. O trade-off foi aceitar maior tempo de processamento, mas para um sistema de candidatura em que privacidade dos dados é uma restrição real, a troca valia a pena.</p>
+        </div>
+        <div class="rounded-2xl border border-border bg-card px-5 py-5 md:px-6">
+          <p class="text-lg font-medium text-foreground">Algoritmo determinístico para o score, IA para a linguagem</p>
+          <p class="mt-1 text-sm text-muted-foreground">Deixar a IA calcular a aderência produzia resultados inconsistentes e difíceis de auditar. Usar um algoritmo com pesos configuráveis para o matching e reservar a IA apenas para a reescrita das seções estratégicas separou bem as responsabilidades e tornou o sistema previsível. A IA faz o que faz bem, que é linguagem. O algoritmo faz o que a IA não faz bem, que é consistência numérica.</p>
+        </div>
+        <div class="rounded-2xl border border-border bg-card px-5 py-5 md:px-6">
+          <p class="text-lg font-medium text-foreground">Personalização parcial do currículo</p>
+          <p class="mt-1 text-sm text-muted-foreground">Limitar a IA às seções de resumo profissional, competências e experiência principal reduziu significativamente as alucinações. <strong>A IA não pode inventar competências ou experiências. Ela só pode reorganizar, reescrever e enfatizar o que já existe no currículo do candidato. O que não está lá, não aparece.</strong></p>
+        </div>
+        <div class="rounded-2xl border border-border bg-card px-5 py-5 md:px-6">
+          <p class="text-lg font-medium text-foreground">HTML antes do PDF</p>
+          <p class="mt-1 text-sm text-muted-foreground">Gerar o currículo em HTML e exportar pelo navegador resolveu dois problemas concretos: o tempo de processamento das bibliotecas de conversão direta era alto, e a diagramação do PDF gerado apresentava inconsistências visuais difíceis de controlar. Com HTML, cada currículo sai padronizado, com fidelidade visual garantida entre versões. Além disso, o pdf fica muito leve e com os textos preservados para os leitores de ATS</p>
+        </div>
+      </div>
+
+      <div class="mt-6">
+        <img src="/fluxo_cv_optimizer_horizontal.png" alt="Diagrama técnico do fluxo" class="w-full object-cover rounded-2xl" />
+      </div>
+
+      <h3 class="mt-8 text-lg font-semibold">A interface como consequência do processo</h3>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        O kanban foi desenhado para dar visibilidade imediata ao pipeline de candidaturas. Cada card mostra título, empresa, plataforma, data e score de aderência com código de cores semântico. A stats bar no topo resume o estado atual com quatro métricas: total de vagas, aplicadas, entrevistas agendadas e match médio.
+      </p>
+
+      <div class="mt-6">
+        <img src="/AjustaCv_Abre.png" alt="Kanban AjustaCV" class="w-full object-cover rounded-2xl" />
+      </div>
+
+      <p class="mt-6 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        O side panel de cada vaga mostra dois scores lado a lado: a aderência do currículo base e a aderência do currículo já ajustado pela IA para aquela vaga específica. Esse comparativo tornou visível o valor real da personalização.
+      </p>
+
+      <div class="mt-6">
+        <img src="/Modal_AjustaCV.png" alt="Side panel com scores comparativos" class="w-full object-cover rounded-2xl" />
+      </div>
+
+      <p class="mt-6 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Para a vaga de UX Designer na Ilia, por exemplo, o currículo base obteve 73% de aderência. Após a personalização, o score subiu para 83%, cobrindo skills como "mapeamento de jornadas", "contexto B2B" e "sistemas financeiros" que não apareciam no currículo original com aquela nomenclatura específica.
+      </p>
+
+      <h3 class="mt-8 text-lg font-semibold">Validação em uso real</h3>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        A validação aconteceu de forma contínua: cada candidatura era um teste do sistema. Conduzi comparações diretas entre currículos gerados pelo AjustaCV e por outras IAs, usando o mesmo currículo base e a mesma vaga, avaliados por uma terceira IA considerando aderência, palavras-chave, compatibilidade com ATS e consistência das informações.
+      </p>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Com 21 candidaturas realizadas, o sistema registrou 80% de match médio. As vagas com maior aderência identificadas foram Grupo Boticário (93%) e Afya (89%). Vagas abaixo de 60% foram descartadas antes da candidatura, direcionando o esforço de personalização para onde a probabilidade de retorno era maior.
+      </p>
+    </section>
+
+    <section class="mt-14">
+      <h2 id="aprendizados" class="scroll-mt-20 text-2xl font-semibold tracking-tight">O que aprendi</h2>
+      <ul class="mt-4 space-y-4 text-muted-foreground">
+        {[
+          { title: "O problema real raramente é o problema visível.", desc: "Adaptar o currículo era a tarefa que aparecia, mas a fragmentação de toda a jornada era o que realmente custava tempo e energia. Descobrir isso só foi possível porque eu era o usuário." },
+          { title: "IA e algoritmo têm papéis diferentes.", desc: "Dar autonomia total à IA sobre decisões que envolvem dados específicos gera inconsistência. Usar a IA para linguagem e o algoritmo para cálculo foi a decisão que mais impactou a confiabilidade do sistema." },
+          { title: "Prompts são design de sistema.", desc: "Estruturar um prompt com regras, exemplos, proteções e instruções de formato é tão rigoroso quanto projetar um fluxo de usuário. Cada iteração do prompt era uma hipótese sobre o comportamento esperado do sistema." },
+          { title: "Aprender com um problema real acelera o aprendizado.", desc: "As limitações do contexto, o hardware disponível, a privacidade dos dados, o tempo de processamento, forçaram decisões de design que um projeto fictício nunca teria exigido." },
+        ].map((item) => (
+          <li class="flex items-start gap-3 text-lg leading-relaxed text-pretty">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/40" />
+            <div>
+              <span class="font-semibold text-foreground">{item.title}</span>
+              <span class="text-muted-foreground"> {item.desc}</span>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="mt-14">
+      <h2 id="stack" class="scroll-mt-20 text-2xl font-semibold tracking-tight">Stack</h2>
+
+      <div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {[
+          { category: "Design", items: ["Figma", "V0", "Lovable"] },
+          { category: "Desenvolvimento", items: ["Visual Studio Code", "Opencode"] },
+          { category: "Backend", items: ["Node.js", "Express", "SQLite"] },
+          { category: "Inteligência Artificial", items: ["Ollama (Llama 3.2)", "Skills especializadas"] },
+          { category: "Frontend", items: ["HTML", "CSS", "JavaScript"] },
+        ].map((area) => (
+          <div class="rounded-2xl border border-border bg-card px-5 py-5 md:px-6">
+            <p class="text-sm font-semibold tracking-[0.12em] text-muted-foreground uppercase">{area.category}</p>
+            <ul class="mt-3 space-y-1.5">
+              {area.items.map((item) => (
+                <li class="flex items-start gap-2 text-sm text-foreground">
+                  <span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-foreground/40" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-14">
+      <div class="mt-6 space-y-6">
+        <img src="/AjustaCV_Revisar.png" alt="Tela de revisão do CV com campos editáveis por seção" class="w-full object-cover rounded-2xl" />
+        <img src="/AjustaCV_Print.png" alt="Visualização do PDF gerado" class="w-full object-cover rounded-2xl" />
+      </div>
+    </section>
+
+    <section class="mt-14">
+      <h2 id="proximos" class="scroll-mt-20 text-2xl font-semibold tracking-tight">Próximos passos</h2>
+
+      <div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+        <div class="rounded-2xl border border-border bg-card px-5 py-5 md:px-6">
+          <div class="flex items-center gap-2">
+            <span class="flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500/20 text-xs font-bold text-emerald-600">✓</span>
+            <p class="text-sm font-semibold tracking-[0.12em] text-muted-foreground uppercase">Em desenvolvimento</p>
+          </div>
+          <ul class="mt-3 space-y-2">
+            <li class="flex items-start gap-2 text-sm text-foreground">
+              <span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-emerald-500/60" />
+              Importação de currículo externo
+            </li>
+            <li class="flex items-start gap-2 text-sm text-foreground">
+              <span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-emerald-500/60" />
+              Edição manual do currículo
+            </li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border border-border bg-card px-5 py-5 md:px-6">
+          <div class="flex items-center gap-2">
+            <span class="flex h-6 w-6 items-center justify-center rounded-full bg-primary/20 text-xs font-bold text-primary">→</span>
+            <p class="text-sm font-semibold tracking-[0.12em] text-muted-foreground uppercase">Planejado</p>
+          </div>
+          <ul class="mt-3 space-y-2">
+            {["Importação automática da vaga por URL", "Carta de apresentação automática", "Relatórios de evolução do processo seletivo"].map((item) => (
+              <li class="flex items-start gap-2 text-sm text-foreground">
+                <span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-primary/60" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="mt-12 mb-16 flex justify-start">
+      <a
+        href="#"
+        class="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-xs font-medium tracking-[0.18em] text-muted-foreground transition-colors hover:text-foreground"
+      >
+        ↑ Voltar ao topo
+      </a>
+    </div>
+  </PageContainer>
+</Layout>
