@@ -1,0 +1,261 @@
+---
+import Layout from "../../components/Layout.astro";
+import PageContainer from "../../components/PageContainer.astro";
+import SectionHeader from "../../components/SectionHeader.astro";
+---
+
+<Layout
+  pathname={Astro.url.pathname}
+  title="Décio D'Almeida — AjustaCV"
+  description="Product case study: AjustaCV — a smart platform for job analysis, CV personalization, and application management."
+  sections={[
+    { name: "Starting Point", id: "produto" },
+    { name: "Problem", id: "desafio" },
+    { name: "Design Process", id: "processo" },
+    { name: "Learnings", id: "aprendizados" },
+    { name: "Stack", id: "stack" },
+  ]}
+  lang="en"
+>
+  <PageContainer>
+    <section class="-mt-6">
+      <SectionHeader title="AjustaCV" />
+
+      <p class="mt-1 text-lg font-medium text-muted-foreground">
+        From learning to product: how studying applied AI as a designer solved a problem every job seeker knows
+      </p>
+
+      <div class="mt-6">
+        <img src="/AjustaCv_Abre.png" alt="AjustaCV opening screen" class="w-full object-cover rounded-2xl" />
+      </div>
+    </section>
+
+    <section class="mt-14">
+      <h2 id="produto" class="scroll-mt-20 text-2xl font-semibold tracking-tight">The starting point</h2>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        I decided to learn how to work with artificial intelligence in a structured way, creating a curriculum for myself on how to use AI skills and agents in the design process, from discovery to delivery.
+      </p>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        The methodology was simple: learn by doing. But for the learning to be real, I needed a real problem to solve. Not a fictional exercise, not a redesign of a famous app.
+      </p>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        I found a problem in my own routine: I was actively searching for a new opportunity as a Product Designer, and the application process was chaotic.
+      </p>
+    </section>
+
+    <section class="mt-14">
+      <h2 id="desafio" class="scroll-mt-20 text-2xl font-semibold tracking-tight">The problem I knew from the inside</h2>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Each job posting required the same manual ritual: read the full description, identify relevant ATS keywords, rewrite the strategic sections of the resume, generate a new PDF, and log progress in a spreadsheet that soon became outdated.
+      </p>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Tools like Jobscan, Enhancv, and SkillSyncer solve isolated parts of this process. One analyzes keywords, another formats the resume, another organizes applications. But the candidate remains the manual link between them, repeating the same effort for every job posting.
+      </p>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        This was the problem I knew from the inside — one worth solving.
+      </p>
+    </section>
+
+    <section class="mt-14">
+      <h2 id="nasceu" class="scroll-mt-20 text-2xl font-semibold tracking-tight">What emerged from it</h2>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        AjustaCV is the product that emerged from this context: a platform that centralizes the entire application process into a single flow. The job description enters the system, the local AI extracts the requirements, an algorithm calculates the alignment with a base resume, AI personalizes the strategic sections, and a kanban board tracks all applications.
+      </p>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        It wasn't planned as a product from the start. It grew as each step of learning met a step of the real problem.
+      </p>
+    </section>
+
+    <section class="mt-14">
+      <h2 id="processo" class="scroll-mt-20 text-2xl font-semibold tracking-tight">The design process</h2>
+
+      <h3 class="mt-6 text-lg font-semibold">Understanding the problem before building the solution</h3>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Before any code or prompt, I mapped the complete job application journey in six steps — from the moment a candidate discovers a job opening to tracking the selection process. This mapping revealed where the biggest friction points were and, more importantly, which of them technology could eliminate without compromising the candidate's control over their own resume.
+      </p>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        I also analyzed how the market was solving the problem. Jobscan, Enhancv, and SkillSyncer had distinct approaches, but all shared the same limitation: they solved the piece, not the journey. This gap confirmed the project scope.
+      </p>
+
+      <div class="mt-6">
+        <img src="/fluxo_ajustaCV.png" alt="Problem-to-application flow" class="w-full object-cover rounded-2xl" />
+      </div>
+
+      <h3 class="mt-8 text-lg font-semibold">Defining what to build — and what not to build</h3>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Four principles served as filters for every decision throughout the project:
+      </p>
+
+      <div class="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
+        {[
+          { title: "Centralize the journey", desc: "in a single platform, from job analysis to application tracking — eliminating the need to switch between tools." },
+          { title: "Prioritize by alignment", desc: "by automatically calculating compatibility between resume and job posting, so personalization effort goes where it yields the highest return." },
+          { title: "Personalize only what adds value", desc: "preserving professional identity in sections that don't need to change for each role, and protecting critical quantitative data against AI hallucinations." },
+          { title: "Ensure privacy and control", desc: "by processing everything locally, without sending personal data to external AI services." },
+        ].map((item) => (
+          <div class="rounded-2xl border border-border bg-card px-5 py-5 md:px-6">
+            <p class="text-lg font-medium text-foreground">{item.title}</p>
+            <p class="mt-1 text-sm text-muted-foreground">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      <h3 class="mt-8 text-lg font-semibold">The decisions that shaped the product</h3>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Each design decision revealed something about how to work with AI in a real product context — and that's where the learning became densest.
+      </p>
+
+      <div class="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
+        <div class="rounded-2xl border border-border bg-card px-5 py-5 md:px-6">
+          <p class="text-lg font-medium text-foreground">Local AI instead of external APIs</p>
+          <p class="mt-1 text-sm text-muted-foreground">Choosing local processing with Ollama guaranteed total privacy and zero cost per request. The trade-off was longer processing time, but for an application system where data privacy is a real constraint, the exchange was worth it.</p>
+        </div>
+        <div class="rounded-2xl border border-border bg-card px-5 py-5 md:px-6">
+          <p class="text-lg font-medium text-foreground">Deterministic algorithm for scoring, AI for language</p>
+          <p class="mt-1 text-sm text-muted-foreground">Letting AI calculate alignment produced inconsistent, hard-to-audit results. Using an algorithm with configurable weights for matching and reserving AI only for rewriting strategic sections separated responsibilities cleanly and made the system predictable. AI does what it does well — language. The algorithm does what AI doesn't do well — numerical consistency.</p>
+        </div>
+        <div class="rounded-2xl border border-border bg-card px-5 py-5 md:px-6">
+          <p class="text-lg font-medium text-foreground">Partial resume personalization</p>
+          <p class="mt-1 text-sm text-muted-foreground">Limiting AI to the professional summary, skills, and main experience sections significantly reduced hallucinations. <strong>AI cannot invent skills or experiences. It can only reorganize, rewrite, and emphasize what already exists in the candidate's resume. What isn't there doesn't appear.</strong></p>
+        </div>
+        <div class="rounded-2xl border border-border bg-card px-5 py-5 md:px-6">
+          <p class="text-lg font-medium text-foreground">HTML before PDF</p>
+          <p class="mt-1 text-sm text-muted-foreground">Generating the resume in HTML and exporting via the browser solved two concrete problems: direct conversion libraries were slow, and the resulting PDF layout had hard-to-control visual inconsistencies. With HTML, every resume comes out standardized with guaranteed visual fidelity across versions. Plus the PDF is lightweight with preserved text for ATS readers.</p>
+        </div>
+      </div>
+
+      <div class="mt-6">
+        <img src="/fluxo_cv_optimizer_horizontal.png" alt="Technical flow diagram" class="w-3/4 mx-auto object-cover rounded-2xl" />
+      </div>
+
+      <h3 class="mt-8 text-lg font-semibold">The interface as a consequence of the process</h3>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        The kanban was designed to give immediate visibility into the application pipeline. Each card shows the job title, company, platform, date, and alignment score with semantic color coding. The stats bar at the top summarizes the current state with four metrics: total jobs, applied, interviews scheduled, and average match score.
+      </p>
+
+      <div class="mt-6">
+        <img src="/AjustaCv_Abre.png" alt="AjustaCV kanban" class="w-full object-cover rounded-2xl" />
+      </div>
+
+      <p class="mt-6 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        The side panel for each job shows two scores side by side: the alignment of the base resume and the alignment of the AI-adjusted resume for that specific job. This comparison made the value of personalization visible.
+      </p>
+
+      <div class="mt-6">
+        <img src="/Modal_AjustaCV.png" alt="Side panel with comparative scores" class="w-full object-cover rounded-2xl" />
+      </div>
+
+      <p class="mt-6 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        For the UX Designer position at Ilia, for example, the base resume achieved 73% alignment. After personalization, the score rose to 83%, covering skills like "journey mapping", "B2B context", and "financial systems" that weren't in the original resume under those specific terms.
+      </p>
+
+      <h3 class="mt-8 text-lg font-semibold">Validation through real use</h3>
+      <p class="mt-2 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        Validation happened continuously: each application was a test of the system. I ran direct comparisons between resumes generated by AjustaCV and by other AIs, using the same base resume and the same job posting, evaluated by a third AI considering alignment, keywords, ATS compatibility, and information consistency.
+      </p>
+      <p class="mt-4 max-w-4xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        With 21 applications submitted, the system recorded an 80% average match rate. The highest-alignment jobs identified were Grupo Boticário (93%) and Afya (89%). Jobs below 60% were discarded before applying, directing personalization effort where the probability of return was highest.
+      </p>
+    </section>
+
+    <section class="mt-14">
+      <h2 id="aprendizados" class="scroll-mt-20 text-2xl font-semibold tracking-tight">What I learned</h2>
+      <ul class="mt-4 space-y-4 text-muted-foreground">
+        {[
+          { title: "The real problem is rarely the visible problem.", desc: "Adapting the resume was the task that appeared, but the fragmentation of the entire journey was what truly cost time and energy. Discovering this was only possible because I was the user." },
+          { title: "AI and algorithms have different roles.", desc: "Giving AI full autonomy over decisions involving specific data creates inconsistency. Using AI for language and the algorithm for calculation was the decision that most impacted the system's reliability." },
+          { title: "Prompts are system design.", desc: "Structuring a prompt with rules, examples, safeguards, and format instructions is as rigorous as designing a user flow. Each prompt iteration was a hypothesis about the system's expected behavior." },
+          { title: "Learning with a real problem accelerates learning.", desc: "Context limitations — available hardware, data privacy, processing time — forced design decisions that a fictional project would never have required." },
+        ].map((item) => (
+          <li class="flex items-start gap-3 text-lg leading-relaxed text-pretty">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/40" />
+            <div>
+              <span class="font-semibold text-foreground">{item.title}</span>
+              <span class="text-muted-foreground"> {item.desc}</span>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="mt-14">
+      <h2 id="stack" class="scroll-mt-20 text-2xl font-semibold tracking-tight">Stack</h2>
+
+      <div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {[
+          { category: "Design", items: ["Figma", "V0", "Lovable"] },
+          { category: "Development", items: ["Visual Studio Code", "Opencode"] },
+          { category: "Backend", items: ["Node.js", "Express", "SQLite"] },
+          { category: "Artificial Intelligence", items: ["Ollama (Llama 3.2)", "Specialized skills"] },
+          { category: "Frontend", items: ["HTML", "CSS", "JavaScript"] },
+        ].map((area) => (
+          <div class="rounded-2xl border border-border bg-card px-5 py-5 md:px-6">
+            <p class="text-sm font-semibold tracking-[0.12em] text-muted-foreground uppercase">{area.category}</p>
+            <ul class="mt-3 space-y-1.5">
+              {area.items.map((item) => (
+                <li class="flex items-start gap-2 text-sm text-foreground">
+                  <span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-foreground/40" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-14">
+      <div class="mt-6 space-y-6">
+        <img src="/AjustaCV_Revisar.png" alt="CV review screen with editable sections" class="w-full object-cover rounded-2xl" />
+        <img src="/AjustaCV_Print.png" alt="Generated PDF preview" class="w-full object-cover rounded-2xl" />
+      </div>
+    </section>
+
+    <section class="mt-14">
+      <h2 id="proximos" class="scroll-mt-20 text-2xl font-semibold tracking-tight">Next steps</h2>
+
+      <div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+        <div class="rounded-2xl border border-border bg-card px-5 py-5 md:px-6">
+          <div class="flex items-center gap-2">
+            <span class="flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500/20 text-xs font-bold text-emerald-600">✓</span>
+            <p class="text-sm font-semibold tracking-[0.12em] text-muted-foreground uppercase">In development</p>
+          </div>
+          <ul class="mt-3 space-y-2">
+            <li class="flex items-start gap-2 text-sm text-foreground">
+              <span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-emerald-500/60" />
+              External resume import
+            </li>
+            <li class="flex items-start gap-2 text-sm text-foreground">
+              <span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-emerald-500/60" />
+              Manual resume editing
+            </li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border border-border bg-card px-5 py-5 md:px-6">
+          <div class="flex items-center gap-2">
+            <span class="flex h-6 w-6 items-center justify-center rounded-full bg-primary/20 text-xs font-bold text-primary">→</span>
+            <p class="text-sm font-semibold tracking-[0.12em] text-muted-foreground uppercase">Planned</p>
+          </div>
+          <ul class="mt-3 space-y-2">
+            {["Automatic job import by URL", "Auto-generated cover letter", "Application progress reports"].map((item) => (
+              <li class="flex items-start gap-2 text-sm text-foreground">
+                <span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-primary/60" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="mt-12 mb-16 flex justify-start">
+      <a
+        href="#"
+        class="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-xs font-medium tracking-[0.18em] text-muted-foreground transition-colors hover:text-foreground"
+      >
+        ↑ Back to top
+      </a>
+    </div>
+  </PageContainer>
+</Layout>
